@@ -29,14 +29,53 @@
   .spinner { width: 16px; height: 16px; border: 3px solid #cbd5c9; border-top-color: #1a7a1a; border-radius: 50%; animation: spin 0.9s linear infinite; flex: none; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .commit-line { font-size: 13px; color: #555; margin: 4px 0 10px; }
-  .source-links { font-size: 14px; margin-top: 28px; padding-top: 14px; border-top: 1px solid #ddd; }
+  .source-links { font-size: 14px; margin-top: 28px; padding-top: 14px; border-top: 1px solid #ddd; max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 16px; padding-right: 16px; }
   .source-links p { margin: 6px 0; }
+
+  html { scroll-behavior: smooth; }
+  body { max-width: none; margin: 0; padding: 0; }
+  .page { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  .topnav { position: sticky; top: 0; z-index: 50; background: #ffffffee; backdrop-filter: blur(6px); border-bottom: 1px solid #ddd; }
+  .topnav-inner { max-width: 860px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .topnav-brand { font-weight: 700; font-size: 14px; color: #333; margin-right: auto; }
+  .topnav a { font-size: 14px; text-decoration: none; color: #555; padding: 4px 2px; border-bottom: 2px solid transparent; }
+  .topnav a:hover { color: #222; }
+  .topnav a.active { color: #1a4fb0; border-bottom-color: #1a4fb0; font-weight: 600; }
+
+  section.section { scroll-margin-top: 54px; padding: 28px 16px 36px; }
+  .section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .section-hero-title { font-size: 20px; font-weight: 700; margin: 0 0 14px; }
+
+  .section-intro { background: #ffffff; }
+  .section-intro .section-eyebrow { color: #1a4fb0; }
+
+  .section-demo { background: #eef3fb; border-top: 1px solid #d7e3f7; border-bottom: 1px solid #d7e3f7; }
+  .section-demo .section-eyebrow { color: #1a4fb0; }
+  .section-demo button { background: #1a4fb0; color: #fff; border: none; border-radius: 6px; }
+  .section-demo button:disabled { background: #9fb3d6; }
+  .section-demo .fault-box, .section-demo #fault-diff, .section-demo pre { background: #ffffff; }
+
+  .section-conclusion { background: #fbf8f1; border-top: 1px solid #ecdfc4; }
+  .section-conclusion .section-eyebrow { color: #8a6d1f; }
+  .section-conclusion .intro { background: #fffdf8; border-color: #e7d9b8; }
 </style>
 </head>
 <body>
 
-<h1>GSM Sandbox - Ma trận kiểm thử</h1>
-<p style="margin:-6px 0 18px"><a href="#ket-luan">↓ Đi tới phần Kết luận</a></p>
+<nav class="topnav" id="topnav">
+  <div class="topnav-inner">
+    <span class="topnav-brand">GSM Sandbox</span>
+    <a href="#section-intro" data-nav="section-intro">Giới thiệu</a>
+    <a href="#section-demo" data-nav="section-demo">Demo</a>
+    <a href="#section-conclusion" data-nav="section-conclusion">Kết luận</a>
+  </div>
+</nav>
+
+<section id="section-intro" class="section section-intro">
+<div class="page">
+<div class="section-eyebrow">Phần 1</div>
+<h1 class="section-hero-title">GSM Sandbox - Ma trận kiểm thử</h1>
 
 <div class="intro">
 <h3>Trang này là gì</h3>
@@ -112,6 +151,14 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — triển khai trước. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức trước khi dùng thật.</p>
 </div>
 
+</div>
+</section>
+
+<section id="section-demo" class="section section-demo">
+<div class="page">
+<div class="section-eyebrow">Phần 2</div>
+<h2 class="section-hero-title">Demo — tự chạy A và B ngay trong trình duyệt</h2>
+
 <div class="statusrow">
   <span class="spinner" id="spinner" hidden></span>
   <p id="status" style="margin:0">Sẵn sàng để bắt đầu…</p>
@@ -156,6 +203,13 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <p style="margin-top:14px"><button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button></p>
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
+
+</div>
+</section>
+
+<section id="section-conclusion" class="section section-conclusion">
+<div class="page">
+<div class="section-eyebrow">Phần 3</div>
 
 <div class="intro" id="ket-luan">
 <h3>Bảng kiểm toán dưới đây đo gì, và phần bạn vừa chạy nằm ở đâu trong đó</h3>
@@ -240,6 +294,9 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 </ul>
 </div>
 
+</div>
+</section>
+
 <div class="source-links">
 <p><b>Mã nguồn chạy trên trang này:</b> <a href="https://github.com/jinsimple/gsm-demo" target="_blank" rel="noopener">github.com/jinsimple/gsm-demo</a> — đúng những tệp trang này đang chạy, không thêm không bớt.</p>
 <p><b>Toàn bộ hồ sơ dự án</b> (tài liệu, quyết định thiết kế, bộ lệnh kiểm, báo cáo): <a href="https://github.com/jinsimple/gsm-check" target="_blank" rel="noopener">github.com/jinsimple/gsm-check</a></p>
@@ -264,6 +321,27 @@ const faultDiff = document.getElementById('fault-diff');
 if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
   document.getElementById('mobile-note').style.display = 'block';
 }
+
+// Scrollspy: highlight nav link cua phan dang hien tren man hinh.
+(() => {
+  const navLinks = Array.from(document.querySelectorAll('.topnav a'));
+  const sections = navLinks
+    .map(a => document.getElementById(a.dataset.nav))
+    .filter(Boolean);
+  if (!sections.length) return;
+  const setActive = (id) => {
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === id));
+  };
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      setActive(visible[0].target.id);
+    }
+  }, { rootMargin: '-56px 0px -60% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+  sections.forEach(s => observer.observe(s));
+  setActive(sections[0].id);
+})();
 
 let pyodideReady = null;
 let filesPristine = null;
