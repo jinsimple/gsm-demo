@@ -1,0 +1,53 @@
+{
+  "version": "0.1",
+  "note": "Tham so gia cuoc khach cho san pham mau A. [Suy luan] Moi con so la GIA. GHI NHAN: quang duong 0 km duoc tinh theo bac mo cua, tuc thu du tien bac mo cua. SPEC_A khong noi toi truong hop 0 km va bac dau tien duoc dinh nghia nua mo khong gom 0, nen day la mot don gian hoa cua sandbox, khong phai quy tac tu SPEC_A.",
+  "currency": "VND",
+  "tiers": [
+    {
+      "tier_id": "opening",
+      "kind": "flat",
+      "from_km": 0,
+      "to_km": 2,
+      "amount_vnd": 30000
+    },
+    {
+      "tier_id": "t2",
+      "kind": "per_km",
+      "from_km": 2,
+      "to_km": 12,
+      "rate_vnd_per_km": 15000
+    },
+    {
+      "tier_id": "t3",
+      "kind": "per_km",
+      "from_km": 12,
+      "to_km": 25,
+      "rate_vnd_per_km": 14000
+    },
+    {
+      "tier_id": "t4",
+      "kind": "per_km",
+      "from_km": 25,
+      "to_km": null,
+      "rate_vnd_per_km": 12000
+    }
+  ],
+  "time_coefficients": [
+    {
+      "window_id": "night",
+      "hours": [0, 1, 2, 3, 4, 5, 6],
+      "coef": 0.9
+    },
+    {
+      "window_id": "peak",
+      "hours": [7, 8, 9, 17, 18, 19],
+      "coef": 1.2
+    }
+  ],
+  "default_time_coef": 1.0,
+  "max_time_coef": 1.3,
+  "rounding": {
+    "mode": "up",
+    "multiple_vnd": 1000
+  }
+}

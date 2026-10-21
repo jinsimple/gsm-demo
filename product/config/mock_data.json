@@ -1,0 +1,86 @@
+{
+  "version": "0.3",
+  "note": "Tham so sinh du lieu tong hop. 100% gia lap, khong co du lieu that. CANH BAO: THU TU KHOA trong cac khoi trong so (driver_status_weights, vehicle_type_weights, customer_segment_weights) la MOT PHAN CUA SEED. Doi cho hai khoa trong cung mot khoi khong doi ngu nghia nhung doi toan bo du lieu sinh ra voi cung seed 42. Khong doi cho, khong sap xep lai.",
+  "seed": 42,
+  "base_date": "2026-10-19",
+  "utc_offset_hours": 7,
+  "bbox": {
+    "lat_min": 21.0,
+    "lat_max": 21.08,
+    "lon_min": 105.78,
+    "lon_max": 105.88
+  },
+  "coord_decimals": 6,
+  "counts": {
+    "drivers": 200,
+    "customers": 300,
+    "rides": 200
+  },
+  "id_format": {
+    "driver_prefix": "D",
+    "customer_prefix": "C",
+    "ride_prefix": "R",
+    "width": 4
+  },
+  "driver_status_weights": {
+    "idle": 0.5,
+    "busy": 0.3,
+    "offline": 0.2
+  },
+  "vehicle_type_weights": {
+    "car": 0.8,
+    "premium": 0.2
+  },
+  "customer_segment_weights": {
+    "A": 0.5,
+    "B": 0.5
+  },
+  "acceptance_rate_range": [0.4, 1.0],
+  "acceptance_rate_decimals": 2,
+  "trips_today_range": [0, 25],
+  "ride_overlay_note": "Hai nhom chuyen duoi day duoc dat len rides.json SAU khi 1.000 chuyen co so da sinh xong, bang mot dong ngau nhien RIENG cung seed 42. Nho vay drivers.json va customers.json khong doi mot byte, va moi chuyen khong thuoc hai nhom nay giu nguyen gia tri cu. CANH BAO: THU TU hai khoi (rides_in_secondary_bbox truoc, long_distance_rides sau) la MOT PHAN CUA SEED. Khong doi cho.",
+  "rides_in_secondary_bbox": {
+    "note": "Diem don VA diem den cua nhom nay nam trong bbox rieng duoi day, tach khoi bbox chinh. min_clearance_km la rang buoc hinh hoc giua hai tap diem: khoang cach nho nhat cho phep giua tap diem don cua nhom nay va tap toa do trong drivers.json; gen_mock do that va bao loi neu khong dat.",
+    "share": 0.04,
+    "bbox": {
+      "lat_min": 21.2,
+      "lat_max": 21.28,
+      "lon_min": 105.78,
+      "lon_max": 105.88
+    },
+    "min_clearance_km": 10.0
+  },
+  "long_distance_rides": {
+    "note": "Diem don giu nguyen trong bbox chinh; diem den duoc dat lai theo mot khoang cach rut tu distance_km_bands va mot huong rut tu bearing_deg_range. Cac chuyen trong nhom duoc chia luan phien cho cac band theo thu tu, nen moi band luon co it nhat mot chuyen.",
+    "share": 0.04,
+    "distance_km_bands": [[13.0, 24.0], [26.0, 40.0]],
+    "bearing_deg_range": [0.0, 360.0]
+  },
+  "coincident_driver_points": {
+    "note": "Ghi de SAU khi 200 ban ghi tai xe da sinh xong bang vong lap ngau nhien. Moi phan tu 'pairs' chon hai driver_id co san (sinh ra tu counts.drivers o tren) va dat lai lat/lon cua CA HAI thanh dung mot toa do 'point' chung, cong voi status/vehicle_type/trips_today liet ke. Khong doi vi tri bat ky tai xe nao khac ngoai cac driver_id duoc neu ten o day.",
+    "pairs": [
+      {
+        "driver_ids": ["D0001", "D0002"],
+        "point": {"lat": 21.03, "lon": 105.81},
+        "status": "idle",
+        "vehicle_type": "car",
+        "trips_today": [2, 5]
+      },
+      {
+        "driver_ids": ["D0003", "D0004"],
+        "point": {"lat": 21.06, "lon": 105.84},
+        "status": "idle",
+        "vehicle_type": "car",
+        "trips_today": [3, 3]
+      }
+    ]
+  },
+  "rides_with_pickup_at_coincident_point": {
+    "note": "Dong ngau nhien RIENG cung seed 42, tiep theo ngay sau dong chon chi so cua rides_in_secondary_bbox va long_distance_rides (CANH BAO THU TU: phai chon sau hai nhom do, tren phan chi so CON LAI, de khong giao nhau). Moi phan tu 'assignments' ung voi dung mot phan tu cua coincident_driver_points.pairs theo thu tu (pair_index la vi tri trong danh sach do). Voi moi chuyen duoc chon, diem don (pickup_lat, pickup_lon) duoc dat lai dung bang 'point' cua cap tuong ung, va vehicle_type dat lai theo gia tri duoi day; diem den (dropoff) khong doi.",
+    "vehicle_type": "car",
+    "assignments": [
+      {"pair_index": 0, "ride_count": 2},
+      {"pair_index": 1, "ride_count": 2}
+    ]
+  }
+}

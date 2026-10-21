@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSM Sandbox — demo chạy thật trong trình duyệt</title>
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.3/full/pyodide.js"></script>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 860px; margin: 24px auto; padding: 0 16px; line-height: 1.5; }
+  .note { background: #fff8e1; border: 1px solid #e0c200; padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
+  .warn { background: #fdecea; border: 1px solid #c0392b; padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
+  button { font-size: 16px; padding: 8px 16px; margin: 6px 6px 6px 0; cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: 0.5; }
+  pre { background: #f5f5f5; border: 1px solid #ddd; padding: 12px; overflow-x: auto; white-space: pre-wrap; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  td, th { border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  .st-dat { color: #1a7a1a; font-weight: 600; }
+  .st-cnx { color: #b8860b; font-weight: 600; }
+  .st-khongdat { color: #c0392b; font-weight: 600; }
+  #status { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>GSM Sandbox — A + B chạy thật trong trình duyệt</h1>
+
+<div class="note">
+Đây là bản <b>mô phỏng</b>, dữ liệu <b>hoàn toàn tổng hợp</b> (giả lập) — không phải sản phẩm thật, không phải dữ liệu thật của Green SM.
+</div>
+<div class="note">
+Trang này chạy <b>đúng mã nguồn</b> của A (bản sạch, commit <code>2abeafd</code>) và B (đóng băng tại tag <code>b-freeze</code>, commit <code>cce80bf</code>) — không sửa một dòng nào trong <code>product/</code> hay <code>auditor/</code>. Ba chỗ B gọi tiến trình con/git (không chạy được trong trình duyệt) được thay ở <b>tầng môi trường</b>, ngoài mã B.
+</div>
+<div class="warn">
+Bản thu nhỏ <b>200 chuyến</b> (báo cáo G4 đo trên 1.000 chuyến) để chạy được trong trình duyệt — mọi số đếm (số chuyến, số quyết định, kết quả M01–M12) <b>khác</b> báo cáo G4, vì cỡ mẫu nhỏ hơn làm thay đổi phân phối ngẫu nhiên. Đây là bản minh hoạ cách chạy, không phải số đo thay thế báo cáo G4.
+</div>
+<div class="note" id="mobile-note" style="display:none">
+Trang này cần máy tính (không chạy trên điện thoại/máy yếu) — tải Pyodide và chạy đủ 200 chuyến tốn vài chục giây đến vài phút CPU.
+</div>
+
+<p id="status">Đang tải Pyodide (CPython chạy trong trình duyệt)… có thể mất vài giây lần đầu.</p>
+
+<div>
+  <button id="btn-a" disabled>① Chạy A (matching + pricing, 200 chuyến)</button>
+  <button id="btn-b" disabled>② Chạy B (kiểm A theo 12 quy tắc)</button>
+</div>
+
+<h3>Kết quả A</h3>
+<pre id="out-a">(chưa chạy)</pre>
+
+<h3>Kết quả B</h3>
+<div id="out-b-table"></div>
+<pre id="out-b">(chưa chạy)</pre>
+
+<script>
+const statusEl = document.getElementById('status');
+const btnA = document.getElementById('btn-a');
+const btnB = document.getElementById('btn-b');
+const outA = document.getElementById('out-a');
+const outB = document.getElementById('out-b');
+const outBTable = document.getElementById('out-b-table');
+
+if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  document.getElementById('mobile-note').style.display = 'block';
+}
+
+let pyodideReady = null;
+
+function ensureDir(pyodide, path) {
+  const parts = path.split('/');
+  let cur = '';
+  for (let i = 0; i < parts.length - 1; i++) {
+    cur = cur ? cur + '/' + parts[i] : parts[i];
+    try { pyodide.FS.mkdir(cur); } catch (e) {}
+  }
+}
+
+async function boot() {
+  const pyodide = await loadPyodide();
+  statusEl.textContent = 'Đang nạp mã nguồn A + B vào bộ nhớ…';
+  const files = await (await fetch('files.json')).json();
+  for (const [path, content] of Object.entries(files)) {
+    ensureDir(pyodide, path);
+    pyodide.FS.writeFile(path, content);
+  }
+  try { pyodide.FS.mkdir('logs'); } catch (e) {}
+  try { pyodide.FS.mkdir('reports'); } catch (e) {}
+  statusEl.textContent = 'Sẵn sàng. Bấm ① để chạy A, ② để chạy B.';
+  btnA.disabled = false;
+  btnB.disabled = false;
+  pyodideReady = pyodide;
+}
+
+const STAGE1_PY = `
+import sys, runpy, io, contextlib, os
+os.makedirs('logs', exist_ok=True)
+os.makedirs('reports', exist_ok=True)
+buf = io.StringIO()
+old_argv = sys.argv
+sys.argv = ['run_product.py']
+try:
+    with contextlib.redirect_stdout(buf):
+        runpy.run_path('product/run_product.py', run_name='__main__')
+    _res = {'ok': True, 'stdout': buf.getvalue()}
+except SystemExit as e:
+    code = e.code if isinstance(e.code, int) else (0 if e.code is None else 1)
+    _res = {'ok': code == 0, 'stdout': buf.getvalue(), 'exit_code': code}
+except Exception as e:
+    _res = {'ok': False, 'stdout': buf.getvalue(), 'error': str(e)}
+finally:
+    sys.argv = old_argv
+_res
+`;
+
+const STAGE2_PY = `
+import subprocess, sys, runpy, io, contextlib, os, json, glob
+
+EMBEDDED_COMMIT = "cce80bf"  # tag b-freeze cua B — xem phia tren ve A/B dong o hai moc khac nhau
+TRACKED_SET = set(json.loads(TRACKED_JSON))
+
+class _FakeProc:
+    def __init__(self, returncode, stdout='', stderr=''):
+        self.returncode = returncode
+        self.stdout = stdout
+        self.stderr = stderr
+
+def _norm(p):
+    return str(p).replace('\\\\', '/')
+
+def _fake_run(cmd, **kwargs):
+    cmd = [str(c) for c in cmd]
+    if len(cmd) >= 2 and _norm(cmd[-1]).endswith('product/run_product.py'):
+        buf_out, buf_err = io.StringIO(), io.StringIO()
+        old_argv = sys.argv
+        sys.argv = ['run_product.py']
+        rc = 0
+        try:
+            with contextlib.redirect_stdout(buf_out), contextlib.redirect_stderr(buf_err):
+                runpy.run_path(cmd[-1], run_name='__main__')
+        except SystemExit as e:
+            rc = e.code if isinstance(e.code, int) else (0 if e.code is None else 1)
+        except Exception as e:
+            buf_err.write(str(e)); rc = 1
+        finally:
+            sys.argv = old_argv
+        return _FakeProc(rc, buf_out.getvalue(), buf_err.getvalue())
+    if len(cmd) >= 2 and cmd[0] == 'git' and cmd[1] == 'rev-parse':
+        return _FakeProc(0, EMBEDDED_COMMIT + '\\n', '')
+    if len(cmd) >= 3 and cmd[0] == 'git' and cmd[1] == 'ls-files':
+        target = _norm(cmd[-1])
+        if target in TRACKED_SET:
+            return _FakeProc(0, target + '\\n', '')
+        return _FakeProc(1, '', '')
+    return _FakeProc(1, '', 'shim: lenh khong duoc mo phong: ' + repr(cmd))
+
+subprocess.run = _fake_run
+
+buf = io.StringIO()
+old_argv = sys.argv
+sys.argv = ['run_audit.py']
+_ok = True
+try:
+    with contextlib.redirect_stdout(buf):
+        runpy.run_path('auditor/run_audit.py', run_name='__main__')
+except SystemExit as e:
+    _ok = (e.code in (0, None))
+except Exception as e:
+    buf.write('\\nLOI: ' + str(e))
+    _ok = False
+finally:
+    sys.argv = old_argv
+
+report_files = sorted(glob.glob('reports/audit_*.json'))
+report_json = None
+if report_files:
+    with open(report_files[-1], encoding='utf-8') as f:
+        report_json = f.read()
+
+{'ok': _ok, 'stdout': buf.getvalue(), 'report_json': report_json}
+`;
+
+btnA.addEventListener('click', async () => {
+  btnA.disabled = true;
+  outA.textContent = 'Đang chạy A trên 200 chuyến…';
+  try {
+    const result = pyodideReady.runPython(STAGE1_PY).toJs({ dict_converter: Object.fromEntries });
+    outA.textContent = (result.ok ? '[OK]\n' : '[LOI]\n') + result.stdout;
+  } catch (e) {
+    outA.textContent = 'Lỗi JS: ' + e;
+  }
+  btnA.disabled = false;
+});
+
+function renderTable(rows) {
+  let html = '<table><tr><th>ID</th><th>Kết quả</th><th>Bằng chứng (rút gọn)</th></tr>';
+  for (const row of rows) {
+    const cls = row.result === 'ĐẠT' ? 'st-dat' : (row.result === 'KHÔNG ĐẠT' ? 'st-khongdat' : 'st-cnx');
+    const ev = Array.isArray(row.evidence) ? row.evidence.slice(0, 2).join('; ') : '';
+    html += `<tr><td>${row.id}</td><td class="${cls}">${row.result}</td><td>${ev}</td></tr>`;
+  }
+  html += '</table>';
+  return html;
+}
+
+btnB.addEventListener('click', async () => {
+  btnB.disabled = true;
+  outB.textContent = 'Đang chạy B (nạp A, chạy 12 quy tắc)…';
+  outBTable.innerHTML = '';
+  try {
+    pyodideReady.globals.set('TRACKED_JSON', JSON.stringify(Object.keys(await (await fetch('files.json')).json())));
+    const result = pyodideReady.runPython(STAGE2_PY).toJs({ dict_converter: Object.fromEntries });
+    outB.textContent = (result.ok ? '[OK]\n' : '[LOI]\n') + result.stdout;
+    if (result.report_json) {
+      const report = JSON.parse(result.report_json);
+      outBTable.innerHTML = renderTable(report.rows);
+    }
+  } catch (e) {
+    outB.textContent = 'Lỗi JS: ' + e;
+  }
+  btnB.disabled = false;
+});
+
+boot();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1802 @@
+[
+  {
+    "driver_id": "D0001",
+    "lat": 21.03,
+    "lon": 105.81,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.84,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0002",
+    "lat": 21.03,
+    "lon": 105.81,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0003",
+    "lat": 21.06,
+    "lon": 105.84,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.73,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0004",
+    "lat": 21.06,
+    "lon": 105.84,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.5,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0005",
+    "lat": 21.02722,
+    "lon": 105.795548,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0006",
+    "lat": 21.028718,
+    "lon": 105.814396,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0007",
+    "lat": 21.077849,
+    "lon": 105.817853,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.77,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0008",
+    "lat": 21.046188,
+    "lon": 105.850457,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.57,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0009",
+    "lat": 21.068425,
+    "lon": 105.866648,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.9,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0010",
+    "lat": 21.029614,
+    "lon": 105.800951,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.79,
+    "trips_today": 19
+  },
+  {
+    "driver_id": "D0011",
+    "lat": 21.050798,
+    "lon": 105.833414,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.56,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0012",
+    "lat": 21.055053,
+    "lon": 105.801962,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.43,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0013",
+    "lat": 21.064404,
+    "lon": 105.820116,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.74,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0014",
+    "lat": 21.025174,
+    "lon": 105.845544,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.68,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0015",
+    "lat": 21.01117,
+    "lon": 105.854499,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.66,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0016",
+    "lat": 21.031952,
+    "lon": 105.801932,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.45,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0017",
+    "lat": 21.068888,
+    "lon": 105.795284,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.76,
+    "trips_today": 12
+  },
+  {
+    "driver_id": "D0018",
+    "lat": 21.03053,
+    "lon": 105.879612,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.92,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0019",
+    "lat": 21.054423,
+    "lon": 105.791455,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.86,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0020",
+    "lat": 21.008924,
+    "lon": 105.823477,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.93,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0021",
+    "lat": 21.077751,
+    "lon": 105.856196,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.78,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0022",
+    "lat": 21.040613,
+    "lon": 105.799891,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.97,
+    "trips_today": 16
+  },
+  {
+    "driver_id": "D0023",
+    "lat": 21.073479,
+    "lon": 105.839894,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.62,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0024",
+    "lat": 21.024601,
+    "lon": 105.785793,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.45,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0025",
+    "lat": 21.065282,
+    "lon": 105.877798,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.8,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0026",
+    "lat": 21.01321,
+    "lon": 105.832767,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.96,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0027",
+    "lat": 21.058394,
+    "lon": 105.800115,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.79,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0028",
+    "lat": 21.071969,
+    "lon": 105.825149,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.41,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0029",
+    "lat": 21.018409,
+    "lon": 105.802022,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.54,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0030",
+    "lat": 21.068771,
+    "lon": 105.787086,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.53,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0031",
+    "lat": 21.057868,
+    "lon": 105.868238,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0032",
+    "lat": 21.015233,
+    "lon": 105.789693,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 23
+  },
+  {
+    "driver_id": "D0033",
+    "lat": 21.004334,
+    "lon": 105.845346,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.84,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0034",
+    "lat": 21.068934,
+    "lon": 105.804866,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.65,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0035",
+    "lat": 21.03701,
+    "lon": 105.867449,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.91,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0036",
+    "lat": 21.004047,
+    "lon": 105.879928,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.96,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0037",
+    "lat": 21.013305,
+    "lon": 105.828564,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.44,
+    "trips_today": 12
+  },
+  {
+    "driver_id": "D0038",
+    "lat": 21.000172,
+    "lon": 105.819042,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.57,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0039",
+    "lat": 21.076585,
+    "lon": 105.879542,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.49,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0040",
+    "lat": 21.017416,
+    "lon": 105.785848,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.59,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0041",
+    "lat": 21.046734,
+    "lon": 105.830285,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.98,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0042",
+    "lat": 21.068107,
+    "lon": 105.786852,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.64,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0043",
+    "lat": 21.019697,
+    "lon": 105.839452,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.75,
+    "trips_today": 16
+  },
+  {
+    "driver_id": "D0044",
+    "lat": 21.02531,
+    "lon": 105.806077,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.56,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0045",
+    "lat": 21.053735,
+    "lon": 105.81,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.44,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0046",
+    "lat": 21.049693,
+    "lon": 105.836299,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.7,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0047",
+    "lat": 21.074661,
+    "lon": 105.868086,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.49,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0048",
+    "lat": 21.056283,
+    "lon": 105.841168,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.4,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0049",
+    "lat": 21.02395,
+    "lon": 105.846339,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.47,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0050",
+    "lat": 21.059393,
+    "lon": 105.795545,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.61,
+    "trips_today": 21
+  },
+  {
+    "driver_id": "D0051",
+    "lat": 21.050739,
+    "lon": 105.806398,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.91,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0052",
+    "lat": 21.050743,
+    "lon": 105.862935,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.48,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0053",
+    "lat": 21.012927,
+    "lon": 105.824184,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.47,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0054",
+    "lat": 21.072314,
+    "lon": 105.834559,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.49,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0055",
+    "lat": 21.003346,
+    "lon": 105.816465,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.42,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0056",
+    "lat": 21.016806,
+    "lon": 105.804953,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.93,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0057",
+    "lat": 21.077907,
+    "lon": 105.854948,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.5,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0058",
+    "lat": 21.064862,
+    "lon": 105.868142,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.6,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0059",
+    "lat": 21.064179,
+    "lon": 105.866406,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.87,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0060",
+    "lat": 21.030603,
+    "lon": 105.783872,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.95,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0061",
+    "lat": 21.024415,
+    "lon": 105.859535,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.52,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0062",
+    "lat": 21.022288,
+    "lon": 105.786942,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.71,
+    "trips_today": 21
+  },
+  {
+    "driver_id": "D0063",
+    "lat": 21.078492,
+    "lon": 105.833622,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.98,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0064",
+    "lat": 21.046447,
+    "lon": 105.878355,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.61,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0065",
+    "lat": 21.025094,
+    "lon": 105.840621,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.75,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0066",
+    "lat": 21.003551,
+    "lon": 105.823606,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.81,
+    "trips_today": 23
+  },
+  {
+    "driver_id": "D0067",
+    "lat": 21.058963,
+    "lon": 105.799704,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.95,
+    "trips_today": 19
+  },
+  {
+    "driver_id": "D0068",
+    "lat": 21.025113,
+    "lon": 105.864802,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.59,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0069",
+    "lat": 21.026095,
+    "lon": 105.849721,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.8,
+    "trips_today": 12
+  },
+  {
+    "driver_id": "D0070",
+    "lat": 21.054185,
+    "lon": 105.870281,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.73,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0071",
+    "lat": 21.02431,
+    "lon": 105.801018,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.59,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0072",
+    "lat": 21.035373,
+    "lon": 105.80137,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.88,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0073",
+    "lat": 21.052708,
+    "lon": 105.808379,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0074",
+    "lat": 21.018789,
+    "lon": 105.811042,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.43,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0075",
+    "lat": 21.048902,
+    "lon": 105.856849,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.75,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0076",
+    "lat": 21.055708,
+    "lon": 105.829438,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.4,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0077",
+    "lat": 21.068835,
+    "lon": 105.868547,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.88,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0078",
+    "lat": 21.041437,
+    "lon": 105.785022,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.67,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0079",
+    "lat": 21.037171,
+    "lon": 105.833113,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.85,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0080",
+    "lat": 21.049012,
+    "lon": 105.851927,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.73,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0081",
+    "lat": 21.059492,
+    "lon": 105.827467,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.78,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0082",
+    "lat": 21.062214,
+    "lon": 105.82846,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.83,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0083",
+    "lat": 21.021737,
+    "lon": 105.811971,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.54,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0084",
+    "lat": 21.012224,
+    "lon": 105.801395,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0085",
+    "lat": 21.016547,
+    "lon": 105.822014,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.82,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0086",
+    "lat": 21.046055,
+    "lon": 105.827698,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.63,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0087",
+    "lat": 21.043058,
+    "lon": 105.853463,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.69,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0088",
+    "lat": 21.034867,
+    "lon": 105.782902,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.64,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0089",
+    "lat": 21.06724,
+    "lon": 105.871954,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.94,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0090",
+    "lat": 21.045151,
+    "lon": 105.78271,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0091",
+    "lat": 21.020813,
+    "lon": 105.812735,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.93,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0092",
+    "lat": 21.060161,
+    "lon": 105.863192,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.41,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0093",
+    "lat": 21.004167,
+    "lon": 105.875192,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.97,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0094",
+    "lat": 21.060339,
+    "lon": 105.874961,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.49,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0095",
+    "lat": 21.037885,
+    "lon": 105.791439,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.55,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0096",
+    "lat": 21.013423,
+    "lon": 105.840725,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.89,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0097",
+    "lat": 21.008648,
+    "lon": 105.782568,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.97,
+    "trips_today": 12
+  },
+  {
+    "driver_id": "D0098",
+    "lat": 21.075318,
+    "lon": 105.799833,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.55,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0099",
+    "lat": 21.061798,
+    "lon": 105.865029,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.99,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0100",
+    "lat": 21.003286,
+    "lon": 105.833275,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.79,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0101",
+    "lat": 21.067966,
+    "lon": 105.862233,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.78,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0102",
+    "lat": 21.056585,
+    "lon": 105.823549,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.56,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0103",
+    "lat": 21.073569,
+    "lon": 105.857464,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.76,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0104",
+    "lat": 21.068137,
+    "lon": 105.863073,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.55,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0105",
+    "lat": 21.045588,
+    "lon": 105.846819,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.6,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0106",
+    "lat": 21.01697,
+    "lon": 105.859783,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.82,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0107",
+    "lat": 21.044463,
+    "lon": 105.831663,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.64,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0108",
+    "lat": 21.060653,
+    "lon": 105.849061,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.88,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0109",
+    "lat": 21.023539,
+    "lon": 105.82044,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.62,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0110",
+    "lat": 21.042474,
+    "lon": 105.82255,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.82,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0111",
+    "lat": 21.02453,
+    "lon": 105.803054,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.85,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0112",
+    "lat": 21.055213,
+    "lon": 105.799154,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.75,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0113",
+    "lat": 21.041971,
+    "lon": 105.8083,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.54,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0114",
+    "lat": 21.024181,
+    "lon": 105.850802,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.43,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0115",
+    "lat": 21.055793,
+    "lon": 105.792628,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.92,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0116",
+    "lat": 21.022747,
+    "lon": 105.827871,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.55,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0117",
+    "lat": 21.009127,
+    "lon": 105.786534,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.81,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0118",
+    "lat": 21.011936,
+    "lon": 105.836284,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.47,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0119",
+    "lat": 21.033294,
+    "lon": 105.839613,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.63,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0120",
+    "lat": 21.023788,
+    "lon": 105.838853,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.44,
+    "trips_today": 23
+  },
+  {
+    "driver_id": "D0121",
+    "lat": 21.007939,
+    "lon": 105.856274,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.45,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0122",
+    "lat": 21.013905,
+    "lon": 105.787506,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.76,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0123",
+    "lat": 21.002611,
+    "lon": 105.80881,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.44,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0124",
+    "lat": 21.073913,
+    "lon": 105.858783,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.96,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0125",
+    "lat": 21.009182,
+    "lon": 105.802481,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.49,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0126",
+    "lat": 21.013274,
+    "lon": 105.810761,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.57,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0127",
+    "lat": 21.037496,
+    "lon": 105.810409,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.72,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0128",
+    "lat": 21.006435,
+    "lon": 105.783986,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.55,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0129",
+    "lat": 21.018314,
+    "lon": 105.84743,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.41,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0130",
+    "lat": 21.053783,
+    "lon": 105.806951,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0131",
+    "lat": 21.035378,
+    "lon": 105.807816,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.89,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0132",
+    "lat": 21.037601,
+    "lon": 105.820835,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.5,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0133",
+    "lat": 21.055494,
+    "lon": 105.808822,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.73,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0134",
+    "lat": 21.007045,
+    "lon": 105.80524,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.92,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0135",
+    "lat": 21.052613,
+    "lon": 105.834259,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.62,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0136",
+    "lat": 21.039879,
+    "lon": 105.824204,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.48,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0137",
+    "lat": 21.035049,
+    "lon": 105.849825,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.77,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0138",
+    "lat": 21.056783,
+    "lon": 105.811075,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.53,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0139",
+    "lat": 21.036916,
+    "lon": 105.791747,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.83,
+    "trips_today": 16
+  },
+  {
+    "driver_id": "D0140",
+    "lat": 21.056433,
+    "lon": 105.821549,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.67,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0141",
+    "lat": 21.030687,
+    "lon": 105.872187,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.92,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0142",
+    "lat": 21.061814,
+    "lon": 105.865441,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.56,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0143",
+    "lat": 21.022627,
+    "lon": 105.809856,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.69,
+    "trips_today": 4
+  },
+  {
+    "driver_id": "D0144",
+    "lat": 21.035724,
+    "lon": 105.828434,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.63,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0145",
+    "lat": 21.069568,
+    "lon": 105.878077,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.91,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0146",
+    "lat": 21.003492,
+    "lon": 105.854471,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.63,
+    "trips_today": 21
+  },
+  {
+    "driver_id": "D0147",
+    "lat": 21.063391,
+    "lon": 105.845202,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.48,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0148",
+    "lat": 21.02656,
+    "lon": 105.790036,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.95,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0149",
+    "lat": 21.057796,
+    "lon": 105.820998,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.68,
+    "trips_today": 8
+  },
+  {
+    "driver_id": "D0150",
+    "lat": 21.027085,
+    "lon": 105.84927,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.91,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0151",
+    "lat": 21.030401,
+    "lon": 105.811666,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.92,
+    "trips_today": 1
+  },
+  {
+    "driver_id": "D0152",
+    "lat": 21.049397,
+    "lon": 105.803477,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.54,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0153",
+    "lat": 21.034718,
+    "lon": 105.789844,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.67,
+    "trips_today": 22
+  },
+  {
+    "driver_id": "D0154",
+    "lat": 21.023957,
+    "lon": 105.782895,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.62,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0155",
+    "lat": 21.011646,
+    "lon": 105.833117,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.5,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0156",
+    "lat": 21.048759,
+    "lon": 105.818254,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.75,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0157",
+    "lat": 21.036892,
+    "lon": 105.805398,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.88,
+    "trips_today": 9
+  },
+  {
+    "driver_id": "D0158",
+    "lat": 21.054209,
+    "lon": 105.795798,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.75,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0159",
+    "lat": 21.076962,
+    "lon": 105.849031,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 1.0,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0160",
+    "lat": 21.008532,
+    "lon": 105.818136,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.82,
+    "trips_today": 0
+  },
+  {
+    "driver_id": "D0161",
+    "lat": 21.078236,
+    "lon": 105.845823,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.81,
+    "trips_today": 23
+  },
+  {
+    "driver_id": "D0162",
+    "lat": 21.077888,
+    "lon": 105.871062,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.94,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0163",
+    "lat": 21.063909,
+    "lon": 105.840706,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.77,
+    "trips_today": 21
+  },
+  {
+    "driver_id": "D0164",
+    "lat": 21.060446,
+    "lon": 105.856747,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0165",
+    "lat": 21.051707,
+    "lon": 105.810893,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.84,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0166",
+    "lat": 21.07277,
+    "lon": 105.812672,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.87,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0167",
+    "lat": 21.042468,
+    "lon": 105.871349,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.89,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0168",
+    "lat": 21.077391,
+    "lon": 105.809514,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.68,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0169",
+    "lat": 21.011261,
+    "lon": 105.87665,
+    "status": "offline",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.99,
+    "trips_today": 25
+  },
+  {
+    "driver_id": "D0170",
+    "lat": 21.044585,
+    "lon": 105.78903,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.47,
+    "trips_today": 11
+  },
+  {
+    "driver_id": "D0171",
+    "lat": 21.053826,
+    "lon": 105.847234,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.96,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0172",
+    "lat": 21.053987,
+    "lon": 105.827148,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.6,
+    "trips_today": 19
+  },
+  {
+    "driver_id": "D0173",
+    "lat": 21.017709,
+    "lon": 105.786322,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.58,
+    "trips_today": 13
+  },
+  {
+    "driver_id": "D0174",
+    "lat": 21.009334,
+    "lon": 105.784535,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.47,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0175",
+    "lat": 21.070981,
+    "lon": 105.793566,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.85,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0176",
+    "lat": 21.03353,
+    "lon": 105.854227,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 15
+  },
+  {
+    "driver_id": "D0177",
+    "lat": 21.049252,
+    "lon": 105.873905,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.53,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0178",
+    "lat": 21.076044,
+    "lon": 105.865545,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.73,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0179",
+    "lat": 21.028694,
+    "lon": 105.819814,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.91,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0180",
+    "lat": 21.007334,
+    "lon": 105.801211,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.43,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0181",
+    "lat": 21.019486,
+    "lon": 105.792592,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.86,
+    "trips_today": 6
+  },
+  {
+    "driver_id": "D0182",
+    "lat": 21.046911,
+    "lon": 105.861305,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.87,
+    "trips_today": 19
+  },
+  {
+    "driver_id": "D0183",
+    "lat": 21.000227,
+    "lon": 105.865841,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.55,
+    "trips_today": 5
+  },
+  {
+    "driver_id": "D0184",
+    "lat": 21.008794,
+    "lon": 105.866645,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.87,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0185",
+    "lat": 21.025902,
+    "lon": 105.797425,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.72,
+    "trips_today": 23
+  },
+  {
+    "driver_id": "D0186",
+    "lat": 21.005085,
+    "lon": 105.824828,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.67,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0187",
+    "lat": 21.075633,
+    "lon": 105.784337,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.71,
+    "trips_today": 14
+  },
+  {
+    "driver_id": "D0188",
+    "lat": 21.051467,
+    "lon": 105.783115,
+    "status": "offline",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.66,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0189",
+    "lat": 21.039222,
+    "lon": 105.87097,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.76,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0190",
+    "lat": 21.010095,
+    "lon": 105.842432,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.63,
+    "trips_today": 19
+  },
+  {
+    "driver_id": "D0191",
+    "lat": 21.042445,
+    "lon": 105.825372,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.82,
+    "trips_today": 20
+  },
+  {
+    "driver_id": "D0192",
+    "lat": 21.052073,
+    "lon": 105.856896,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.67,
+    "trips_today": 7
+  },
+  {
+    "driver_id": "D0193",
+    "lat": 21.033105,
+    "lon": 105.862742,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.59,
+    "trips_today": 10
+  },
+  {
+    "driver_id": "D0194",
+    "lat": 21.053209,
+    "lon": 105.81743,
+    "status": "idle",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.44,
+    "trips_today": 2
+  },
+  {
+    "driver_id": "D0195",
+    "lat": 21.007458,
+    "lon": 105.789656,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.73,
+    "trips_today": 18
+  },
+  {
+    "driver_id": "D0196",
+    "lat": 21.07653,
+    "lon": 105.836168,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.92,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0197",
+    "lat": 21.033835,
+    "lon": 105.871584,
+    "status": "idle",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.59,
+    "trips_today": 3
+  },
+  {
+    "driver_id": "D0198",
+    "lat": 21.046233,
+    "lon": 105.801274,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.46,
+    "trips_today": 17
+  },
+  {
+    "driver_id": "D0199",
+    "lat": 21.029405,
+    "lon": 105.856261,
+    "status": "busy",
+    "vehicle_type": "premium",
+    "acceptance_rate": 0.91,
+    "trips_today": 24
+  },
+  {
+    "driver_id": "D0200",
+    "lat": 21.065474,
+    "lon": 105.841357,
+    "status": "busy",
+    "vehicle_type": "car",
+    "acceptance_rate": 0.96,
+    "trips_today": 22
+  }
+]

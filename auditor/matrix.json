@@ -1,0 +1,115 @@
+{
+  "version": "0.1",
+  "source": "docs/MATRIX_v0.md",
+  "note": "[Suy luận] Sinh tay tu bang Ma tran trong MATRIX_v0.md (dong 22-35). Cot Mechanism/Effect de trong theo chot G1.",
+  "rows": [
+    {
+      "id": "M01",
+      "control": "A.5.4 Tác động lên cá nhân/nhóm",
+      "law": "AI Act PL III 4(b); PWD Đ.8",
+      "rule": "Chênh lệch tỷ lệ được ghép hoặc khoảng cách trung bình giữa các nhóm vượt ngưỡng (mặc định 10%)",
+      "evidence_source": "log matching, kết quả chạy",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M02",
+      "control": "A.7.4 Chất lượng dữ liệu",
+      "law": "PWD Đ.7",
+      "rule": "Code matching đọc thuộc tính KHÔNG nằm trong danh sách cho phép ở INTERFACE",
+      "evidence_source": "phân tích tĩnh (AST)",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M03",
+      "control": "A.7.5 Nguồn gốc dữ liệu",
+      "law": "GDPR Đ.5(1)(c)",
+      "rule": "Mock data có trường mang định dạng dữ liệu cá nhân thật (SĐT, email, CCCD…)",
+      "evidence_source": "quét regex trên data/",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M04",
+      "control": "A.6.2.8 Log sự kiện",
+      "law": "AI Act Đ.12",
+      "rule": "Số quyết định ≠ số quyết định có log; hoặc có nhánh return không gọi log",
+      "evidence_source": "AST + đối chiếu log",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M05",
+      "control": "A.6.2.3 Tài liệu thiết kế",
+      "law": "AI Act Đ.11",
+      "rule": "Hằng số số học nghiệp vụ trong code không có trong config",
+      "evidence_source": "AST",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M06",
+      "control": "A.6.2.7 Tài liệu kỹ thuật",
+      "law": "AI Act Đ.11",
+      "rule": "File config thiếu trường version",
+      "evidence_source": "đọc config",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M07",
+      "control": "A.9.2 Sử dụng có trách nhiệm",
+      "law": "GDPR Đ.22; PWD Đ.10",
+      "rule": "Có hành động bất lợi hoặc ràng buộc lên tài xế (khóa, phạt, hạ ưu tiên, tự động nhận chuyến) mà không có bước/cờ con người xem xét",
+      "evidence_source": "AST + log",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M08",
+      "control": "A.5.2 Quy trình đánh giá tác động",
+      "law": "GDPR Đ.35; PWD Đ.8",
+      "rule": "Không có tài liệu đánh giá tác động trong docs/",
+      "evidence_source": "quét docs/",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M09",
+      "control": "A.8.2 Thông tin cho người dùng",
+      "law": "PWD Đ.9",
+      "rule": "Quyết định không kèm reason đọc được",
+      "evidence_source": "log",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M10",
+      "control": "A.6.2.4 Kiểm chứng & xác nhận",
+      "law": "AI Act Đ.15",
+      "rule": "Cùng đầu vào chạy 3 lần → kết quả khác nhau",
+      "evidence_source": "chạy lặp",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M11",
+      "control": "A.5.4 (pricing)",
+      "law": "Luật tiêu dùng EU [Suy luận]",
+      "rule": "Giá phụ thuộc thuộc tính của khách ngoài quãng đường và thời điểm",
+      "evidence_source": "AST + thống kê theo segment",
+      "mechanism": "",
+      "effect": ""
+    },
+    {
+      "id": "M12",
+      "control": "A.6.2.6 Vận hành & giám sát",
+      "law": "AI Act Đ.72 [Suy luận]",
+      "rule": "Không có ngưỡng cảnh báo cho tỷ lệ auto_accept",
+      "evidence_source": "đọc config + code",
+      "mechanism": "",
+      "effect": ""
+    }
+  ]
+}

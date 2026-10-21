@@ -1,0 +1,2002 @@
+[
+  {
+    "ride_id": "R0001",
+    "customer_id": "C0130",
+    "vehicle_type": "car",
+    "pickup_lat": 21.028568,
+    "pickup_lon": 105.786756,
+    "dropoff_lat": 21.01929,
+    "dropoff_lon": 105.84571,
+    "requested_at": "2026-10-19T00:00:00+07:00"
+  },
+  {
+    "ride_id": "R0002",
+    "customer_id": "C0054",
+    "vehicle_type": "car",
+    "pickup_lat": 21.058815,
+    "pickup_lon": 105.813252,
+    "dropoff_lat": 21.003547,
+    "dropoff_lon": 105.834601,
+    "requested_at": "2026-10-19T00:07:12+07:00"
+  },
+  {
+    "ride_id": "R0003",
+    "customer_id": "C0090",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.054775,
+    "pickup_lon": 105.878082,
+    "dropoff_lat": 21.038282,
+    "dropoff_lon": 105.798228,
+    "requested_at": "2026-10-19T00:14:24+07:00"
+  },
+  {
+    "ride_id": "R0004",
+    "customer_id": "C0070",
+    "vehicle_type": "car",
+    "pickup_lat": 21.062095,
+    "pickup_lon": 105.825768,
+    "dropoff_lat": 21.023475,
+    "dropoff_lon": 105.784381,
+    "requested_at": "2026-10-19T00:21:36+07:00"
+  },
+  {
+    "ride_id": "R0005",
+    "customer_id": "C0103",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.025248,
+    "pickup_lon": 105.811008,
+    "dropoff_lat": 21.031858,
+    "dropoff_lon": 105.861541,
+    "requested_at": "2026-10-19T00:28:48+07:00"
+  },
+  {
+    "ride_id": "R0006",
+    "customer_id": "C0243",
+    "vehicle_type": "car",
+    "pickup_lat": 21.060263,
+    "pickup_lon": 105.79911,
+    "dropoff_lat": 21.028558,
+    "dropoff_lon": 105.858084,
+    "requested_at": "2026-10-19T00:36:00+07:00"
+  },
+  {
+    "ride_id": "R0007",
+    "customer_id": "C0170",
+    "vehicle_type": "car",
+    "pickup_lat": 21.202543,
+    "pickup_lon": 105.78937,
+    "dropoff_lat": 21.218613,
+    "dropoff_lon": 105.840202,
+    "requested_at": "2026-10-19T00:43:12+07:00"
+  },
+  {
+    "ride_id": "R0008",
+    "customer_id": "C0198",
+    "vehicle_type": "car",
+    "pickup_lat": 21.03,
+    "pickup_lon": 105.81,
+    "dropoff_lat": 21.029388,
+    "dropoff_lon": 105.859729,
+    "requested_at": "2026-10-19T00:50:24+07:00"
+  },
+  {
+    "ride_id": "R0009",
+    "customer_id": "C0137",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.058167,
+    "pickup_lon": 105.787893,
+    "dropoff_lat": 21.048196,
+    "dropoff_lon": 105.862234,
+    "requested_at": "2026-10-19T00:57:36+07:00"
+  },
+  {
+    "ride_id": "R0010",
+    "customer_id": "C0280",
+    "vehicle_type": "car",
+    "pickup_lat": 21.008208,
+    "pickup_lon": 105.812792,
+    "dropoff_lat": 21.023651,
+    "dropoff_lon": 105.824592,
+    "requested_at": "2026-10-19T01:04:48+07:00"
+  },
+  {
+    "ride_id": "R0011",
+    "customer_id": "C0219",
+    "vehicle_type": "car",
+    "pickup_lat": 21.035513,
+    "pickup_lon": 105.824713,
+    "dropoff_lat": 21.058145,
+    "dropoff_lon": 105.871161,
+    "requested_at": "2026-10-19T01:12:00+07:00"
+  },
+  {
+    "ride_id": "R0012",
+    "customer_id": "C0223",
+    "vehicle_type": "car",
+    "pickup_lat": 21.078402,
+    "pickup_lon": 105.87479,
+    "dropoff_lat": 21.006003,
+    "dropoff_lon": 105.843751,
+    "requested_at": "2026-10-19T01:19:12+07:00"
+  },
+  {
+    "ride_id": "R0013",
+    "customer_id": "C0187",
+    "vehicle_type": "car",
+    "pickup_lat": 21.059992,
+    "pickup_lon": 105.795999,
+    "dropoff_lat": 21.002491,
+    "dropoff_lon": 105.864867,
+    "requested_at": "2026-10-19T01:26:24+07:00"
+  },
+  {
+    "ride_id": "R0014",
+    "customer_id": "C0225",
+    "vehicle_type": "car",
+    "pickup_lat": 21.005379,
+    "pickup_lon": 105.857852,
+    "dropoff_lat": 21.029306,
+    "dropoff_lon": 105.818285,
+    "requested_at": "2026-10-19T01:33:36+07:00"
+  },
+  {
+    "ride_id": "R0015",
+    "customer_id": "C0291",
+    "vehicle_type": "car",
+    "pickup_lat": 21.012275,
+    "pickup_lon": 105.824992,
+    "dropoff_lat": 21.029677,
+    "dropoff_lon": 105.824394,
+    "requested_at": "2026-10-19T01:40:48+07:00"
+  },
+  {
+    "ride_id": "R0016",
+    "customer_id": "C0040",
+    "vehicle_type": "car",
+    "pickup_lat": 21.042357,
+    "pickup_lon": 105.819803,
+    "dropoff_lat": 21.051965,
+    "dropoff_lon": 105.804961,
+    "requested_at": "2026-10-19T01:48:00+07:00"
+  },
+  {
+    "ride_id": "R0017",
+    "customer_id": "C0059",
+    "vehicle_type": "car",
+    "pickup_lat": 21.014884,
+    "pickup_lon": 105.831775,
+    "dropoff_lat": 21.073083,
+    "dropoff_lon": 105.791776,
+    "requested_at": "2026-10-19T01:55:12+07:00"
+  },
+  {
+    "ride_id": "R0018",
+    "customer_id": "C0134",
+    "vehicle_type": "car",
+    "pickup_lat": 21.017166,
+    "pickup_lon": 105.841188,
+    "dropoff_lat": 21.055518,
+    "dropoff_lon": 105.879863,
+    "requested_at": "2026-10-19T02:02:24+07:00"
+  },
+  {
+    "ride_id": "R0019",
+    "customer_id": "C0103",
+    "vehicle_type": "car",
+    "pickup_lat": 21.068226,
+    "pickup_lon": 105.825204,
+    "dropoff_lat": 21.071894,
+    "dropoff_lon": 105.824511,
+    "requested_at": "2026-10-19T02:09:36+07:00"
+  },
+  {
+    "ride_id": "R0020",
+    "customer_id": "C0045",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.077405,
+    "pickup_lon": 105.878657,
+    "dropoff_lat": 21.053427,
+    "dropoff_lon": 105.850954,
+    "requested_at": "2026-10-19T02:16:48+07:00"
+  },
+  {
+    "ride_id": "R0021",
+    "customer_id": "C0282",
+    "vehicle_type": "car",
+    "pickup_lat": 21.071307,
+    "pickup_lon": 105.865136,
+    "dropoff_lat": 21.056945,
+    "dropoff_lon": 105.872732,
+    "requested_at": "2026-10-19T02:24:00+07:00"
+  },
+  {
+    "ride_id": "R0022",
+    "customer_id": "C0090",
+    "vehicle_type": "car",
+    "pickup_lat": 21.0407,
+    "pickup_lon": 105.792136,
+    "dropoff_lat": 21.016078,
+    "dropoff_lon": 105.793888,
+    "requested_at": "2026-10-19T02:31:12+07:00"
+  },
+  {
+    "ride_id": "R0023",
+    "customer_id": "C0253",
+    "vehicle_type": "car",
+    "pickup_lat": 21.044322,
+    "pickup_lon": 105.816891,
+    "dropoff_lat": 21.064293,
+    "dropoff_lon": 105.835165,
+    "requested_at": "2026-10-19T02:38:24+07:00"
+  },
+  {
+    "ride_id": "R0024",
+    "customer_id": "C0045",
+    "vehicle_type": "car",
+    "pickup_lat": 21.031853,
+    "pickup_lon": 105.851693,
+    "dropoff_lat": 20.966316,
+    "dropoff_lon": 105.7392,
+    "requested_at": "2026-10-19T02:45:36+07:00"
+  },
+  {
+    "ride_id": "R0025",
+    "customer_id": "C0210",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.0059,
+    "pickup_lon": 105.877238,
+    "dropoff_lat": 21.051387,
+    "dropoff_lon": 105.824997,
+    "requested_at": "2026-10-19T02:52:48+07:00"
+  },
+  {
+    "ride_id": "R0026",
+    "customer_id": "C0265",
+    "vehicle_type": "car",
+    "pickup_lat": 21.070237,
+    "pickup_lon": 105.858026,
+    "dropoff_lat": 21.051184,
+    "dropoff_lon": 105.798196,
+    "requested_at": "2026-10-19T03:00:00+07:00"
+  },
+  {
+    "ride_id": "R0027",
+    "customer_id": "C0067",
+    "vehicle_type": "car",
+    "pickup_lat": 21.072857,
+    "pickup_lon": 105.785541,
+    "dropoff_lat": 21.009933,
+    "dropoff_lon": 105.795302,
+    "requested_at": "2026-10-19T03:07:12+07:00"
+  },
+  {
+    "ride_id": "R0028",
+    "customer_id": "C0085",
+    "vehicle_type": "car",
+    "pickup_lat": 21.074779,
+    "pickup_lon": 105.802547,
+    "dropoff_lat": 21.404506,
+    "dropoff_lon": 105.769567,
+    "requested_at": "2026-10-19T03:14:24+07:00"
+  },
+  {
+    "ride_id": "R0029",
+    "customer_id": "C0146",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.2449,
+    "pickup_lon": 105.851602,
+    "dropoff_lat": 21.256106,
+    "dropoff_lon": 105.821952,
+    "requested_at": "2026-10-19T03:21:36+07:00"
+  },
+  {
+    "ride_id": "R0030",
+    "customer_id": "C0156",
+    "vehicle_type": "car",
+    "pickup_lat": 21.007474,
+    "pickup_lon": 105.844099,
+    "dropoff_lat": 21.047345,
+    "dropoff_lon": 105.838065,
+    "requested_at": "2026-10-19T03:28:48+07:00"
+  },
+  {
+    "ride_id": "R0031",
+    "customer_id": "C0088",
+    "vehicle_type": "car",
+    "pickup_lat": 21.057651,
+    "pickup_lon": 105.840514,
+    "dropoff_lat": 21.067402,
+    "dropoff_lon": 105.836362,
+    "requested_at": "2026-10-19T03:36:00+07:00"
+  },
+  {
+    "ride_id": "R0032",
+    "customer_id": "C0015",
+    "vehicle_type": "car",
+    "pickup_lat": 21.075884,
+    "pickup_lon": 105.857102,
+    "dropoff_lat": 21.021172,
+    "dropoff_lon": 105.801081,
+    "requested_at": "2026-10-19T03:43:12+07:00"
+  },
+  {
+    "ride_id": "R0033",
+    "customer_id": "C0293",
+    "vehicle_type": "car",
+    "pickup_lat": 21.03,
+    "pickup_lon": 105.81,
+    "dropoff_lat": 21.050173,
+    "dropoff_lon": 105.808967,
+    "requested_at": "2026-10-19T03:50:24+07:00"
+  },
+  {
+    "ride_id": "R0034",
+    "customer_id": "C0155",
+    "vehicle_type": "car",
+    "pickup_lat": 21.064375,
+    "pickup_lon": 105.848499,
+    "dropoff_lat": 21.023795,
+    "dropoff_lon": 105.787297,
+    "requested_at": "2026-10-19T03:57:36+07:00"
+  },
+  {
+    "ride_id": "R0035",
+    "customer_id": "C0031",
+    "vehicle_type": "car",
+    "pickup_lat": 21.03325,
+    "pickup_lon": 105.826444,
+    "dropoff_lat": 21.027215,
+    "dropoff_lon": 105.794367,
+    "requested_at": "2026-10-19T04:04:48+07:00"
+  },
+  {
+    "ride_id": "R0036",
+    "customer_id": "C0164",
+    "vehicle_type": "car",
+    "pickup_lat": 21.235937,
+    "pickup_lon": 105.807819,
+    "dropoff_lat": 21.269544,
+    "dropoff_lon": 105.855881,
+    "requested_at": "2026-10-19T04:12:00+07:00"
+  },
+  {
+    "ride_id": "R0037",
+    "customer_id": "C0288",
+    "vehicle_type": "car",
+    "pickup_lat": 21.019339,
+    "pickup_lon": 105.792252,
+    "dropoff_lat": 21.035968,
+    "dropoff_lon": 105.794088,
+    "requested_at": "2026-10-19T04:19:12+07:00"
+  },
+  {
+    "ride_id": "R0038",
+    "customer_id": "C0026",
+    "vehicle_type": "car",
+    "pickup_lat": 21.030732,
+    "pickup_lon": 105.841538,
+    "dropoff_lat": 21.019862,
+    "dropoff_lon": 105.866531,
+    "requested_at": "2026-10-19T04:26:24+07:00"
+  },
+  {
+    "ride_id": "R0039",
+    "customer_id": "C0082",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.0747,
+    "pickup_lon": 105.852113,
+    "dropoff_lat": 21.015187,
+    "dropoff_lon": 105.795934,
+    "requested_at": "2026-10-19T04:33:36+07:00"
+  },
+  {
+    "ride_id": "R0040",
+    "customer_id": "C0264",
+    "vehicle_type": "car",
+    "pickup_lat": 21.070326,
+    "pickup_lon": 105.829737,
+    "dropoff_lat": 21.007204,
+    "dropoff_lon": 105.819324,
+    "requested_at": "2026-10-19T04:40:48+07:00"
+  },
+  {
+    "ride_id": "R0041",
+    "customer_id": "C0235",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.017212,
+    "pickup_lon": 105.81529,
+    "dropoff_lat": 21.004043,
+    "dropoff_lon": 105.829489,
+    "requested_at": "2026-10-19T04:48:00+07:00"
+  },
+  {
+    "ride_id": "R0042",
+    "customer_id": "C0241",
+    "vehicle_type": "car",
+    "pickup_lat": 21.000654,
+    "pickup_lon": 105.79075,
+    "dropoff_lat": 21.010715,
+    "dropoff_lon": 105.806447,
+    "requested_at": "2026-10-19T04:55:12+07:00"
+  },
+  {
+    "ride_id": "R0043",
+    "customer_id": "C0188",
+    "vehicle_type": "car",
+    "pickup_lat": 21.029275,
+    "pickup_lon": 105.820058,
+    "dropoff_lat": 21.045623,
+    "dropoff_lon": 105.799466,
+    "requested_at": "2026-10-19T05:02:24+07:00"
+  },
+  {
+    "ride_id": "R0044",
+    "customer_id": "C0284",
+    "vehicle_type": "car",
+    "pickup_lat": 21.030908,
+    "pickup_lon": 105.825035,
+    "dropoff_lat": 21.043989,
+    "dropoff_lon": 105.862531,
+    "requested_at": "2026-10-19T05:09:36+07:00"
+  },
+  {
+    "ride_id": "R0045",
+    "customer_id": "C0061",
+    "vehicle_type": "car",
+    "pickup_lat": 21.007735,
+    "pickup_lon": 105.81732,
+    "dropoff_lat": 21.078943,
+    "dropoff_lon": 105.835783,
+    "requested_at": "2026-10-19T05:16:48+07:00"
+  },
+  {
+    "ride_id": "R0046",
+    "customer_id": "C0188",
+    "vehicle_type": "car",
+    "pickup_lat": 21.015925,
+    "pickup_lon": 105.830912,
+    "dropoff_lat": 21.040006,
+    "dropoff_lon": 105.78453,
+    "requested_at": "2026-10-19T05:24:00+07:00"
+  },
+  {
+    "ride_id": "R0047",
+    "customer_id": "C0071",
+    "vehicle_type": "car",
+    "pickup_lat": 21.064317,
+    "pickup_lon": 105.831933,
+    "dropoff_lat": 21.011915,
+    "dropoff_lon": 105.869313,
+    "requested_at": "2026-10-19T05:31:12+07:00"
+  },
+  {
+    "ride_id": "R0048",
+    "customer_id": "C0072",
+    "vehicle_type": "car",
+    "pickup_lat": 21.049045,
+    "pickup_lon": 105.79625,
+    "dropoff_lat": 21.079249,
+    "dropoff_lon": 105.853932,
+    "requested_at": "2026-10-19T05:38:24+07:00"
+  },
+  {
+    "ride_id": "R0049",
+    "customer_id": "C0154",
+    "vehicle_type": "car",
+    "pickup_lat": 21.040585,
+    "pickup_lon": 105.830971,
+    "dropoff_lat": 21.039188,
+    "dropoff_lon": 105.836292,
+    "requested_at": "2026-10-19T05:45:36+07:00"
+  },
+  {
+    "ride_id": "R0050",
+    "customer_id": "C0244",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.029469,
+    "pickup_lon": 105.847381,
+    "dropoff_lat": 21.078392,
+    "dropoff_lon": 105.83837,
+    "requested_at": "2026-10-19T05:52:48+07:00"
+  },
+  {
+    "ride_id": "R0051",
+    "customer_id": "C0014",
+    "vehicle_type": "car",
+    "pickup_lat": 21.021242,
+    "pickup_lon": 105.845559,
+    "dropoff_lat": 21.077765,
+    "dropoff_lon": 105.837847,
+    "requested_at": "2026-10-19T06:00:00+07:00"
+  },
+  {
+    "ride_id": "R0052",
+    "customer_id": "C0117",
+    "vehicle_type": "car",
+    "pickup_lat": 21.046682,
+    "pickup_lon": 105.797051,
+    "dropoff_lat": 21.050322,
+    "dropoff_lon": 105.841974,
+    "requested_at": "2026-10-19T06:07:12+07:00"
+  },
+  {
+    "ride_id": "R0053",
+    "customer_id": "C0195",
+    "vehicle_type": "car",
+    "pickup_lat": 21.054458,
+    "pickup_lon": 105.783157,
+    "dropoff_lat": 21.075856,
+    "dropoff_lon": 105.79099,
+    "requested_at": "2026-10-19T06:14:24+07:00"
+  },
+  {
+    "ride_id": "R0054",
+    "customer_id": "C0010",
+    "vehicle_type": "car",
+    "pickup_lat": 21.033502,
+    "pickup_lon": 105.821296,
+    "dropoff_lat": 21.016311,
+    "dropoff_lon": 105.830182,
+    "requested_at": "2026-10-19T06:21:36+07:00"
+  },
+  {
+    "ride_id": "R0055",
+    "customer_id": "C0242",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.058867,
+    "pickup_lon": 105.786228,
+    "dropoff_lat": 21.011047,
+    "dropoff_lon": 105.800734,
+    "requested_at": "2026-10-19T06:28:48+07:00"
+  },
+  {
+    "ride_id": "R0056",
+    "customer_id": "C0167",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.03827,
+    "pickup_lon": 105.817682,
+    "dropoff_lat": 21.076535,
+    "dropoff_lon": 105.825966,
+    "requested_at": "2026-10-19T06:36:00+07:00"
+  },
+  {
+    "ride_id": "R0057",
+    "customer_id": "C0273",
+    "vehicle_type": "car",
+    "pickup_lat": 21.028343,
+    "pickup_lon": 105.857199,
+    "dropoff_lat": 21.057674,
+    "dropoff_lon": 105.844331,
+    "requested_at": "2026-10-19T06:43:12+07:00"
+  },
+  {
+    "ride_id": "R0058",
+    "customer_id": "C0136",
+    "vehicle_type": "car",
+    "pickup_lat": 21.212773,
+    "pickup_lon": 105.822261,
+    "dropoff_lat": 21.22223,
+    "dropoff_lon": 105.801531,
+    "requested_at": "2026-10-19T06:50:24+07:00"
+  },
+  {
+    "ride_id": "R0059",
+    "customer_id": "C0153",
+    "vehicle_type": "car",
+    "pickup_lat": 21.056392,
+    "pickup_lon": 105.849024,
+    "dropoff_lat": 21.03912,
+    "dropoff_lon": 105.82798,
+    "requested_at": "2026-10-19T06:57:36+07:00"
+  },
+  {
+    "ride_id": "R0060",
+    "customer_id": "C0287",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.063632,
+    "pickup_lon": 105.807346,
+    "dropoff_lat": 21.00975,
+    "dropoff_lon": 105.847662,
+    "requested_at": "2026-10-19T07:04:48+07:00"
+  },
+  {
+    "ride_id": "R0061",
+    "customer_id": "C0195",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.031563,
+    "pickup_lon": 105.814513,
+    "dropoff_lat": 21.061845,
+    "dropoff_lon": 105.794648,
+    "requested_at": "2026-10-19T07:12:00+07:00"
+  },
+  {
+    "ride_id": "R0062",
+    "customer_id": "C0022",
+    "vehicle_type": "car",
+    "pickup_lat": 21.057131,
+    "pickup_lon": 105.814636,
+    "dropoff_lat": 21.03539,
+    "dropoff_lon": 105.805644,
+    "requested_at": "2026-10-19T07:19:12+07:00"
+  },
+  {
+    "ride_id": "R0063",
+    "customer_id": "C0246",
+    "vehicle_type": "car",
+    "pickup_lat": 21.26108,
+    "pickup_lon": 105.790221,
+    "dropoff_lat": 21.230394,
+    "dropoff_lon": 105.815898,
+    "requested_at": "2026-10-19T07:26:24+07:00"
+  },
+  {
+    "ride_id": "R0064",
+    "customer_id": "C0056",
+    "vehicle_type": "car",
+    "pickup_lat": 21.046946,
+    "pickup_lon": 105.804246,
+    "dropoff_lat": 21.053587,
+    "dropoff_lon": 105.833104,
+    "requested_at": "2026-10-19T07:33:36+07:00"
+  },
+  {
+    "ride_id": "R0065",
+    "customer_id": "C0120",
+    "vehicle_type": "car",
+    "pickup_lat": 21.033064,
+    "pickup_lon": 105.851736,
+    "dropoff_lat": 21.008044,
+    "dropoff_lon": 105.857077,
+    "requested_at": "2026-10-19T07:40:48+07:00"
+  },
+  {
+    "ride_id": "R0066",
+    "customer_id": "C0003",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.078233,
+    "pickup_lon": 105.795794,
+    "dropoff_lat": 21.052231,
+    "dropoff_lon": 105.868065,
+    "requested_at": "2026-10-19T07:48:00+07:00"
+  },
+  {
+    "ride_id": "R0067",
+    "customer_id": "C0244",
+    "vehicle_type": "car",
+    "pickup_lat": 21.015956,
+    "pickup_lon": 105.876391,
+    "dropoff_lat": 21.025693,
+    "dropoff_lon": 105.84459,
+    "requested_at": "2026-10-19T07:55:12+07:00"
+  },
+  {
+    "ride_id": "R0068",
+    "customer_id": "C0046",
+    "vehicle_type": "car",
+    "pickup_lat": 21.018578,
+    "pickup_lon": 105.853869,
+    "dropoff_lat": 21.068027,
+    "dropoff_lon": 105.78373,
+    "requested_at": "2026-10-19T08:02:24+07:00"
+  },
+  {
+    "ride_id": "R0069",
+    "customer_id": "C0090",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067008,
+    "pickup_lon": 105.873392,
+    "dropoff_lat": 21.002907,
+    "dropoff_lon": 105.86362,
+    "requested_at": "2026-10-19T08:09:36+07:00"
+  },
+  {
+    "ride_id": "R0070",
+    "customer_id": "C0254",
+    "vehicle_type": "car",
+    "pickup_lat": 21.05992,
+    "pickup_lon": 105.867229,
+    "dropoff_lat": 21.023157,
+    "dropoff_lon": 105.783747,
+    "requested_at": "2026-10-19T08:16:48+07:00"
+  },
+  {
+    "ride_id": "R0071",
+    "customer_id": "C0153",
+    "vehicle_type": "car",
+    "pickup_lat": 21.227516,
+    "pickup_lon": 105.806452,
+    "dropoff_lat": 21.203476,
+    "dropoff_lon": 105.825942,
+    "requested_at": "2026-10-19T08:24:00+07:00"
+  },
+  {
+    "ride_id": "R0072",
+    "customer_id": "C0279",
+    "vehicle_type": "car",
+    "pickup_lat": 21.071141,
+    "pickup_lon": 105.79342,
+    "dropoff_lat": 21.040337,
+    "dropoff_lon": 105.807284,
+    "requested_at": "2026-10-19T08:31:12+07:00"
+  },
+  {
+    "ride_id": "R0073",
+    "customer_id": "C0058",
+    "vehicle_type": "car",
+    "pickup_lat": 21.05849,
+    "pickup_lon": 105.844829,
+    "dropoff_lat": 21.057488,
+    "dropoff_lon": 105.781408,
+    "requested_at": "2026-10-19T08:38:24+07:00"
+  },
+  {
+    "ride_id": "R0074",
+    "customer_id": "C0173",
+    "vehicle_type": "car",
+    "pickup_lat": 21.045422,
+    "pickup_lon": 105.855728,
+    "dropoff_lat": 21.01404,
+    "dropoff_lon": 105.865615,
+    "requested_at": "2026-10-19T08:45:36+07:00"
+  },
+  {
+    "ride_id": "R0075",
+    "customer_id": "C0208",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.041222,
+    "pickup_lon": 105.788674,
+    "dropoff_lat": 21.05354,
+    "dropoff_lon": 105.798478,
+    "requested_at": "2026-10-19T08:52:48+07:00"
+  },
+  {
+    "ride_id": "R0076",
+    "customer_id": "C0072",
+    "vehicle_type": "car",
+    "pickup_lat": 21.074866,
+    "pickup_lon": 105.780683,
+    "dropoff_lat": 21.030686,
+    "dropoff_lon": 105.824674,
+    "requested_at": "2026-10-19T09:00:00+07:00"
+  },
+  {
+    "ride_id": "R0077",
+    "customer_id": "C0137",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.024156,
+    "pickup_lon": 105.852288,
+    "dropoff_lat": 21.000915,
+    "dropoff_lon": 105.845368,
+    "requested_at": "2026-10-19T09:07:12+07:00"
+  },
+  {
+    "ride_id": "R0078",
+    "customer_id": "C0121",
+    "vehicle_type": "car",
+    "pickup_lat": 21.009458,
+    "pickup_lon": 105.810681,
+    "dropoff_lat": 21.032433,
+    "dropoff_lon": 105.830252,
+    "requested_at": "2026-10-19T09:14:24+07:00"
+  },
+  {
+    "ride_id": "R0079",
+    "customer_id": "C0160",
+    "vehicle_type": "car",
+    "pickup_lat": 21.06,
+    "pickup_lon": 105.84,
+    "dropoff_lat": 21.029404,
+    "dropoff_lon": 105.802085,
+    "requested_at": "2026-10-19T09:21:36+07:00"
+  },
+  {
+    "ride_id": "R0080",
+    "customer_id": "C0069",
+    "vehicle_type": "car",
+    "pickup_lat": 21.036398,
+    "pickup_lon": 105.878884,
+    "dropoff_lat": 21.02989,
+    "dropoff_lon": 105.850194,
+    "requested_at": "2026-10-19T09:28:48+07:00"
+  },
+  {
+    "ride_id": "R0081",
+    "customer_id": "C0242",
+    "vehicle_type": "car",
+    "pickup_lat": 21.06416,
+    "pickup_lon": 105.86256,
+    "dropoff_lat": 21.060949,
+    "dropoff_lon": 105.848034,
+    "requested_at": "2026-10-19T09:36:00+07:00"
+  },
+  {
+    "ride_id": "R0082",
+    "customer_id": "C0042",
+    "vehicle_type": "car",
+    "pickup_lat": 21.042254,
+    "pickup_lon": 105.816178,
+    "dropoff_lat": 21.07338,
+    "dropoff_lon": 105.791221,
+    "requested_at": "2026-10-19T09:43:12+07:00"
+  },
+  {
+    "ride_id": "R0083",
+    "customer_id": "C0281",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.016173,
+    "pickup_lon": 105.833666,
+    "dropoff_lat": 21.013163,
+    "dropoff_lon": 105.865449,
+    "requested_at": "2026-10-19T09:50:24+07:00"
+  },
+  {
+    "ride_id": "R0084",
+    "customer_id": "C0227",
+    "vehicle_type": "car",
+    "pickup_lat": 21.016432,
+    "pickup_lon": 105.838315,
+    "dropoff_lat": 21.007275,
+    "dropoff_lon": 105.831038,
+    "requested_at": "2026-10-19T09:57:36+07:00"
+  },
+  {
+    "ride_id": "R0085",
+    "customer_id": "C0029",
+    "vehicle_type": "car",
+    "pickup_lat": 21.04106,
+    "pickup_lon": 105.82568,
+    "dropoff_lat": 21.004619,
+    "dropoff_lon": 105.826238,
+    "requested_at": "2026-10-19T10:04:48+07:00"
+  },
+  {
+    "ride_id": "R0086",
+    "customer_id": "C0158",
+    "vehicle_type": "car",
+    "pickup_lat": 21.031676,
+    "pickup_lon": 105.861645,
+    "dropoff_lat": 21.059664,
+    "dropoff_lon": 105.837831,
+    "requested_at": "2026-10-19T10:12:00+07:00"
+  },
+  {
+    "ride_id": "R0087",
+    "customer_id": "C0024",
+    "vehicle_type": "car",
+    "pickup_lat": 21.056031,
+    "pickup_lon": 105.834116,
+    "dropoff_lat": 21.00482,
+    "dropoff_lon": 105.869422,
+    "requested_at": "2026-10-19T10:19:12+07:00"
+  },
+  {
+    "ride_id": "R0088",
+    "customer_id": "C0242",
+    "vehicle_type": "car",
+    "pickup_lat": 21.032709,
+    "pickup_lon": 105.856897,
+    "dropoff_lat": 21.061266,
+    "dropoff_lon": 105.877833,
+    "requested_at": "2026-10-19T10:26:24+07:00"
+  },
+  {
+    "ride_id": "R0089",
+    "customer_id": "C0216",
+    "vehicle_type": "car",
+    "pickup_lat": 21.071307,
+    "pickup_lon": 105.824854,
+    "dropoff_lat": 21.073369,
+    "dropoff_lon": 105.81775,
+    "requested_at": "2026-10-19T10:33:36+07:00"
+  },
+  {
+    "ride_id": "R0090",
+    "customer_id": "C0042",
+    "vehicle_type": "car",
+    "pickup_lat": 21.052943,
+    "pickup_lon": 105.83393,
+    "dropoff_lat": 21.052283,
+    "dropoff_lon": 105.814777,
+    "requested_at": "2026-10-19T10:40:48+07:00"
+  },
+  {
+    "ride_id": "R0091",
+    "customer_id": "C0092",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.031445,
+    "pickup_lon": 105.792735,
+    "dropoff_lat": 21.078298,
+    "dropoff_lon": 105.863482,
+    "requested_at": "2026-10-19T10:48:00+07:00"
+  },
+  {
+    "ride_id": "R0092",
+    "customer_id": "C0012",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.03704,
+    "pickup_lon": 105.851909,
+    "dropoff_lat": 21.03393,
+    "dropoff_lon": 105.817928,
+    "requested_at": "2026-10-19T10:55:12+07:00"
+  },
+  {
+    "ride_id": "R0093",
+    "customer_id": "C0118",
+    "vehicle_type": "car",
+    "pickup_lat": 21.027693,
+    "pickup_lon": 105.807565,
+    "dropoff_lat": 21.074993,
+    "dropoff_lon": 105.852502,
+    "requested_at": "2026-10-19T11:02:24+07:00"
+  },
+  {
+    "ride_id": "R0094",
+    "customer_id": "C0058",
+    "vehicle_type": "car",
+    "pickup_lat": 21.052816,
+    "pickup_lon": 105.841492,
+    "dropoff_lat": 21.074899,
+    "dropoff_lon": 105.868904,
+    "requested_at": "2026-10-19T11:09:36+07:00"
+  },
+  {
+    "ride_id": "R0095",
+    "customer_id": "C0124",
+    "vehicle_type": "car",
+    "pickup_lat": 21.008072,
+    "pickup_lon": 105.783358,
+    "dropoff_lat": 21.047823,
+    "dropoff_lon": 105.850329,
+    "requested_at": "2026-10-19T11:16:48+07:00"
+  },
+  {
+    "ride_id": "R0096",
+    "customer_id": "C0025",
+    "vehicle_type": "car",
+    "pickup_lat": 21.003539,
+    "pickup_lon": 105.823896,
+    "dropoff_lat": 21.043181,
+    "dropoff_lon": 105.855439,
+    "requested_at": "2026-10-19T11:24:00+07:00"
+  },
+  {
+    "ride_id": "R0097",
+    "customer_id": "C0029",
+    "vehicle_type": "car",
+    "pickup_lat": 21.079479,
+    "pickup_lon": 105.803416,
+    "dropoff_lat": 21.073312,
+    "dropoff_lon": 105.837611,
+    "requested_at": "2026-10-19T11:31:12+07:00"
+  },
+  {
+    "ride_id": "R0098",
+    "customer_id": "C0296",
+    "vehicle_type": "car",
+    "pickup_lat": 21.053803,
+    "pickup_lon": 105.812067,
+    "dropoff_lat": 21.024141,
+    "dropoff_lon": 105.794326,
+    "requested_at": "2026-10-19T11:38:24+07:00"
+  },
+  {
+    "ride_id": "R0099",
+    "customer_id": "C0267",
+    "vehicle_type": "car",
+    "pickup_lat": 21.02404,
+    "pickup_lon": 105.786096,
+    "dropoff_lat": 21.075882,
+    "dropoff_lon": 105.867971,
+    "requested_at": "2026-10-19T11:45:36+07:00"
+  },
+  {
+    "ride_id": "R0100",
+    "customer_id": "C0090",
+    "vehicle_type": "car",
+    "pickup_lat": 21.034176,
+    "pickup_lon": 105.829562,
+    "dropoff_lat": 21.077783,
+    "dropoff_lon": 105.874159,
+    "requested_at": "2026-10-19T11:52:48+07:00"
+  },
+  {
+    "ride_id": "R0101",
+    "customer_id": "C0196",
+    "vehicle_type": "car",
+    "pickup_lat": 21.025499,
+    "pickup_lon": 105.821632,
+    "dropoff_lat": 21.011937,
+    "dropoff_lon": 105.817646,
+    "requested_at": "2026-10-19T12:00:00+07:00"
+  },
+  {
+    "ride_id": "R0102",
+    "customer_id": "C0276",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067947,
+    "pickup_lon": 105.810074,
+    "dropoff_lat": 21.056606,
+    "dropoff_lon": 105.860578,
+    "requested_at": "2026-10-19T12:07:12+07:00"
+  },
+  {
+    "ride_id": "R0103",
+    "customer_id": "C0030",
+    "vehicle_type": "car",
+    "pickup_lat": 21.077423,
+    "pickup_lon": 105.835729,
+    "dropoff_lat": 21.010727,
+    "dropoff_lon": 105.804286,
+    "requested_at": "2026-10-19T12:14:24+07:00"
+  },
+  {
+    "ride_id": "R0104",
+    "customer_id": "C0105",
+    "vehicle_type": "car",
+    "pickup_lat": 21.006326,
+    "pickup_lon": 105.824979,
+    "dropoff_lat": 21.029686,
+    "dropoff_lon": 105.833564,
+    "requested_at": "2026-10-19T12:21:36+07:00"
+  },
+  {
+    "ride_id": "R0105",
+    "customer_id": "C0098",
+    "vehicle_type": "car",
+    "pickup_lat": 21.030173,
+    "pickup_lon": 105.840497,
+    "dropoff_lat": 21.003164,
+    "dropoff_lon": 105.787278,
+    "requested_at": "2026-10-19T12:28:48+07:00"
+  },
+  {
+    "ride_id": "R0106",
+    "customer_id": "C0287",
+    "vehicle_type": "car",
+    "pickup_lat": 21.016711,
+    "pickup_lon": 105.870703,
+    "dropoff_lat": 21.024255,
+    "dropoff_lon": 105.870899,
+    "requested_at": "2026-10-19T12:36:00+07:00"
+  },
+  {
+    "ride_id": "R0107",
+    "customer_id": "C0109",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.076966,
+    "pickup_lon": 105.791732,
+    "dropoff_lat": 21.079966,
+    "dropoff_lon": 105.827892,
+    "requested_at": "2026-10-19T12:43:12+07:00"
+  },
+  {
+    "ride_id": "R0108",
+    "customer_id": "C0125",
+    "vehicle_type": "car",
+    "pickup_lat": 21.056301,
+    "pickup_lon": 105.819663,
+    "dropoff_lat": 21.019146,
+    "dropoff_lon": 105.812162,
+    "requested_at": "2026-10-19T12:50:24+07:00"
+  },
+  {
+    "ride_id": "R0109",
+    "customer_id": "C0145",
+    "vehicle_type": "car",
+    "pickup_lat": 21.042692,
+    "pickup_lon": 105.815926,
+    "dropoff_lat": 21.020925,
+    "dropoff_lon": 105.831282,
+    "requested_at": "2026-10-19T12:57:36+07:00"
+  },
+  {
+    "ride_id": "R0110",
+    "customer_id": "C0255",
+    "vehicle_type": "car",
+    "pickup_lat": 21.064225,
+    "pickup_lon": 105.852241,
+    "dropoff_lat": 21.06093,
+    "dropoff_lon": 105.812023,
+    "requested_at": "2026-10-19T13:04:48+07:00"
+  },
+  {
+    "ride_id": "R0111",
+    "customer_id": "C0105",
+    "vehicle_type": "car",
+    "pickup_lat": 21.033114,
+    "pickup_lon": 105.836252,
+    "dropoff_lat": 21.017702,
+    "dropoff_lon": 105.794592,
+    "requested_at": "2026-10-19T13:12:00+07:00"
+  },
+  {
+    "ride_id": "R0112",
+    "customer_id": "C0134",
+    "vehicle_type": "car",
+    "pickup_lat": 21.046723,
+    "pickup_lon": 105.852001,
+    "dropoff_lat": 21.023615,
+    "dropoff_lon": 105.799619,
+    "requested_at": "2026-10-19T13:19:12+07:00"
+  },
+  {
+    "ride_id": "R0113",
+    "customer_id": "C0118",
+    "vehicle_type": "car",
+    "pickup_lat": 21.066669,
+    "pickup_lon": 105.82993,
+    "dropoff_lat": 21.052369,
+    "dropoff_lon": 105.848485,
+    "requested_at": "2026-10-19T13:26:24+07:00"
+  },
+  {
+    "ride_id": "R0114",
+    "customer_id": "C0132",
+    "vehicle_type": "car",
+    "pickup_lat": 21.03909,
+    "pickup_lon": 105.852356,
+    "dropoff_lat": 21.059168,
+    "dropoff_lon": 105.826083,
+    "requested_at": "2026-10-19T13:33:36+07:00"
+  },
+  {
+    "ride_id": "R0115",
+    "customer_id": "C0181",
+    "vehicle_type": "car",
+    "pickup_lat": 21.057625,
+    "pickup_lon": 105.828832,
+    "dropoff_lat": 21.192223,
+    "dropoff_lon": 105.668042,
+    "requested_at": "2026-10-19T13:40:48+07:00"
+  },
+  {
+    "ride_id": "R0116",
+    "customer_id": "C0031",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067125,
+    "pickup_lon": 105.787433,
+    "dropoff_lat": 21.06544,
+    "dropoff_lon": 105.784851,
+    "requested_at": "2026-10-19T13:48:00+07:00"
+  },
+  {
+    "ride_id": "R0117",
+    "customer_id": "C0004",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067404,
+    "pickup_lon": 105.803143,
+    "dropoff_lat": 21.056574,
+    "dropoff_lon": 105.780914,
+    "requested_at": "2026-10-19T13:55:12+07:00"
+  },
+  {
+    "ride_id": "R0118",
+    "customer_id": "C0259",
+    "vehicle_type": "car",
+    "pickup_lat": 21.004836,
+    "pickup_lon": 105.843773,
+    "dropoff_lat": 21.074712,
+    "dropoff_lon": 105.871275,
+    "requested_at": "2026-10-19T14:02:24+07:00"
+  },
+  {
+    "ride_id": "R0119",
+    "customer_id": "C0250",
+    "vehicle_type": "car",
+    "pickup_lat": 21.042577,
+    "pickup_lon": 105.821134,
+    "dropoff_lat": 21.001338,
+    "dropoff_lon": 105.852219,
+    "requested_at": "2026-10-19T14:09:36+07:00"
+  },
+  {
+    "ride_id": "R0120",
+    "customer_id": "C0275",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.001371,
+    "pickup_lon": 105.861316,
+    "dropoff_lat": 21.053923,
+    "dropoff_lon": 105.860617,
+    "requested_at": "2026-10-19T14:16:48+07:00"
+  },
+  {
+    "ride_id": "R0121",
+    "customer_id": "C0092",
+    "vehicle_type": "car",
+    "pickup_lat": 21.007705,
+    "pickup_lon": 105.79489,
+    "dropoff_lat": 21.015355,
+    "dropoff_lon": 105.832646,
+    "requested_at": "2026-10-19T14:24:00+07:00"
+  },
+  {
+    "ride_id": "R0122",
+    "customer_id": "C0182",
+    "vehicle_type": "car",
+    "pickup_lat": 21.031752,
+    "pickup_lon": 105.817305,
+    "dropoff_lat": 21.032482,
+    "dropoff_lon": 105.8365,
+    "requested_at": "2026-10-19T14:31:12+07:00"
+  },
+  {
+    "ride_id": "R0123",
+    "customer_id": "C0116",
+    "vehicle_type": "car",
+    "pickup_lat": 21.066245,
+    "pickup_lon": 105.788062,
+    "dropoff_lat": 21.079334,
+    "dropoff_lon": 105.844989,
+    "requested_at": "2026-10-19T14:38:24+07:00"
+  },
+  {
+    "ride_id": "R0124",
+    "customer_id": "C0017",
+    "vehicle_type": "car",
+    "pickup_lat": 21.030341,
+    "pickup_lon": 105.83527,
+    "dropoff_lat": 21.004489,
+    "dropoff_lon": 105.780945,
+    "requested_at": "2026-10-19T14:45:36+07:00"
+  },
+  {
+    "ride_id": "R0125",
+    "customer_id": "C0088",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067626,
+    "pickup_lon": 105.844491,
+    "dropoff_lat": 21.026502,
+    "dropoff_lon": 105.877733,
+    "requested_at": "2026-10-19T14:52:48+07:00"
+  },
+  {
+    "ride_id": "R0126",
+    "customer_id": "C0049",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.073532,
+    "pickup_lon": 105.802977,
+    "dropoff_lat": 21.072102,
+    "dropoff_lon": 105.849229,
+    "requested_at": "2026-10-19T15:00:00+07:00"
+  },
+  {
+    "ride_id": "R0127",
+    "customer_id": "C0291",
+    "vehicle_type": "car",
+    "pickup_lat": 21.003725,
+    "pickup_lon": 105.787435,
+    "dropoff_lat": 21.074047,
+    "dropoff_lon": 105.869931,
+    "requested_at": "2026-10-19T15:07:12+07:00"
+  },
+  {
+    "ride_id": "R0128",
+    "customer_id": "C0289",
+    "vehicle_type": "car",
+    "pickup_lat": 21.014348,
+    "pickup_lon": 105.865043,
+    "dropoff_lat": 21.001253,
+    "dropoff_lon": 105.800716,
+    "requested_at": "2026-10-19T15:14:24+07:00"
+  },
+  {
+    "ride_id": "R0129",
+    "customer_id": "C0074",
+    "vehicle_type": "car",
+    "pickup_lat": 21.057017,
+    "pickup_lon": 105.81983,
+    "dropoff_lat": 21.006155,
+    "dropoff_lon": 105.796245,
+    "requested_at": "2026-10-19T15:21:36+07:00"
+  },
+  {
+    "ride_id": "R0130",
+    "customer_id": "C0124",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067955,
+    "pickup_lon": 105.847703,
+    "dropoff_lat": 21.043245,
+    "dropoff_lon": 105.818385,
+    "requested_at": "2026-10-19T15:28:48+07:00"
+  },
+  {
+    "ride_id": "R0131",
+    "customer_id": "C0072",
+    "vehicle_type": "car",
+    "pickup_lat": 21.055145,
+    "pickup_lon": 105.787843,
+    "dropoff_lat": 21.059637,
+    "dropoff_lon": 105.814586,
+    "requested_at": "2026-10-19T15:36:00+07:00"
+  },
+  {
+    "ride_id": "R0132",
+    "customer_id": "C0051",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067094,
+    "pickup_lon": 105.814059,
+    "dropoff_lat": 21.06152,
+    "dropoff_lon": 105.875486,
+    "requested_at": "2026-10-19T15:43:12+07:00"
+  },
+  {
+    "ride_id": "R0133",
+    "customer_id": "C0204",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.02611,
+    "pickup_lon": 105.843412,
+    "dropoff_lat": 21.062684,
+    "dropoff_lon": 105.825055,
+    "requested_at": "2026-10-19T15:50:24+07:00"
+  },
+  {
+    "ride_id": "R0134",
+    "customer_id": "C0117",
+    "vehicle_type": "car",
+    "pickup_lat": 21.075291,
+    "pickup_lon": 105.823185,
+    "dropoff_lat": 21.054376,
+    "dropoff_lon": 105.846067,
+    "requested_at": "2026-10-19T15:57:36+07:00"
+  },
+  {
+    "ride_id": "R0135",
+    "customer_id": "C0044",
+    "vehicle_type": "car",
+    "pickup_lat": 21.02363,
+    "pickup_lon": 105.804645,
+    "dropoff_lat": 21.005881,
+    "dropoff_lon": 105.806797,
+    "requested_at": "2026-10-19T16:04:48+07:00"
+  },
+  {
+    "ride_id": "R0136",
+    "customer_id": "C0195",
+    "vehicle_type": "car",
+    "pickup_lat": 21.050712,
+    "pickup_lon": 105.853966,
+    "dropoff_lat": 21.025334,
+    "dropoff_lon": 105.790655,
+    "requested_at": "2026-10-19T16:12:00+07:00"
+  },
+  {
+    "ride_id": "R0137",
+    "customer_id": "C0003",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.035579,
+    "pickup_lon": 105.856135,
+    "dropoff_lat": 21.008179,
+    "dropoff_lon": 105.78873,
+    "requested_at": "2026-10-19T16:19:12+07:00"
+  },
+  {
+    "ride_id": "R0138",
+    "customer_id": "C0221",
+    "vehicle_type": "car",
+    "pickup_lat": 21.044379,
+    "pickup_lon": 105.820804,
+    "dropoff_lat": 21.002101,
+    "dropoff_lon": 105.815391,
+    "requested_at": "2026-10-19T16:26:24+07:00"
+  },
+  {
+    "ride_id": "R0139",
+    "customer_id": "C0048",
+    "vehicle_type": "car",
+    "pickup_lat": 21.062755,
+    "pickup_lon": 105.866372,
+    "dropoff_lat": 21.000987,
+    "dropoff_lon": 105.821381,
+    "requested_at": "2026-10-19T16:33:36+07:00"
+  },
+  {
+    "ride_id": "R0140",
+    "customer_id": "C0044",
+    "vehicle_type": "car",
+    "pickup_lat": 21.044763,
+    "pickup_lon": 105.879273,
+    "dropoff_lat": 21.019419,
+    "dropoff_lon": 105.83211,
+    "requested_at": "2026-10-19T16:40:48+07:00"
+  },
+  {
+    "ride_id": "R0141",
+    "customer_id": "C0195",
+    "vehicle_type": "car",
+    "pickup_lat": 21.021514,
+    "pickup_lon": 105.806841,
+    "dropoff_lat": 21.011675,
+    "dropoff_lon": 105.796721,
+    "requested_at": "2026-10-19T16:48:00+07:00"
+  },
+  {
+    "ride_id": "R0142",
+    "customer_id": "C0142",
+    "vehicle_type": "car",
+    "pickup_lat": 21.038739,
+    "pickup_lon": 105.787692,
+    "dropoff_lat": 21.020136,
+    "dropoff_lon": 105.804659,
+    "requested_at": "2026-10-19T16:55:12+07:00"
+  },
+  {
+    "ride_id": "R0143",
+    "customer_id": "C0254",
+    "vehicle_type": "car",
+    "pickup_lat": 21.015644,
+    "pickup_lon": 105.790697,
+    "dropoff_lat": 21.024373,
+    "dropoff_lon": 105.874882,
+    "requested_at": "2026-10-19T17:02:24+07:00"
+  },
+  {
+    "ride_id": "R0144",
+    "customer_id": "C0171",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.030391,
+    "pickup_lon": 105.86622,
+    "dropoff_lat": 21.035218,
+    "dropoff_lon": 105.823062,
+    "requested_at": "2026-10-19T17:09:36+07:00"
+  },
+  {
+    "ride_id": "R0145",
+    "customer_id": "C0070",
+    "vehicle_type": "car",
+    "pickup_lat": 21.048257,
+    "pickup_lon": 105.849529,
+    "dropoff_lat": 21.038321,
+    "dropoff_lon": 105.797764,
+    "requested_at": "2026-10-19T17:16:48+07:00"
+  },
+  {
+    "ride_id": "R0146",
+    "customer_id": "C0204",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.023316,
+    "pickup_lon": 105.849496,
+    "dropoff_lat": 20.753594,
+    "dropoff_lon": 105.936421,
+    "requested_at": "2026-10-19T17:24:00+07:00"
+  },
+  {
+    "ride_id": "R0147",
+    "customer_id": "C0125",
+    "vehicle_type": "car",
+    "pickup_lat": 21.022424,
+    "pickup_lon": 105.858587,
+    "dropoff_lat": 21.029201,
+    "dropoff_lon": 105.873207,
+    "requested_at": "2026-10-19T17:31:12+07:00"
+  },
+  {
+    "ride_id": "R0148",
+    "customer_id": "C0103",
+    "vehicle_type": "car",
+    "pickup_lat": 21.04365,
+    "pickup_lon": 105.848171,
+    "dropoff_lat": 21.044008,
+    "dropoff_lon": 105.8753,
+    "requested_at": "2026-10-19T17:38:24+07:00"
+  },
+  {
+    "ride_id": "R0149",
+    "customer_id": "C0237",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.016772,
+    "pickup_lon": 105.859769,
+    "dropoff_lat": 21.066503,
+    "dropoff_lon": 105.786916,
+    "requested_at": "2026-10-19T17:45:36+07:00"
+  },
+  {
+    "ride_id": "R0150",
+    "customer_id": "C0210",
+    "vehicle_type": "car",
+    "pickup_lat": 21.011134,
+    "pickup_lon": 105.810283,
+    "dropoff_lat": 21.020215,
+    "dropoff_lon": 105.795414,
+    "requested_at": "2026-10-19T17:52:48+07:00"
+  },
+  {
+    "ride_id": "R0151",
+    "customer_id": "C0217",
+    "vehicle_type": "car",
+    "pickup_lat": 21.005917,
+    "pickup_lon": 105.87907,
+    "dropoff_lat": 21.038339,
+    "dropoff_lon": 105.820081,
+    "requested_at": "2026-10-19T18:00:00+07:00"
+  },
+  {
+    "ride_id": "R0152",
+    "customer_id": "C0260",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.069571,
+    "pickup_lon": 105.82183,
+    "dropoff_lat": 21.002941,
+    "dropoff_lon": 105.876843,
+    "requested_at": "2026-10-19T18:07:12+07:00"
+  },
+  {
+    "ride_id": "R0153",
+    "customer_id": "C0275",
+    "vehicle_type": "car",
+    "pickup_lat": 21.073152,
+    "pickup_lon": 105.790937,
+    "dropoff_lat": 21.019858,
+    "dropoff_lon": 105.846469,
+    "requested_at": "2026-10-19T18:14:24+07:00"
+  },
+  {
+    "ride_id": "R0154",
+    "customer_id": "C0086",
+    "vehicle_type": "car",
+    "pickup_lat": 21.003544,
+    "pickup_lon": 105.878361,
+    "dropoff_lat": 21.054198,
+    "dropoff_lon": 105.819962,
+    "requested_at": "2026-10-19T18:21:36+07:00"
+  },
+  {
+    "ride_id": "R0155",
+    "customer_id": "C0170",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.034436,
+    "pickup_lon": 105.781055,
+    "dropoff_lat": 21.020699,
+    "dropoff_lon": 105.831068,
+    "requested_at": "2026-10-19T18:28:48+07:00"
+  },
+  {
+    "ride_id": "R0156",
+    "customer_id": "C0266",
+    "vehicle_type": "car",
+    "pickup_lat": 21.055013,
+    "pickup_lon": 105.802103,
+    "dropoff_lat": 21.02993,
+    "dropoff_lon": 105.826306,
+    "requested_at": "2026-10-19T18:36:00+07:00"
+  },
+  {
+    "ride_id": "R0157",
+    "customer_id": "C0257",
+    "vehicle_type": "car",
+    "pickup_lat": 21.079816,
+    "pickup_lon": 105.828277,
+    "dropoff_lat": 21.023635,
+    "dropoff_lon": 105.872055,
+    "requested_at": "2026-10-19T18:43:12+07:00"
+  },
+  {
+    "ride_id": "R0158",
+    "customer_id": "C0044",
+    "vehicle_type": "car",
+    "pickup_lat": 21.075254,
+    "pickup_lon": 105.794168,
+    "dropoff_lat": 21.179192,
+    "dropoff_lon": 105.976632,
+    "requested_at": "2026-10-19T18:50:24+07:00"
+  },
+  {
+    "ride_id": "R0159",
+    "customer_id": "C0106",
+    "vehicle_type": "car",
+    "pickup_lat": 21.027864,
+    "pickup_lon": 105.789762,
+    "dropoff_lat": 21.05776,
+    "dropoff_lon": 105.825245,
+    "requested_at": "2026-10-19T18:57:36+07:00"
+  },
+  {
+    "ride_id": "R0160",
+    "customer_id": "C0035",
+    "vehicle_type": "car",
+    "pickup_lat": 21.064815,
+    "pickup_lon": 105.791509,
+    "dropoff_lat": 21.067934,
+    "dropoff_lon": 105.844797,
+    "requested_at": "2026-10-19T19:04:48+07:00"
+  },
+  {
+    "ride_id": "R0161",
+    "customer_id": "C0085",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.059239,
+    "pickup_lon": 105.831599,
+    "dropoff_lat": 21.044153,
+    "dropoff_lon": 105.813099,
+    "requested_at": "2026-10-19T19:12:00+07:00"
+  },
+  {
+    "ride_id": "R0162",
+    "customer_id": "C0219",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.018548,
+    "pickup_lon": 105.820505,
+    "dropoff_lat": 21.014756,
+    "dropoff_lon": 105.844048,
+    "requested_at": "2026-10-19T19:19:12+07:00"
+  },
+  {
+    "ride_id": "R0163",
+    "customer_id": "C0222",
+    "vehicle_type": "car",
+    "pickup_lat": 21.058991,
+    "pickup_lon": 105.86831,
+    "dropoff_lat": 21.035966,
+    "dropoff_lon": 105.822955,
+    "requested_at": "2026-10-19T19:26:24+07:00"
+  },
+  {
+    "ride_id": "R0164",
+    "customer_id": "C0003",
+    "vehicle_type": "car",
+    "pickup_lat": 21.209986,
+    "pickup_lon": 105.87223,
+    "dropoff_lat": 21.206304,
+    "dropoff_lon": 105.809318,
+    "requested_at": "2026-10-19T19:33:36+07:00"
+  },
+  {
+    "ride_id": "R0165",
+    "customer_id": "C0053",
+    "vehicle_type": "car",
+    "pickup_lat": 21.042951,
+    "pickup_lon": 105.816579,
+    "dropoff_lat": 21.015766,
+    "dropoff_lon": 105.791395,
+    "requested_at": "2026-10-19T19:40:48+07:00"
+  },
+  {
+    "ride_id": "R0166",
+    "customer_id": "C0251",
+    "vehicle_type": "car",
+    "pickup_lat": 21.051129,
+    "pickup_lon": 105.839697,
+    "dropoff_lat": 21.048905,
+    "dropoff_lon": 105.8387,
+    "requested_at": "2026-10-19T19:48:00+07:00"
+  },
+  {
+    "ride_id": "R0167",
+    "customer_id": "C0179",
+    "vehicle_type": "car",
+    "pickup_lat": 21.036629,
+    "pickup_lon": 105.797253,
+    "dropoff_lat": 21.053887,
+    "dropoff_lon": 105.860061,
+    "requested_at": "2026-10-19T19:55:12+07:00"
+  },
+  {
+    "ride_id": "R0168",
+    "customer_id": "C0044",
+    "vehicle_type": "car",
+    "pickup_lat": 21.025055,
+    "pickup_lon": 105.803857,
+    "dropoff_lat": 21.009356,
+    "dropoff_lon": 105.817331,
+    "requested_at": "2026-10-19T20:02:24+07:00"
+  },
+  {
+    "ride_id": "R0169",
+    "customer_id": "C0073",
+    "vehicle_type": "car",
+    "pickup_lat": 21.033459,
+    "pickup_lon": 105.793787,
+    "dropoff_lat": 21.030697,
+    "dropoff_lon": 105.798575,
+    "requested_at": "2026-10-19T20:09:36+07:00"
+  },
+  {
+    "ride_id": "R0170",
+    "customer_id": "C0276",
+    "vehicle_type": "car",
+    "pickup_lat": 21.051621,
+    "pickup_lon": 105.87999,
+    "dropoff_lat": 21.044393,
+    "dropoff_lon": 105.828964,
+    "requested_at": "2026-10-19T20:16:48+07:00"
+  },
+  {
+    "ride_id": "R0171",
+    "customer_id": "C0072",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067359,
+    "pickup_lon": 105.841941,
+    "dropoff_lat": 21.069242,
+    "dropoff_lon": 105.875184,
+    "requested_at": "2026-10-19T20:24:00+07:00"
+  },
+  {
+    "ride_id": "R0172",
+    "customer_id": "C0249",
+    "vehicle_type": "car",
+    "pickup_lat": 21.065217,
+    "pickup_lon": 105.876383,
+    "dropoff_lat": 21.040435,
+    "dropoff_lon": 105.829497,
+    "requested_at": "2026-10-19T20:31:12+07:00"
+  },
+  {
+    "ride_id": "R0173",
+    "customer_id": "C0252",
+    "vehicle_type": "car",
+    "pickup_lat": 21.067191,
+    "pickup_lon": 105.82887,
+    "dropoff_lat": 21.006614,
+    "dropoff_lon": 105.783086,
+    "requested_at": "2026-10-19T20:38:24+07:00"
+  },
+  {
+    "ride_id": "R0174",
+    "customer_id": "C0113",
+    "vehicle_type": "car",
+    "pickup_lat": 21.021988,
+    "pickup_lon": 105.833761,
+    "dropoff_lat": 21.013457,
+    "dropoff_lon": 105.825732,
+    "requested_at": "2026-10-19T20:45:36+07:00"
+  },
+  {
+    "ride_id": "R0175",
+    "customer_id": "C0254",
+    "vehicle_type": "car",
+    "pickup_lat": 21.009057,
+    "pickup_lon": 105.791421,
+    "dropoff_lat": 21.062009,
+    "dropoff_lon": 105.862328,
+    "requested_at": "2026-10-19T20:52:48+07:00"
+  },
+  {
+    "ride_id": "R0176",
+    "customer_id": "C0188",
+    "vehicle_type": "car",
+    "pickup_lat": 21.06,
+    "pickup_lon": 105.84,
+    "dropoff_lat": 21.035309,
+    "dropoff_lon": 105.801854,
+    "requested_at": "2026-10-19T21:00:00+07:00"
+  },
+  {
+    "ride_id": "R0177",
+    "customer_id": "C0218",
+    "vehicle_type": "car",
+    "pickup_lat": 21.066406,
+    "pickup_lon": 105.855135,
+    "dropoff_lat": 21.023817,
+    "dropoff_lon": 105.879931,
+    "requested_at": "2026-10-19T21:07:12+07:00"
+  },
+  {
+    "ride_id": "R0178",
+    "customer_id": "C0231",
+    "vehicle_type": "car",
+    "pickup_lat": 21.068976,
+    "pickup_lon": 105.788698,
+    "dropoff_lat": 21.069223,
+    "dropoff_lon": 105.791739,
+    "requested_at": "2026-10-19T21:14:24+07:00"
+  },
+  {
+    "ride_id": "R0179",
+    "customer_id": "C0122",
+    "vehicle_type": "car",
+    "pickup_lat": 21.059009,
+    "pickup_lon": 105.848913,
+    "dropoff_lat": 21.068884,
+    "dropoff_lon": 105.841026,
+    "requested_at": "2026-10-19T21:21:36+07:00"
+  },
+  {
+    "ride_id": "R0180",
+    "customer_id": "C0220",
+    "vehicle_type": "car",
+    "pickup_lat": 21.011139,
+    "pickup_lon": 105.800662,
+    "dropoff_lat": 21.016555,
+    "dropoff_lon": 105.785936,
+    "requested_at": "2026-10-19T21:28:48+07:00"
+  },
+  {
+    "ride_id": "R0181",
+    "customer_id": "C0180",
+    "vehicle_type": "car",
+    "pickup_lat": 21.047749,
+    "pickup_lon": 105.796838,
+    "dropoff_lat": 20.913624,
+    "dropoff_lon": 105.535366,
+    "requested_at": "2026-10-19T21:36:00+07:00"
+  },
+  {
+    "ride_id": "R0182",
+    "customer_id": "C0294",
+    "vehicle_type": "car",
+    "pickup_lat": 21.068641,
+    "pickup_lon": 105.878549,
+    "dropoff_lat": 21.054344,
+    "dropoff_lon": 105.789523,
+    "requested_at": "2026-10-19T21:43:12+07:00"
+  },
+  {
+    "ride_id": "R0183",
+    "customer_id": "C0211",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.079399,
+    "pickup_lon": 105.866705,
+    "dropoff_lat": 21.010151,
+    "dropoff_lon": 105.866608,
+    "requested_at": "2026-10-19T21:50:24+07:00"
+  },
+  {
+    "ride_id": "R0184",
+    "customer_id": "C0128",
+    "vehicle_type": "car",
+    "pickup_lat": 21.025768,
+    "pickup_lon": 105.804755,
+    "dropoff_lat": 21.067484,
+    "dropoff_lon": 105.81927,
+    "requested_at": "2026-10-19T21:57:36+07:00"
+  },
+  {
+    "ride_id": "R0185",
+    "customer_id": "C0073",
+    "vehicle_type": "car",
+    "pickup_lat": 21.021497,
+    "pickup_lon": 105.821423,
+    "dropoff_lat": 21.036159,
+    "dropoff_lon": 105.843363,
+    "requested_at": "2026-10-19T22:04:48+07:00"
+  },
+  {
+    "ride_id": "R0186",
+    "customer_id": "C0048",
+    "vehicle_type": "car",
+    "pickup_lat": 21.059984,
+    "pickup_lon": 105.84947,
+    "dropoff_lat": 21.070185,
+    "dropoff_lon": 105.82547,
+    "requested_at": "2026-10-19T22:12:00+07:00"
+  },
+  {
+    "ride_id": "R0187",
+    "customer_id": "C0250",
+    "vehicle_type": "car",
+    "pickup_lat": 21.000198,
+    "pickup_lon": 105.857414,
+    "dropoff_lat": 21.058618,
+    "dropoff_lon": 105.853093,
+    "requested_at": "2026-10-19T22:19:12+07:00"
+  },
+  {
+    "ride_id": "R0188",
+    "customer_id": "C0235",
+    "vehicle_type": "car",
+    "pickup_lat": 21.055783,
+    "pickup_lon": 105.865011,
+    "dropoff_lat": 21.063654,
+    "dropoff_lon": 105.819772,
+    "requested_at": "2026-10-19T22:26:24+07:00"
+  },
+  {
+    "ride_id": "R0189",
+    "customer_id": "C0220",
+    "vehicle_type": "premium",
+    "pickup_lat": 21.039577,
+    "pickup_lon": 105.812287,
+    "dropoff_lat": 21.022687,
+    "dropoff_lon": 105.834731,
+    "requested_at": "2026-10-19T22:33:36+07:00"
+  },
+  {
+    "ride_id": "R0190",
+    "customer_id": "C0067",
+    "vehicle_type": "car",
+    "pickup_lat": 21.250291,
+    "pickup_lon": 105.868545,
+    "dropoff_lat": 21.228931,
+    "dropoff_lon": 105.799229,
+    "requested_at": "2026-10-19T22:40:48+07:00"
+  },
+  {
+    "ride_id": "R0191",
+    "customer_id": "C0051",
+    "vehicle_type": "car",
+    "pickup_lat": 21.066936,
+    "pickup_lon": 105.781628,
+    "dropoff_lat": 21.074355,
+    "dropoff_lon": 105.795798,
+    "requested_at": "2026-10-19T22:48:00+07:00"
+  },
+  {
+    "ride_id": "R0192",
+    "customer_id": "C0234",
+    "vehicle_type": "car",
+    "pickup_lat": 21.076643,
+    "pickup_lon": 105.800232,
+    "dropoff_lat": 21.055087,
+    "dropoff_lon": 105.793191,
+    "requested_at": "2026-10-19T22:55:12+07:00"
+  },
+  {
+    "ride_id": "R0193",
+    "customer_id": "C0155",
+    "vehicle_type": "car",
+    "pickup_lat": 21.074618,
+    "pickup_lon": 105.807402,
+    "dropoff_lat": 21.052367,
+    "dropoff_lon": 105.805039,
+    "requested_at": "2026-10-19T23:02:24+07:00"
+  },
+  {
+    "ride_id": "R0194",
+    "customer_id": "C0191",
+    "vehicle_type": "car",
+    "pickup_lat": 21.051913,
+    "pickup_lon": 105.785179,
+    "dropoff_lat": 21.050048,
+    "dropoff_lon": 105.852599,
+    "requested_at": "2026-10-19T23:09:36+07:00"
+  },
+  {
+    "ride_id": "R0195",
+    "customer_id": "C0120",
+    "vehicle_type": "car",
+    "pickup_lat": 21.007296,
+    "pickup_lon": 105.789518,
+    "dropoff_lat": 21.017074,
+    "dropoff_lon": 105.787794,
+    "requested_at": "2026-10-19T23:16:48+07:00"
+  },
+  {
+    "ride_id": "R0196",
+    "customer_id": "C0116",
+    "vehicle_type": "car",
+    "pickup_lat": 21.035605,
+    "pickup_lon": 105.780806,
+    "dropoff_lat": 21.027486,
+    "dropoff_lon": 105.792059,
+    "requested_at": "2026-10-19T23:24:00+07:00"
+  },
+  {
+    "ride_id": "R0197",
+    "customer_id": "C0217",
+    "vehicle_type": "car",
+    "pickup_lat": 21.038216,
+    "pickup_lon": 105.802895,
+    "dropoff_lat": 20.962557,
+    "dropoff_lon": 105.620491,
+    "requested_at": "2026-10-19T23:31:12+07:00"
+  },
+  {
+    "ride_id": "R0198",
+    "customer_id": "C0053",
+    "vehicle_type": "car",
+    "pickup_lat": 21.070479,
+    "pickup_lon": 105.793713,
+    "dropoff_lat": 20.909768,
+    "dropoff_lon": 105.598759,
+    "requested_at": "2026-10-19T23:38:24+07:00"
+  },
+  {
+    "ride_id": "R0199",
+    "customer_id": "C0069",
+    "vehicle_type": "car",
+    "pickup_lat": 21.054171,
+    "pickup_lon": 105.786841,
+    "dropoff_lat": 21.045063,
+    "dropoff_lon": 105.841032,
+    "requested_at": "2026-10-19T23:45:36+07:00"
+  },
+  {
+    "ride_id": "R0200",
+    "customer_id": "C0085",
+    "vehicle_type": "car",
+    "pickup_lat": 21.057795,
+    "pickup_lon": 105.842808,
+    "dropoff_lat": 21.01211,
+    "dropoff_lon": 105.821171,
+    "requested_at": "2026-10-19T23:52:48+07:00"
+  }
+]

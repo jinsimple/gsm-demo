@@ -1,0 +1,7 @@
+{
+  "version": "0.1",
+  "note": "Tham so matching cho san pham mau A. [Suy luan] Moi con so la GIA.",
+  "radius_km": 5,
+  "auto_accept_threshold": 0.7,
+  "idle_status": "idle"
+}
