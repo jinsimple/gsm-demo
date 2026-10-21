@@ -322,13 +322,24 @@ if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
   document.getElementById('mobile-note').style.display = 'block';
 }
 
-// Scrollspy: highlight nav link cua phan dang hien tren man hinh.
+// Scrollspy + bu chieu cao nav THUC (nav co the xuong 2 hang tren man hinh hep).
 (() => {
+  const topnav = document.getElementById('topnav');
   const navLinks = Array.from(document.querySelectorAll('.topnav a'));
   const sections = navLinks
     .map(a => document.getElementById(a.dataset.nav))
     .filter(Boolean);
   if (!sections.length) return;
+
+  function syncNavHeight() {
+    const h = topnav.getBoundingClientRect().height;
+    document.documentElement.style.scrollPaddingTop = h + 'px';
+    sections.forEach(s => { s.style.scrollMarginTop = h + 'px'; });
+    return h;
+  }
+  let navH = syncNavHeight();
+  window.addEventListener('resize', () => { navH = syncNavHeight(); });
+
   const setActive = (id) => {
     navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === id));
   };
@@ -338,7 +349,7 @@ if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
       setActive(visible[0].target.id);
     }
-  }, { rootMargin: '-56px 0px -60% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+  }, { rootMargin: `-${Math.round(navH) + 2}px 0px -60% 0px`, threshold: [0, 0.1, 0.25, 0.5] });
   sections.forEach(s => observer.observe(s));
   setActive(sections[0].id);
 })();
