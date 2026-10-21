@@ -66,89 +66,58 @@
 <nav class="topnav" id="topnav">
   <div class="topnav-inner">
     <span class="topnav-brand">GSM Sandbox</span>
-    <a href="#section-intro" data-nav="section-intro">Giới thiệu</a>
-    <a href="#section-demo" data-nav="section-demo">Demo</a>
-    <a href="#section-conclusion" data-nav="section-conclusion">Kết luận</a>
+    <a href="#section-intro" data-nav="section-intro">Đề bài</a>
+    <a href="#section-demo" data-nav="section-demo">Tự chạy thử</a>
+    <a href="#section-conclusion" data-nav="section-conclusion">Em nhận ra gì</a>
   </div>
 </nav>
 
 <section id="section-intro" class="section section-intro">
 <div class="page">
 <div class="section-eyebrow">Phần 1</div>
-<h1 class="section-hero-title">GSM Sandbox - Ma trận kiểm thử</h1>
+<h1 class="section-hero-title">Ai kiểm tra người kiểm tra?</h1>
 
 <div class="intro">
-<h3>Trang này là gì</h3>
-<p>Đây là một thí nghiệm nhỏ. Có hai chương trình.</p>
-<p>Chương trình thứ nhất, gọi là <b>A</b>, làm việc của một ứng dụng gọi xe: nhận một cuốc, chọn tài xế phù hợp gần đó, rồi tính tiền. Nó ghi lại mọi bước nó làm vào một quyển sổ.</p>
-<p>Chương trình thứ hai, gọi là <b>B</b>, làm việc của một người đi kiểm tra. B có một bảng 12 điều cần kiểm, lấy từ quy định của châu Âu — ví dụ <i>có đối xử lệch giữa các nhóm khách không</i>, <i>có lưu vết quyết định không</i>. B tự đọc mã nguồn và quyển sổ của A, rồi kết luận từng điều.</p>
-<p>Điều đáng chú ý: <b>B không được biết gì về bên trong A.</b> Người viết B chỉ được xem bảng 12 điều và bản mô tả A nhận vào gì trả ra gì. Giống như thuê người soát hàng mà không cho xem bản vẽ nhà máy.</p>
-<p><b>Bước 1 — Bấm "① Chạy A".</b> Thuật toán sẽ xử lý 200 cuốc xe và in ra kết quả: bao nhiêu cuốc ghép được tài xế, giá trung bình, bao nhiêu cuốc không tìm được xe. Lần đầu hơi lâu vì trình duyệt phải tải Python về máy bạn. Mọi thứ chạy trong máy bạn, không gửi gì lên mạng.</p>
-<p><b>Bước 2 — Bấm "② Chạy B".</b> Chương trình kiểm sẽ tự chạy lại A một lần nữa để có sổ mới, rồi đi soát 12 điều. Bước này lâu hơn bước 1, vì B phải đọc hết quyển sổ. Kết quả là một bảng 12 dòng, mỗi dòng ghi <i>đạt</i>, <i>không đạt</i>, hoặc <i>cần người xem lại</i>, kèm chỗ nó dựa vào để kết luận.</p>
-<p><b>Bước 3 — Bấm một nút gài lỗi ở mục ③, rồi chạy B lại.</b> Đây là phần vui nhất. Bạn tự tay làm cho sản phẩm sai — ví dụ xoá số phiên bản khỏi tệp cài đặt — rồi xem B có tìm ra không. Trang sẽ hiện cho bạn thấy đã sửa đúng chỗ nào. Bấm "Hoàn lại" là mọi thứ về như cũ.</p>
+<p><i>Thí nghiệm nội bộ. Dữ liệu hoàn toàn giả. Trang này chứng minh một cách đo — không chứng minh sản phẩm thật nào tuân thủ.</i></p>
 </div>
 
-<div class="note">
-Đây là bản <b>mô phỏng</b>, dữ liệu <b>hoàn toàn tổng hợp</b> (giả lập) — không phải sản phẩm thật, không phải dữ liệu thật của Green SM.
-</div>
-<div class="warn">
-Bản thu nhỏ <b>200 chuyến</b> (báo cáo G4 đo trên 1.000 chuyến) để chạy được trong trình duyệt — mọi số đếm (số chuyến, số quyết định, kết quả M01–M12) <b>khác</b> báo cáo G4, vì cỡ mẫu nhỏ hơn làm thay đổi phân phối ngẫu nhiên. Đây là bản minh hoạ cách chạy, không phải số đo thay thế báo cáo G4.
-</div>
 <div class="note" id="mobile-note" style="display:none">
 Trang này cần máy tính (không chạy trên điện thoại/máy yếu) — tải Pyodide và chạy đủ 200 chuyến tốn vài chục giây đến vài phút CPU.
 </div>
 
 <div class="intro">
-<h3>1. Đề bài và cách hiểu</h3>
-<p>Đề bài được giao: làm một sản phẩm mẫu <b>A</b> (ghép xe + tính giá), rồi làm một chương trình <b>B</b> tự động kiểm A theo một bảng 12 điều, lấy từ ISO/IEC 42001 (tiêu chuẩn quản lý AI) đối chiếu với các điều khoản cụ thể của luật châu Âu (AI Act, GDPR, chỉ thị nền tảng lao động số — PWD).</p>
-<p>A và B, cộng bảng 12 điều, đều đã làm xong và đo thật — kết quả ở mục 3 dưới đây.</p>
-<p><b>Kết quả chứng minh một phương pháp kiểm định có đứng được không</b> — B có tự tìm ra lỗi mà không được xem trước đáp án hay không. Nó <b>không</b> chứng minh sản phẩm thật của Green SM có tuân thủ hay không, vì A chỉ là bản mẫu tự viết để thử phương pháp.</p>
+<h3>1. Đề bài</h3>
+<p>Dự án dùng <b>AI kiểm định nội bộ</b> để soi các tính năng ML/AI của ghép chuyến và định giá theo chuẩn EU.</p>
+<p>Mục tiêu: ≥95% tính năng được AI kiểm định — <b>làm cơ sở để Legal/DPO thẩm định trước khi ký duyệt.</b></p>
+<p>Mốc 31/10 yêu cầu đối chiếu kết luận của AI Agent với code thực tế, và điền cột Source cho từng tính năng.</p>
+<p>Đọc kỹ đề bài, em thấy một câu hỏi nằm bên dưới tất cả:</p>
+<p>AI kiểm định trả về một kết luận.<br>Legal/DPO sẽ ký dựa trên kết luận đó.</p>
+<p><b>Lấy gì để tin AI kiểm định?</b></p>
 </div>
 
 <div class="intro">
-<h3>2. Ma trận kiểm 12 dòng</h3>
-<p>Đây là bảng 12 điều B dùng để kiểm A. Số hiệu control khớp với tóm tắt công khai tại <a href="https://cyberzoni.com/standards/iso-42001/" target="_blank" rel="noopener">cyberzoni.com/standards/iso-42001</a> — đây là trang tóm tắt của bên thứ ba (bán mẫu tài liệu), không phải bản ISO gốc có bản quyền, nên vẫn chưa đối chiếu trực tiếp với bản chuẩn chính thức.</p>
+<h3>2. Bắt đầu từ đâu</h3>
+<p>Mấy tuần nay em đọc ba thứ.<br>Kiểm toán thuật toán. Kiểm toán pháp lý — Đạo luật AI, GDPR, Chỉ thị Lao động Nền tảng của EU. Và ISO/IEC 42001.</p>
+<p>Đọc nhiều. Nhưng vẫn chỉ là đọc.</p>
+<p>Rồi một chị trong nhóm gợi ý cho em: sao không tự xây một ma trận kiểm thử — từ chính những gì đã đọc?</p>
+<p>Nên em xây trang này.</p>
+</div>
+
+<div class="intro">
+<h3>3. Em đã xây gì</h3>
+<p>Một bản thu nhỏ của chính bài toán dự án.</p>
 <div style="overflow-x:auto">
 <table>
-<tr><th>ID</th><th>Control ISO/IEC 42001</th><th>Căn cứ AI Act / GDPR / PWD</th><th>Câu hỏi kiểm</th></tr>
-<tr><td>M01</td><td>A.5.4 Tác động lên cá nhân/nhóm</td><td>AI Act PL III 4(b); PWD Đ.8</td><td>Chênh lệch tỷ lệ được ghép hoặc khoảng cách trung bình giữa các nhóm khách/tài xế có vượt ngưỡng không?</td></tr>
-<tr><td>M02</td><td>A.7.4 Chất lượng dữ liệu</td><td>PWD Đ.7</td><td>Mã ghép xe có đọc thuộc tính nào ngoài danh sách được phép không?</td></tr>
-<tr><td>M03</td><td>A.7.5 Nguồn gốc dữ liệu</td><td>GDPR Đ.5(1)(c)</td><td>Dữ liệu mẫu có mang định dạng dữ liệu cá nhân thật (SĐT, email, CCCD…) không?</td></tr>
-<tr><td>M04</td><td>A.6.2.8 Log sự kiện</td><td>AI Act Đ.12</td><td>Mọi quyết định có được ghi log không?</td></tr>
-<tr><td>M05</td><td>A.6.2.3 Tài liệu thiết kế</td><td>AI Act Đ.11</td><td>Có hằng số tính tiền nào giấu trong mã, không khai trong tệp cấu hình không?</td></tr>
-<tr><td>M06</td><td>A.6.2.7 Tài liệu kỹ thuật</td><td>AI Act Đ.11</td><td>Tệp cấu hình có thiếu số phiên bản không?</td></tr>
-<tr><td>M07</td><td>A.9.2 Sử dụng có trách nhiệm</td><td>GDPR Đ.22; PWD Đ.10</td><td>Có hành động bất lợi/ràng buộc lên tài xế (khoá, phạt, hạ ưu tiên, tự nhận chuyến) mà không có bước người xem xét không?</td></tr>
-<tr><td>M08</td><td>A.5.2 Quy trình đánh giá tác động</td><td>GDPR Đ.35; PWD Đ.8</td><td>Có tài liệu đánh giá tác động không?</td></tr>
-<tr><td>M09</td><td>A.8.2 Thông tin cho người dùng</td><td>PWD Đ.9</td><td>Mỗi quyết định có kèm lý do đọc được không?</td></tr>
-<tr><td>M10</td><td>A.6.2.4 Kiểm chứng & xác nhận</td><td>AI Act Đ.15</td><td>Cùng đầu vào chạy nhiều lần có ra cùng kết quả không?</td></tr>
-<tr><td>M11</td><td>A.5.4 (pricing)</td><td>Luật tiêu dùng EU [Suy luận]</td><td>Giá có phụ thuộc thuộc tính nào của khách ngoài quãng đường và thời điểm không?</td></tr>
-<tr><td>M12</td><td>A.6.2.6 Vận hành & giám sát</td><td>AI Act Đ.72 [Suy luận]</td><td>Có ngưỡng cảnh báo cho tỷ lệ tự động nhận chuyến không?</td></tr>
+<tr><th>Trên trang này</th><th>Trong dự án</th></tr>
+<tr><td><b>A</b> — app gọi xe thu nhỏ: ghép tài xế, tính tiền</td><td>Ghép chuyến và định giá</td></tr>
+<tr><td><b>B</b> — AI kiểm định: đọc code và nhật ký của A, đi qua ma trận 12 dòng</td><td>AI kiểm định nội bộ</td></tr>
+<tr><td>Mỗi kết luận của B ghi rõ nằm ở tệp nào, dòng nào, phiên bản nào</td><td>Cột Source</td></tr>
+<tr><td>Lỗi được cài sẵn vào A</td><td>Code thực tế — để đối chiếu với kết luận của AI</td></tr>
 </table>
 </div>
-</div>
-
-<div class="intro">
-<h3>3. Kết quả đo thật (G4)</h3>
-<p>Chép nguyên văn từ báo cáo G4 và từ điểm chấm của qa — không tính lại.</p>
-<p>Chấm trên <b>6 lỗi cài sẵn</b> (không ai ngoài hai phiên cách ly biết là lỗi gì khi B chạy) + 3 mục sạch:</p>
-<table>
-<tr><th>Số đo</th><th>Kết quả</th><th>Mục tiêu đề xuất</th></tr>
-<tr><td>Precision (khi B báo, B đúng bao nhiêu %)</td><td><b>1.000</b></td><td>— (không đặt ngưỡng cứng)</td></tr>
-<tr><td>Recall (B bắt được bao nhiêu % lỗi cài)</td><td><b>0.667</b></td><td>≥ 0.80 — <b>không đạt</b></td></tr>
-<tr><td>FNR (B bỏ sót bao nhiêu % lỗi cài)</td><td><b>0.333</b></td><td>≤ 0.20 — <b>không đạt</b></td></tr>
-<tr><td>Độ ổn định (chạy lại nhiều lần có ra cùng kết quả)</td><td><b>3/3 lần giống hệt</b></td><td>100% — đạt</td></tr>
-</table>
-</div>
-
-<div class="intro">
-<h3>4. Giới hạn và bước tiếp theo</h3>
-<ul style="padding-left:18px; line-height:1.7">
-<li><b>Điều 8 không bao giờ ra "không đạt":</b> B bị cấm đọc tài liệu nội bộ nên không thể tự xác nhận có/không có đánh giá tác động — đây là giới hạn của cách đo, không phải bằng chứng A có hay không có tài liệu đó.</li>
-<li><b>2 lỗi bị B bỏ sót</b> — cả 2 nằm trong vùng 12 điều hiện có, không phải vì bảng 12 điều thiếu dòng. Việc sửa là sửa bảng 12 điều hay sửa B thì chưa xác định được — tuỳ vào câu quy tắc tương ứng có đủ chặt hay không.</li>
-<li><b>Bảng 12 điều chưa được bộ phận pháp lý/DPO duyệt</b> — nhóm tự nghiên cứu và tự chốt, ghi thẳng là giới hạn lớn nhất của phép đo này, không giả định đã đủ.</li>
-<li><b>Thu nhập tài xế nằm ngoài phạm vi</b> đo của dự án này — chủ động loại ra, không lặng lẽ bỏ qua.</li>
-</ul>
-<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — triển khai trước. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức trước khi dùng thật.</p>
+<p>Chỉ khác một điểm.</p>
+<p>Trong dự án, chưa ai biết code thật có lỗi ở đâu — nên chưa đo được AI kiểm định đúng đến đâu.</p>
+<p>Ở đây, lỗi do một bên riêng cài vào, và giữ kín với người xây B cho tới khi chấm xong.<br>Nhờ vậy em chấm được: B bắt đúng bao nhiêu, bỏ sót bao nhiêu.</p>
 </div>
 
 </div>
@@ -157,7 +126,14 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <section id="section-demo" class="section section-demo">
 <div class="page">
 <div class="section-eyebrow">Phần 2</div>
-<h2 class="section-hero-title">Demo — tự chạy A và B ngay trong trình duyệt</h2>
+<h2 class="section-hero-title">4. Tự chạy thử</h2>
+
+<div class="intro">
+<p>Bấm ①. Rồi ②.<br>Gài một lỗi ở ③, chạy lại — xem B có bắt được không.</p>
+<p>Kết quả đo thật: B bắt được <b>4/6</b> lỗi cài sẵn.<br>Chạy lại 3 lần — kết quả không đổi một dòng.</p>
+<p>4/6 nghĩa là: B <b>có</b> kiểm định — nhưng không phải kết luận nào cũng đúng.<br>Đếm "bao nhiêu tính năng đã được kiểm định" là chưa đủ. Còn phải đo <b>kiểm định đúng đến đâu.</b></p>
+<p style="font-size:13px;color:#555">Phải nói thêm cho đủ: 6 lỗi là mẫu nhỏ. Khoảng tin cậy 95% của tỷ lệ 4/6 là <b>[0,22 – 0,96]</b> — rộng đến mức chưa xếp hạng được chất lượng công cụ. Nó chứng minh <b>cách đo chạy được</b>, chưa chứng minh công cụ tốt đến đâu.</p>
+</div>
 
 <div class="statusrow">
   <span class="spinner" id="spinner" hidden></span>
@@ -174,17 +150,10 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <pre id="out-a">(chưa chạy)</pre>
 
 <p class="commit-line">Bản mã đang chạy — A: commit <code>2abeafd</code> · B: tag <code>b-freeze</code> (<code>cce80bf</code>)</p>
-<p class="commit-line">Trên bản 200 cuốc này, kết quả nền (chưa gài gì) là <b>7 đạt / 4 cần người xem lại / 1 không đạt</b> — khác bảng 8/3/1 của báo cáo G4 (đo trên 1.000 cuốc), xem lý do ngay dưới bảng.</p>
+<p class="commit-line">Bản demo này chạy 200 cuốc để nhanh trong trình duyệt — số đếm bạn thấy ở bảng dưới khác với <b>4/6</b> nói ở trên (4/6 đo trên 1.000 cuốc, lúc chấm thật, có bộ lỗi kín với người xây B).</p>
 <h3>Kết quả B</h3>
 <div id="out-b-table"></div>
 <pre id="out-b">(chưa chạy)</pre>
-
-<div class="intro after-note">
-<h3>Vài điều nên biết trước</h3>
-<p><b>"Cần người xem lại" không phải là lỗi của B.</b> Khi B không đủ căn cứ để kết luận, nó được thiết kế để <b>nói là chưa đủ căn cứ</b>, chứ không đoán. Trên bản demo 200 cuốc này có <b>bốn</b> dòng như vậy (báo cáo G4 trên 1.000 cuốc có ba) — dòng thứ tư là <b>M01</b>: với chỉ 200 cuốc, nhóm xe "premium" còn lại khá ít chuyến, nên khoảng cách trung bình của nhóm đó dao động mạnh hơn và lệch qua ngưỡng 10% dù không có gì bất thường thật. Lý do đầy đủ ghi ngay trong bảng.</p>
-<p><b>Sản phẩm A là bản mô phỏng.</b> Nhóm tự viết để làm mẫu, dữ liệu là số giả. Không có mã hay dữ liệu thật của Green SM trong đó.</p>
-<p><b>Trang này dùng bản thu nhỏ 200 cuốc</b> để chạy nhanh trong trình duyệt. Thí nghiệm thật chạy 1.000 cuốc, nên các con số đếm ở đây khác với con số trong báo cáo.</p>
-</div>
 
 <h3>③ Tự gài lỗi thử (chỉ trong trang này)</h3>
 <div class="fault-box">
@@ -212,86 +181,33 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <div class="section-eyebrow">Phần 3</div>
 
 <div class="intro" id="ket-luan">
-<h3>Bảng kiểm toán dưới đây đo gì, và phần bạn vừa chạy nằm ở đâu trong đó</h3>
-<p>Phần demo phía trên <b>không phải</b> một thứ riêng để xem chơi. Nó là <b>bằng chứng</b> cho phần kiểm toán dưới đây.</p>
-<p>Đối tượng được kiểm toán ở đây là <b>chính công cụ kiểm định B</b> — không phải sản phẩm A. A chỉ đóng vai bài thi. Bảng dưới trả lời: <i>công cụ này có đáng tin để kết quả của nó được dùng làm bằng chứng tuân thủ hay không</i>, soi theo luật EU và ISO/IEC 42001.</p>
-<p><b>Những điều bạn vừa tự kiểm bằng tay, trên chính trang này:</b></p>
+<h3>5. Điều em nhận ra</h3>
+<p><i>[Suy luận] Phần này do nhóm tự đọc và suy ra, không phải tư vấn pháp lý, chưa qua Legal/DPO.</i></p>
+<p>Luật EU rất rõ ở một chỗ: <b>hệ thống AI nào là rủi ro cao</b> (Đạo luật AI Đ.6(2), Phụ lục III).</p>
+<p>AI kiểm định dùng nội bộ — chấm code, không chấm con người — không nằm trong nhóm đó.</p>
+<p>Và khi không phải rủi ro cao, luật gần như im lặng.<br>Các yêu cầu kỹ thuật ở Điều 9–15 chỉ dành cho nhóm rủi ro cao (Đ.8(1)).</p>
+<p>Nghĩa là: muốn xây một AI kiểm định tốt — hay kiểm tra xem nó có tốt không — <b>luật không cho em cây thước nào.</b></p>
+<p>Đây là chỗ ISO 42001 bước vào.<br>Nó không thay luật. Nó cho cây thước mà luật bỏ trống — đo <b>trực tiếp</b> phần kỹ thuật.</p>
 <div style="overflow-x:auto">
 <table>
-<tr><th>Việc bạn vừa làm</th><th>Chứng minh dòng nào</th></tr>
-<tr><td>Bấm ② và thấy bảng 12 dòng, mỗi dòng có bằng chứng dạng <code>tệp:dòng</code> (kèm <code>@commit</code> khi tệp đó nằm trong mã nguồn đã đóng băng)</td><td><b>T3</b> mỗi quy tắc có căn cứ · <b>T9</b> mỗi kết luận truy được bằng chứng</td></tr>
-<tr><td>Bấm ② lần nữa và thấy kết quả không đổi</td><td><b>T8</b> chạy lại ra cùng kết quả</td></tr>
-<tr><td>Bấm <b>Lỗi 1</b> rồi chạy lại, thấy B báo đúng chỗ</td><td><b>T4</b> công cụ có bắt được lỗi thật</td></tr>
-<tr><td>Bấm <b>Thay đổi hợp lệ 1</b> hoặc <b>Thay đổi hợp lệ 2</b>, thấy B <b>không</b> báo gì</td><td><b>T6</b> công cụ không báo động giả</td></tr>
-<tr><td>Đọc chân trang: B khoá tại <code>b-freeze</code>, A tại một commit cố định</td><td><b>T11</b> không ai chỉnh công cụ sau khi thấy kết quả · <b>T13</b> đầu vào đúng phiên bản</td></tr>
-<tr><td>Thấy dòng về điều 8 ghi "không đủ căn cứ" thay vì đoán</td><td><b>T14</b> giới hạn phép đo được khai báo</td></tr>
+<tr><th>ISO 42001 hỏi</th><th>Chị tự kiểm ngay trên trang này</th><th>Dùng được cho dự án</th></tr>
+<tr><td><b>A.6.2.4</b> — Có kiểm chứng không?</td><td>Gài <b>Lỗi 1</b> → B báo đúng. <b>Thay đổi hợp lệ</b> → B im. Chạy <b>②</b> hai lần → giống hệt</td><td>Bổ sung cho KPI: không chỉ "bao nhiêu % được kiểm định" mà cả "kiểm định đúng bao nhiêu %"</td></tr>
+<tr><td><b>A.6.2.7</b> — Có tài liệu không?</td><td>Mỗi kết luận chỉ thẳng <code>tệp:dòng</code> — kèm <code>@commit</code> với tệp nằm trong mã nguồn đã đóng băng</td><td>Cột Source mốc 31/10 — chi tiết tới dòng và phiên bản code</td></tr>
+<tr><td><b>A.6.2.8</b> — Có ghi log không?</td><td>Log của B nằm cùng kết quả</td><td>Legal/DPO xem lại được B đã kiểm những gì</td></tr>
+<tr><td><b>A.6.2.5</b> — Triển khai có kiểm soát không?</td><td>B khóa tại <code>b-freeze</code> — xem chân trang</td><td>Mốc 31/12: hệ thống còn thay đổi → biết kết luận nào ứng với phiên bản nào</td></tr>
+<tr><td><b>A.3.2</b> — Vai trò có tách bạch không?</td><td><b>Lúc chấm</b>, đáp án chỉ nằm ở môi trường cách ly</td><td>Người xây AI kiểm định không tự chấm điểm chính mình</td></tr>
+<tr><td><b>A.7.5</b> — Căn cứ từ đâu ra?</td><td>Ma trận 12 dòng, dòng nào cũng có cột căn cứ</td><td>Legal/DPO thấy từng kết luận dựa trên điều luật nào</td></tr>
 </table>
 </div>
-<p><b>Những điều trang này KHÔNG cho bạn thấy, và vì sao.</b> Tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (<b>T4</b>, <b>T5</b>) chỉ có nghĩa khi đo trên <b>bộ lỗi mà công cụ không được biết</b>. Lỗi bạn vừa gài thì bạn biết, nên nó chứng minh <i>cơ chế phát hiện chạy được</i>, không cho ra tỷ lệ. Con số tỷ lệ thật nằm ở <b>mục 3 — Kết quả đo thật (G4)</b>, lấy từ lần đo mù do một phiên cách ly thực hiện. Tương tự, <b>T12</b> (người xây và người chấm tách nhau) là việc đã xảy ra ngoài trang này.</p>
-<p>Những câu chỉ Pháp chế hoặc DPO trả lời được — dữ liệu tài xế có ra ngoài EU không, bộ quy tắc có đúng luật không, kết quả có được dùng làm bằng chứng tuân thủ không — không phép đo nào thay được, nên chúng nằm ở tài liệu riêng trong hồ sơ dự án, không nằm trên trang này.</p>
 </div>
 
 <div class="intro">
-<h3>Kết luận — Kiểm toán thuật toán của công cụ kiểm định</h3>
-<p><i>[Suy luận] Phần kết luận do nhóm soạn. Không phải tư vấn pháp lý, chưa được bộ phận Pháp chế/DPO duyệt. Trích dẫn tiếng Việt là bản dịch không chính thức; khi dùng chính thức, đối chiếu bản gốc tiếng Anh.</i></p>
-
-<h4>1. Đối tượng kiểm toán</h4>
-<p>Đối tượng là <b>AI kiểm định</b> — công cụ kiểm tra tính năng matching/pricing. Bản thân matching/pricing <b>không</b> phải đối tượng của vòng này.</p>
-<p>Sản phẩm mẫu A (matching + pricing có lỗi cài sẵn) trên trang này chỉ đóng vai <b>bài thi</b> để đo xem AI kiểm định có đáng tin hay không.</p>
-<p>Có hai bản AI kiểm định, và mức rủi ro của hai bản khác nhau:</p>
-<ul>
-<li><b>Bản sandbox (trang này):</b> chạy bằng quy tắc + thống kê, dữ liệu hoàn toàn giả.</li>
-<li><b>Bản thật:</b> có khả năng dùng mô hình AI và sẽ đọc dữ liệu thật của tài xế tại EU. <i>[Suy luận]</i></li>
-</ul>
-
-<h4>2. Bảng kiểm toán thuật toán cho AI kiểm định</h4>
-<p><i>Chỉ xếp vào phần dưới những dòng đã làm được thật, có bằng chứng chạy lại được.</i> Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
-<p><b>Khối 1 — Đã làm được, có bằng chứng (11/15 dòng):</b></p>
-<div style="overflow-x:auto">
-<table>
-<tr><th>#</th><th>Câu hỏi</th><th>Căn cứ luật</th><th>Căn cứ ISO 42001</th><th>Bằng chứng sandbox</th></tr>
-<tr><td>T3</td><td>Mỗi quy tắc có căn cứ rõ ràng?</td><td>GT</td><td>A.7.5</td><td>✅ cột căn cứ luật + ISO</td></tr>
-<tr><td>T4</td><td>Tỷ lệ bắt lỗi</td><td>GT — AI Act Đ.9(8), Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ đo với lỗi cài mù</td></tr>
-<tr><td>T5</td><td>Tỷ lệ bỏ lọt (chỉ số sống còn)</td><td>GT — Đ.9(8); GDPR Đ.5(2)</td><td>A.6.2.4</td><td>✅ đã đo: 2/6 bỏ lọt; nguyên nhân khoanh còn hai khả năng, chưa chốt</td></tr>
-<tr><td>T6</td><td>Báo động giả</td><td>GT — Đ.9(8)</td><td>A.6.2.4</td><td>✅ chấm theo tập bằng chứng</td></tr>
-<tr><td>T8</td><td>Chạy lại có ra cùng kết quả?</td><td>GT yếu — AI Act Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ 3/3 lần giống nhau</td></tr>
-<tr><td>T9</td><td>Mỗi kết luận truy được bằng chứng?</td><td>GT — GDPR Đ.5(2), Đ.24(1); AI Act Phụ lục IV</td><td>A.6.2.7, A.6.2.8</td><td>✅ <code>file:dòng@commit</code></td></tr>
-<tr><td>T10</td><td>Công cụ tự ghi log từng bước?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.8</td><td>✅ log của công cụ được lưu</td></tr>
-<tr><td>T11</td><td>Không chỉnh công cụ sau khi thấy kết quả?</td><td>—</td><td>A.6.2.5; điều 6.3</td><td>✅ phiên bản đóng băng</td></tr>
-<tr><td>T12</td><td>Người xây và người chấm tách nhau?</td><td>—</td><td>A.3.2</td><td>✅ chấm ở môi trường cách ly</td></tr>
-<tr><td>T13</td><td>Đầu vào đúng phiên bản?</td><td>GT yếu — AI Act Đ.11(1), Phụ lục IV điểm 6</td><td>A.7.4, A.7.5</td><td>✅ manifest, mã băm</td></tr>
-<tr><td>T14</td><td>Giới hạn phép đo có được khai báo?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.7</td><td>✅</td></tr>
-</table>
+<h3>6. Còn dở</h3>
+<p>B vẫn bỏ lọt 2/6 lỗi. Em đang tìm vì sao.<br>Trang này chưa làm phần phân loại Mechanism/Effect — mới đo cách đối chiếu kết luận của AI với code.<br>Bộ quy tắc pháp lý trong ma trận chưa qua Legal/DPO.<br>Phần ISO mới đối chiếu được tên control — chưa đọc nội dung chi tiết của chuẩn.</p>
 </div>
-<p style="font-size:13px;color:#555"><b>Về T4/T5/T6 (dùng khoảng Clopper–Pearson trên chính số đếm):</b> ba dòng này đo trên <b>6 lỗi và 3 mục sạch</b>. Recall 0,667 có khoảng tin cậy 95% là <b>[0,223 – 0,957]</b>; nếu recall thực chỉ bằng tung đồng xu thì xác suất quan sát ≥ 4/6 vẫn là <b>0,344</b>. Phép đo chứng minh <b>giao thức chạy được</b>, chưa đủ lực mẫu để xếp hạng chất lượng công cụ.</p>
 
-<p><b>Khối 2 — Chưa làm được (4/15 dòng):</b></p>
-<ul>
-<li><b>T1</b> — Mục đích và giới hạn sử dụng có được ghi rõ? <b>Chưa làm được.</b> Có một câu trong tài liệu ("Chỉ đề xuất, Pháp chế quyết"), không có văn bản phạm vi.</li>
-<li><b>T2</b> — Bộ quy tắc có phủ đủ nghĩa vụ cần kiểm? <b>Chưa đo.</b> Độ phủ của bộ quy tắc chưa bao giờ được đo — và biết nó chưa đủ: 2 lỗi bị bỏ lọt đều nằm trong phạm vi 12 dòng hiện có.</li>
-<li><b>T7</b> — Báo "ĐẠT" sai đúng chỗ có lỗi? <b>Chưa đo.</b> Chỉ khai báo rằng ca này có thể xảy ra, chưa đo xem nó có xảy ra thật hay không.</li>
-<li><b>T15</b> — Bản thật dùng mô hình AI: ảo giác, tái lập? <b>Chưa làm.</b> Sandbox không đo được.</li>
-</ul>
-
-<h4>3. Hai kết luận</h4>
-<ol>
-<li><b>Về công cụ kiểm định:</b> trong 15 câu hỏi kiểm toán, <b>11 câu đã có bằng chứng chạy lại được</b> — căn cứ từng quy tắc, tỷ lệ bắt lỗi và bỏ lọt đo trên bộ lỗi cài mù, 3/3 lần chạy giống nhau, mỗi kết luận truy được về <code>tệp:dòng@commit</code>, công cụ đóng băng trước khi lỗi được cài, người chấm ở môi trường cách ly. <b>4 câu chưa làm được</b>, liệt kê thẳng ở Khối 2.</li>
-<li><b>Sandbox chứng minh được phương pháp đo, không chứng minh sản phẩm thật tuân thủ.</b></li>
-</ol>
-
-<h4>4. Việc tiếp theo</h4>
-<ul>
-<li><b>Làm được ngay, không cần Pháp chế:</b> văn bản phạm vi đưa AI kiểm định vào hệ thống quản lý AI (T1); KPI = tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (T4, T5); cột Source đã có (T9).</li>
-<li><b>Phải có Pháp chế/DPO kết luận trước:</b> duyệt bộ quy tắc pháp lý; chốt xem kết quả của công cụ kiểm định có được dùng làm bằng chứng tuân thủ hay không; xác định vai trò các bên theo GDPR và việc chuyển dữ liệu ra ngoài EU; lập Tuyên bố áp dụng; quy trình cập nhật khi luật thay đổi; đo riêng rủi ro mô hình AI của bản thật (T15).</li>
-</ul>
-
-<h4>5. Nguồn gốc câu hỏi và giới hạn</h4>
-<ul>
-<li>Các câu hỏi do nhóm <b>tự soạn</b> từ: điều luật đã tra nguyên văn; tên và mục tiêu control ISO 42001; các quyết định trong quá trình làm sandbox.</li>
-<li>Điều luật đã tra nguyên văn (bản hợp nhất AI Act 27/07/2026; Chỉ thị (EU) 2024/2831; GDPR): AI Act Đ.3(1), Đ.6(2)–(3), Đ.8(1), Đ.9(8), Đ.10(3), Đ.10(6), Đ.11(1), Đ.12, Đ.15, Đ.17(1), Đ.27(1), Đ.72, Phụ lục III, Phụ lục IV; GDPR Đ.5(2), Đ.22, Đ.24(1), Đ.35; Chỉ thị Đ.1, Đ.2, Đ.7–Đ.12.</li>
-<li>ISO/IEC 42001: chỉ đối chiếu được <b>tên control và câu mục tiêu</b> qua nguồn thứ cấp. Nội dung yêu cầu chi tiết (Phụ lục B) chưa đọc vì cần bản có bản quyền.</li>
-<li>Mục ghi <b>[Chưa xác minh]</b> cần tra nguyên văn trước khi dùng chính thức.</li>
-</ul>
+<div class="intro" style="text-align:center">
+<p style="font-size:17px;font-weight:600;margin:0"><b>Luật vạch ranh giới. ISO cho cây thước.</b></p>
 </div>
 
 </div>
