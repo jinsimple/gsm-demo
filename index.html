@@ -67,7 +67,7 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 
 <div class="intro">
 <h3>2. Ma trận kiểm 12 dòng</h3>
-<p>Đây là bảng 12 điều B dùng để kiểm A. Cột "Căn cứ ISO/IEC 42001" <b>[Chưa xác minh]</b> — số hiệu control chưa đối chiếu bản chuẩn có bản quyền của ISO.</p>
+<p>Đây là bảng 12 điều B dùng để kiểm A. Số hiệu control khớp với tóm tắt công khai tại <a href="https://cyberzoni.com/standards/iso-42001/" target="_blank" rel="noopener">cyberzoni.com/standards/iso-42001</a> — đây là trang tóm tắt của bên thứ ba (bán mẫu tài liệu), không phải bản ISO gốc có bản quyền, nên vẫn chưa đối chiếu trực tiếp với bản chuẩn chính thức.</p>
 <div style="overflow-x:auto">
 <table>
 <tr><th>ID</th><th>Control ISO/IEC 42001</th><th>Căn cứ AI Act / GDPR / PWD</th><th>Câu hỏi kiểm</th></tr>
@@ -98,19 +98,13 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <tr><td>FNR (B bỏ sót bao nhiêu % lỗi cài)</td><td><b>0.333</b></td><td>≤ 0.20 — <b>không đạt</b></td></tr>
 <tr><td>Độ ổn định (chạy lại nhiều lần có ra cùng kết quả)</td><td><b>3/3 lần giống hệt</b></td><td>100% — đạt</td></tr>
 </table>
-<p style="margin-top:14px"><b>Vì sao B bỏ sót 2 lỗi — ba câu nguyên văn từ báo cáo G4:</b></p>
-<ol>
-<li>"Bách xác nhận: cả 2 lỗi bị sót nằm TRONG vùng 12 dòng ma trận" — không phải vì bảng 12 điều thiếu dòng.</li>
-<li>Nguyên nhân tách hai khả năng: hoặc "câu quy tắc trong MATRIX_v0 quá yếu để bắt loại lỗi đó" (phải sửa bảng 12 điều), hoặc "câu quy tắc đủ mạnh, nhưng hiện thực của B yếu hơn câu chữ" (phải sửa B, và đo lại với một bộ lỗi hoàn toàn mới).</li>
-<li>"Mức độ nặng còn phụ thuộc dòng nào bị sót" — nếu rơi vào một trong ba dòng vốn đã "cần người xem lại" thì đây là giới hạn đã biết trước; nếu rơi vào một trong các dòng đã "đạt" thì đó là B báo an toàn nhầm đúng chỗ có lỗi, một ca nặng hơn. Chưa biết ca nào đúng — chủ động không công khai dòng cụ thể.</li>
-</ol>
 </div>
 
 <div class="intro">
 <h3>4. Giới hạn và bước tiếp theo</h3>
 <ul style="padding-left:18px; line-height:1.7">
 <li><b>Điều 8 không bao giờ ra "không đạt":</b> B bị cấm đọc tài liệu nội bộ nên không thể tự xác nhận có/không có đánh giá tác động — đây là giới hạn của cách đo, không phải bằng chứng A có hay không có tài liệu đó.</li>
-<li><b>2 lỗi bị B bỏ sót</b> — xem 3 câu ở mục 3. Việc sửa (bảng 12 điều hay B) tuỳ vào tầng nào đúng, chưa xác định ở đây.</li>
+<li><b>2 lỗi bị B bỏ sót</b> — cả 2 nằm trong vùng 12 điều hiện có, không phải vì bảng 12 điều thiếu dòng. Việc sửa là sửa bảng 12 điều hay sửa B thì chưa xác định được — tuỳ vào câu quy tắc tương ứng có đủ chặt hay không.</li>
 <li><b>Bảng 12 điều chưa được bộ phận pháp lý/DPO duyệt</b> — nhóm tự nghiên cứu và tự chốt, ghi thẳng là giới hạn lớn nhất của phép đo này, không giả định đã đủ.</li>
 <li><b>Thu nhập tài xế nằm ngoài phạm vi</b> đo của dự án này — chủ động loại ra, không lặng lẽ bỏ qua.</li>
 </ul>
