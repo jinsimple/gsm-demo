@@ -21,11 +21,32 @@
   .fault-box { background: #f0f4ff; border: 1px solid #7a93d1; padding: 10px 14px; border-radius: 6px; margin: 16px 0 8px; font-size: 14px; }
   #fault-active { font-weight: 600; margin: 8px 0 0; }
   #fault-diff { display: none; }
+  .intro { background: #fff; border: 1px solid #ccc; padding: 14px 16px; border-radius: 6px; margin: 16px 0; font-size: 15px; }
+  .intro h3 { margin-top: 0; }
+  .intro p { margin: 8px 0; }
+  .after-note { margin-top: 24px; }
+  .statusrow { display: flex; align-items: center; gap: 10px; }
+  .spinner { width: 16px; height: 16px; border: 3px solid #cbd5c9; border-top-color: #1a7a1a; border-radius: 50%; animation: spin 0.9s linear infinite; flex: none; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .commit-line { font-size: 13px; color: #555; margin: 4px 0 10px; }
+  .source-links { font-size: 14px; margin-top: 28px; padding-top: 14px; border-top: 1px solid #ddd; }
+  .source-links p { margin: 6px 0; }
 </style>
 </head>
 <body>
 
 <h1>GSM Sandbox — A + B chạy thật trong trình duyệt</h1>
+
+<div class="intro">
+<h3>Trang này là gì</h3>
+<p>Đây là một thí nghiệm nhỏ. Có hai chương trình.</p>
+<p>Chương trình thứ nhất, gọi là <b>A</b>, làm việc của một ứng dụng gọi xe: nhận một cuốc, chọn tài xế phù hợp gần đó, rồi tính tiền. Nó ghi lại mọi bước nó làm vào một quyển sổ.</p>
+<p>Chương trình thứ hai, gọi là <b>B</b>, làm việc của một người đi kiểm tra. B có một bảng 12 điều cần kiểm, lấy từ quy định của châu Âu — ví dụ <i>có đối xử lệch giữa các nhóm khách không</i>, <i>có lưu vết quyết định không</i>. B tự đọc mã nguồn và quyển sổ của A, rồi kết luận từng điều.</p>
+<p>Điều đáng chú ý: <b>B không được biết gì về bên trong A.</b> Người viết B chỉ được xem bảng 12 điều và bản mô tả A nhận vào gì trả ra gì. Giống như thuê người soát hàng mà không cho xem bản vẽ nhà máy.</p>
+<p><b>Bước 1 — Bấm "① Chạy A".</b> Thuật toán sẽ xử lý 200 cuốc xe và in ra kết quả: bao nhiêu cuốc ghép được tài xế, giá trung bình, bao nhiêu cuốc không tìm được xe. Lần đầu hơi lâu vì trình duyệt phải tải Python về máy bạn. Mọi thứ chạy trong máy bạn, không gửi gì lên mạng.</p>
+<p><b>Bước 2 — Bấm "② Chạy B".</b> Chương trình kiểm sẽ tự chạy lại A một lần nữa để có sổ mới, rồi đi soát 12 điều. Bước này lâu hơn bước 1, vì B phải đọc hết quyển sổ. Kết quả là một bảng 12 dòng, mỗi dòng ghi <i>đạt</i>, <i>không đạt</i>, hoặc <i>cần người xem lại</i>, kèm chỗ nó dựa vào để kết luận.</p>
+<p><b>Bước 3 — Bấm một nút gài lỗi ở mục ③, rồi chạy B lại.</b> Đây là phần vui nhất. Bạn tự tay làm cho sản phẩm sai — ví dụ xoá số phiên bản khỏi tệp cài đặt — rồi xem B có tìm ra không. Trang sẽ hiện cho bạn thấy đã sửa đúng chỗ nào. Bấm "Hoàn lại" là mọi thứ về như cũ.</p>
+</div>
 
 <div class="note">
 Đây là bản <b>mô phỏng</b>, dữ liệu <b>hoàn toàn tổng hợp</b> (giả lập) — không phải sản phẩm thật, không phải dữ liệu thật của Green SM.
@@ -40,7 +61,11 @@ Bản thu nhỏ <b>200 chuyến</b> (báo cáo G4 đo trên 1.000 chuyến) đ�
 Trang này cần máy tính (không chạy trên điện thoại/máy yếu) — tải Pyodide và chạy đủ 200 chuyến tốn vài chục giây đến vài phút CPU.
 </div>
 
-<p id="status">Đang tải Pyodide (CPython chạy trong trình duyệt)… có thể mất vài giây lần đầu.</p>
+<div class="statusrow">
+  <span class="spinner" id="spinner" hidden></span>
+  <p id="status" style="margin:0">Sẵn sàng để bắt đầu…</p>
+</div>
+<p class="commit-line">Lần chạy đầu mất khoảng <b>20–40 giây</b> vì trình duyệt phải tải Python về máy bạn (một lần cho cả phiên, các lần bấm sau nhanh hơn nhiều).</p>
 
 <div>
   <button id="btn-a" disabled>① Chạy A (matching + pricing, 200 chuyến)</button>
@@ -50,9 +75,17 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <h3>Kết quả A</h3>
 <pre id="out-a">(chưa chạy)</pre>
 
+<p class="commit-line">Bản mã đang chạy — A: commit <code>2abeafd</code> · B: tag <code>b-freeze</code> (<code>cce80bf</code>)</p>
 <h3>Kết quả B</h3>
 <div id="out-b-table"></div>
 <pre id="out-b">(chưa chạy)</pre>
+
+<div class="intro after-note">
+<h3>Vài điều nên biết trước</h3>
+<p><b>"Cần người xem lại" không phải là lỗi của B.</b> Khi B không đủ căn cứ để kết luận, nó được thiết kế để <b>nói là chưa đủ căn cứ</b>, chứ không đoán. Có bốn dòng như vậy trên bản demo 200 cuốc này, và lý do từng dòng ghi ngay trong bảng.</p>
+<p><b>Sản phẩm A là bản mô phỏng.</b> Nhóm tự viết để làm mẫu, dữ liệu là số giả. Không có mã hay dữ liệu thật của Green SM trong đó.</p>
+<p><b>Trang này dùng bản thu nhỏ 200 cuốc</b> để chạy nhanh trong trình duyệt. Thí nghiệm thật chạy 1.000 cuốc, nên các con số đếm ở đây khác với con số trong báo cáo.</p>
+</div>
 
 <h3>③ Tự gài lỗi thử (chỉ trong trang này)</h3>
 <div class="fault-box">
@@ -69,8 +102,14 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
 
+<div class="source-links">
+<p><b>Mã nguồn chạy trên trang này:</b> <a href="https://github.com/jinsimple/gsm-demo" target="_blank" rel="noopener">github.com/jinsimple/gsm-demo</a> — đúng những tệp trang này đang chạy, không thêm không bớt.</p>
+<p><b>Toàn bộ hồ sơ dự án</b> (tài liệu, quyết định thiết kế, bộ lệnh kiểm, báo cáo): <a href="https://github.com/jinsimple/gsm-check" target="_blank" rel="noopener">github.com/jinsimple/gsm-check</a></p>
+</div>
+
 <script>
 const statusEl = document.getElementById('status');
+const spinnerEl = document.getElementById('spinner');
 const btnA = document.getElementById('btn-a');
 const btnB = document.getElementById('btn-b');
 const outA = document.getElementById('out-a');
@@ -90,6 +129,15 @@ if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 let pyodideReady = null;
 let filesPristine = null;
 const PRICING_PATH = 'product/config/pricing.json';
+
+// Pyodide chay Python tren luong chinh: trong luc chay, luong chinh bi
+// chan nen phai doi chu + nhuong mot nhip (setTimeout 0) TRUOC lenh chan,
+// de trinh duyet ve lai duoc chu moi truoc khi dung cung.
+async function setStatus(text, busy) {
+  statusEl.textContent = text;
+  spinnerEl.hidden = !busy;
+  await new Promise(r => setTimeout(r, 0));
+}
 
 function clearResults() {
   outA.textContent = '(chưa chạy)';
@@ -154,8 +202,9 @@ function ensureDir(pyodide, path) {
 }
 
 async function boot() {
+  await setStatus('Đang tải Python vào trình duyệt (lần đầu lâu hơn)…', true);
   const pyodide = await loadPyodide();
-  statusEl.textContent = 'Đang nạp mã nguồn A + B vào bộ nhớ…';
+  await setStatus('Đang nạp mã nguồn A + B vào bộ nhớ…', true);
   const files = await (await fetch('files.json')).json();
   filesPristine = files;
   for (const [path, content] of Object.entries(files)) {
@@ -164,14 +213,14 @@ async function boot() {
   }
   try { pyodide.FS.mkdir('logs'); } catch (e) {}
   try { pyodide.FS.mkdir('reports'); } catch (e) {}
-  statusEl.textContent = 'Sẵn sàng. Bấm ① để chạy A, ② để chạy B.';
+  pyodideReady = pyodide;
+  await setStatus('Sẵn sàng. Bấm ① để chạy A, ② để chạy B.', false);
   btnA.disabled = false;
   btnB.disabled = false;
   btnF1.disabled = false;
   btnF2.disabled = false;
   btnF3.disabled = false;
   btnReset.disabled = false;
-  pyodideReady = pyodide;
 }
 
 const STAGE1_PY = `
@@ -264,13 +313,15 @@ if report_files:
 
 btnA.addEventListener('click', async () => {
   btnA.disabled = true;
-  outA.textContent = 'Đang chạy A trên 200 chuyến…';
+  outA.textContent = 'Đang chạy…';
+  await setStatus('Đang chạy thuật toán A (200 cuốc)…', true);
   try {
     const result = pyodideReady.runPython(STAGE1_PY).toJs({ dict_converter: Object.fromEntries });
     outA.textContent = (result.ok ? '[OK]\n' : '[LOI]\n') + result.stdout;
   } catch (e) {
     outA.textContent = 'Lỗi JS: ' + e;
   }
+  await setStatus('Xong A. Bấm ① để chạy lại, ② để chạy B.', false);
   btnA.disabled = false;
 });
 
@@ -287,8 +338,9 @@ function renderTable(rows) {
 
 btnB.addEventListener('click', async () => {
   btnB.disabled = true;
-  outB.textContent = 'Đang chạy B (nạp A, chạy 12 quy tắc)…';
+  outB.textContent = 'Đang chạy…';
   outBTable.innerHTML = '';
+  await setStatus('Đang chạy B: tạo nhật ký quyết định mới rồi soát 12 điều (bước lâu nhất)…', true);
   try {
     pyodideReady.globals.set('TRACKED_JSON', JSON.stringify(Object.keys(filesPristine)));
     const result = pyodideReady.runPython(STAGE2_PY).toJs({ dict_converter: Object.fromEntries });
@@ -300,6 +352,7 @@ btnB.addEventListener('click', async () => {
   } catch (e) {
     outB.textContent = 'Lỗi JS: ' + e;
   }
+  await setStatus('Xong B. Bấm ① ② để chạy lại, hoặc gài lỗi ở mục ③.', false);
   btnB.disabled = false;
 });
 
