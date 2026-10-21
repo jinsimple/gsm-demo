@@ -173,7 +173,7 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <tr><td>Thấy dòng về điều 8 ghi "không đủ căn cứ" thay vì đoán</td><td><b>T14</b> giới hạn phép đo được khai báo</td></tr>
 </table>
 </div>
-<p><b>Những điều trang này KHÔNG cho bạn thấy, và vì sao.</b> Tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (<b>T4</b>, <b>T5</b>) chỉ có nghĩa khi đo trên <b>bộ lỗi mà công cụ không được biết</b>. Lỗi bạn vừa gài thì bạn biết, nên nó chứng minh <i>cơ chế phát hiện chạy được</i>, không cho ra tỷ lệ. Con số tỷ lệ thật nằm ở <b>mục 3</b>, lấy từ lần đo mù do một phiên cách ly thực hiện. Tương tự, <b>T12</b> (người xây và người chấm tách nhau) là việc đã xảy ra ngoài trang này.</p>
+<p><b>Những điều trang này KHÔNG cho bạn thấy, và vì sao.</b> Tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (<b>T4</b>, <b>T5</b>) chỉ có nghĩa khi đo trên <b>bộ lỗi mà công cụ không được biết</b>. Lỗi bạn vừa gài thì bạn biết, nên nó chứng minh <i>cơ chế phát hiện chạy được</i>, không cho ra tỷ lệ. Con số tỷ lệ thật nằm ở <b>mục 3 — Kết quả đo thật (G4)</b>, lấy từ lần đo mù do một phiên cách ly thực hiện. Tương tự, <b>T12</b> (người xây và người chấm tách nhau) là việc đã xảy ra ngoài trang này.</p>
 <p>Những câu chỉ Pháp chế hoặc DPO trả lời được — dữ liệu tài xế có ra ngoài EU không, bộ quy tắc có đúng luật không, kết quả có được dùng làm bằng chứng tuân thủ không — không phép đo nào thay được, nên chúng nằm ở tài liệu riêng trong hồ sơ dự án, không nằm trên trang này.</p>
 </div>
 
@@ -184,7 +184,7 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <h4>1. Đối tượng kiểm toán</h4>
 <p>Đối tượng là <b>AI kiểm định</b> — công cụ kiểm tra tính năng matching/pricing. Bản thân matching/pricing <b>không</b> phải đối tượng của vòng này.</p>
 <p>Sản phẩm mẫu A (matching + pricing có lỗi cài sẵn) trên trang này chỉ đóng vai <b>bài thi</b> để đo xem AI kiểm định có đáng tin hay không.</p>
-<p>Có hai bản AI kiểm định, và nhiều kết luận pháp lý khác nhau giữa hai bản:</p>
+<p>Có hai bản AI kiểm định, và mức rủi ro của hai bản khác nhau:</p>
 <ul>
 <li><b>Bản sandbox (trang này):</b> chạy bằng quy tắc + thống kê, dữ liệu hoàn toàn giả.</li>
 <li><b>Bản thật:</b> có khả năng dùng mô hình AI và sẽ đọc dữ liệu thật của tài xế tại EU. <i>[Suy luận]</i></li>
@@ -202,7 +202,7 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <p><b>Tiền đề bắt buộc:</b> đường "gián tiếp qua luật" chỉ đứng vững khi văn bản ghi rõ <i>kết quả AI kiểm định được dùng làm bằng chứng tuân thủ</i>, và Pháp chế chấp nhận điều đó.</p>
 
 <h4>3. Bảng kiểm toán thuật toán cho AI kiểm định</h4>
-<p><i>Chỉ xếp vào phần dưới những dòng đã làm được thật, có bằng chứng chạy lại được — theo yêu cầu riêng.</i> Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
+<p><i>Chỉ xếp vào phần dưới những dòng đã làm được thật, có bằng chứng chạy lại được.</i> Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
 <p><b>Khối 1 — Đã làm được, có bằng chứng (11/15 dòng):</b></p>
 <div style="overflow-x:auto">
 <table>
@@ -232,7 +232,7 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 
 <h4>4. Hai kết luận</h4>
 <ol>
-<li><b>Về thuật toán của công cụ:</b> luật EU cho căn cứ <b>gián tiếp</b> cho 6/15 câu hỏi, cộng <b>5 câu có căn cứ gián tiếp yếu</b>; 4 câu còn lại luật không với tới. Luật mạnh hơn ISO ở câu về độ phủ bộ quy tắc. ISO 42001 là căn cứ <b>duy nhất</b> cho 4 câu then chốt: mục đích sử dụng, đóng băng công cụ, tách vai, và rủi ro của mô hình AI.</li>
+<li><b>Về công cụ kiểm định:</b> trong 15 câu hỏi kiểm toán, <b>11 câu đã có bằng chứng chạy lại được</b> — căn cứ từng quy tắc, tỷ lệ bắt lỗi và bỏ lọt đo trên bộ lỗi cài mù, 3/3 lần chạy giống nhau, mỗi kết luận truy được về <code>tệp:dòng@commit</code>, công cụ đóng băng trước khi lỗi được cài, người chấm ở môi trường cách ly. <b>4 câu chưa làm được</b>, liệt kê thẳng ở Khối 2.</li>
 <li><b>Sandbox chứng minh được phương pháp đo, không chứng minh sản phẩm thật tuân thủ.</b></li>
 </ol>
 
