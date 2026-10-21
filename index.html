@@ -157,12 +157,28 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
 
-<div class="warn" id="ket-luan">
-Phần dưới đây là một <b>phân tích pháp lý khác</b>, không phải kết quả B vừa chạy ở trên. Bảng 12 dòng B chạy ra chỉ đo <i>bản thân sản phẩm mẫu A</i>; hai bảng dưới đây đo <i>độ tin cậy của chính B</i> theo luật EU và tiêu chuẩn ISO 42001, và dành cho người làm việc với Pháp chế/DPO, không bắt buộc phải đọc để hiểu phần demo phía trên.
+<div class="intro" id="ket-luan">
+<h3>Hai bảng này đo gì, và phần bạn vừa chạy nằm ở đâu trong đó</h3>
+<p>Phần demo phía trên <b>không phải</b> một thứ riêng để xem chơi. Nó là <b>bằng chứng</b> cho phần kiểm toán dưới đây.</p>
+<p>Đối tượng được kiểm toán ở đây là <b>chính công cụ kiểm định B</b> — không phải sản phẩm A. A chỉ đóng vai bài thi. Hai bảng dưới trả lời: <i>công cụ này có đáng tin để kết quả của nó được dùng làm bằng chứng tuân thủ hay không</i>, soi theo luật EU và ISO/IEC 42001.</p>
+<p><b>Những điều bạn vừa tự kiểm bằng tay, trên chính trang này:</b></p>
+<div style="overflow-x:auto">
+<table>
+<tr><th>Việc bạn vừa làm</th><th>Chứng minh dòng nào</th></tr>
+<tr><td>Bấm ② và thấy bảng 12 dòng, mỗi dòng có bằng chứng dạng <code>tệp:dòng</code> (kèm <code>@commit</code> khi tệp đó nằm trong mã nguồn đã đóng băng)</td><td><b>T3</b> mỗi quy tắc có căn cứ · <b>T9</b> mỗi kết luận truy được bằng chứng</td></tr>
+<tr><td>Bấm ② lần nữa và thấy kết quả không đổi</td><td><b>T8</b> chạy lại ra cùng kết quả</td></tr>
+<tr><td>Bấm <b>Lỗi 1</b> rồi chạy lại, thấy B báo đúng chỗ</td><td><b>T4</b> công cụ có bắt được lỗi thật</td></tr>
+<tr><td>Bấm <b>Thay đổi hợp lệ 1</b> hoặc <b>Thay đổi hợp lệ 2</b>, thấy B <b>không</b> báo gì</td><td><b>T6</b> công cụ không báo động giả</td></tr>
+<tr><td>Đọc chân trang: B khoá tại <code>b-freeze</code>, A tại một commit cố định</td><td><b>T11</b> không ai chỉnh công cụ sau khi thấy kết quả · <b>T13</b> đầu vào đúng phiên bản</td></tr>
+<tr><td>Thấy dòng về điều 8 ghi "không đủ căn cứ" thay vì đoán</td><td><b>T14</b> giới hạn phép đo được khai báo</td></tr>
+</table>
+</div>
+<p><b>Những điều trang này KHÔNG cho bạn thấy, và vì sao.</b> Tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (<b>T4</b>, <b>T5</b>) chỉ có nghĩa khi đo trên <b>bộ lỗi mà công cụ không được biết</b>. Lỗi bạn vừa gài thì bạn biết, nên nó chứng minh <i>cơ chế phát hiện chạy được</i>, không cho ra tỷ lệ. Con số tỷ lệ thật nằm ở <b>mục 3</b>, lấy từ lần đo mù do một phiên cách ly thực hiện. Tương tự, <b>T12</b> (người xây và người chấm tách nhau) là việc đã xảy ra ngoài trang này.</p>
+<p>Những câu chỉ Pháp chế hoặc DPO trả lời được — dữ liệu tài xế có ra ngoài EU không, bộ quy tắc có đúng luật không, kết quả có được dùng làm bằng chứng tuân thủ không — không phép đo nào thay được, nên chúng nằm ở tài liệu riêng trong hồ sơ dự án, không nằm trên trang này.</p>
 </div>
 
 <div class="intro">
-<h3>Kết luận — Kiểm toán AI kiểm định: luật EU và ISO/IEC 42001</h3>
+<h3>Kết luận — Kiểm toán thuật toán của công cụ kiểm định</h3>
 <p><i>[Suy luận] Phần kết luận do nhóm soạn. Không phải tư vấn pháp lý, chưa được bộ phận Pháp chế/DPO duyệt. Trích dẫn tiếng Việt là bản dịch không chính thức; khi dùng chính thức, đối chiếu bản gốc tiếng Anh.</i></p>
 
 <h4>1. Đối tượng kiểm toán</h4>
@@ -186,17 +202,15 @@ Phần dưới đây là một <b>phân tích pháp lý khác</b>, không phải
 <p><b>Tiền đề bắt buộc:</b> đường "gián tiếp qua luật" chỉ đứng vững khi văn bản ghi rõ <i>kết quả AI kiểm định được dùng làm bằng chứng tuân thủ</i>, và Pháp chế chấp nhận điều đó.</p>
 
 <h4>3. Bảng kiểm toán thuật toán cho AI kiểm định</h4>
-<p>Ký hiệu: ✅ có bằng chứng · ⚠️ một phần · ❌ chưa có. Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
+<p><i>Chỉ xếp vào phần dưới những dòng đã làm được thật, có bằng chứng chạy lại được — theo yêu cầu riêng.</i> Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
+<p><b>Khối 1 — Đã làm được, có bằng chứng (11/15 dòng):</b></p>
 <div style="overflow-x:auto">
 <table>
 <tr><th>#</th><th>Câu hỏi</th><th>Căn cứ luật</th><th>Căn cứ ISO 42001</th><th>Bằng chứng sandbox</th></tr>
-<tr><td>T1</td><td>Mục đích và giới hạn sử dụng có được ghi rõ?</td><td>—</td><td>A.9.4; điều 4.3</td><td>✅ "Chỉ đề xuất, Pháp chế quyết" · ❌ chưa có văn bản phạm vi</td></tr>
-<tr><td>T2</td><td>Bộ quy tắc có phủ đủ nghĩa vụ cần kiểm?</td><td>GT — danh mục nghĩa vụ AI Act Đ.9–15, Chỉ thị Đ.7–12, GDPR Đ.22, Đ.35</td><td>A.6.2.2</td><td>⚠️ 12 dòng ma trận</td></tr>
 <tr><td>T3</td><td>Mỗi quy tắc có căn cứ rõ ràng?</td><td>GT</td><td>A.7.5</td><td>✅ cột căn cứ luật + ISO</td></tr>
 <tr><td>T4</td><td>Tỷ lệ bắt lỗi</td><td>GT — AI Act Đ.9(8), Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ đo với lỗi cài mù</td></tr>
-<tr><td>T5</td><td>Tỷ lệ bỏ lọt (chỉ số sống còn)</td><td>GT — Đ.9(8); GDPR Đ.5(2)</td><td>A.6.2.4</td><td>✅ có phân tích "vì sao sót"</td></tr>
+<tr><td>T5</td><td>Tỷ lệ bỏ lọt (chỉ số sống còn)</td><td>GT — Đ.9(8); GDPR Đ.5(2)</td><td>A.6.2.4</td><td>✅ đã đo: 2/6 bỏ lọt; nguyên nhân khoanh còn hai khả năng, chưa chốt</td></tr>
 <tr><td>T6</td><td>Báo động giả</td><td>GT — Đ.9(8)</td><td>A.6.2.4</td><td>✅ chấm theo tập bằng chứng</td></tr>
-<tr><td>T7</td><td>Báo "ĐẠT" sai đúng chỗ có lỗi</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.4</td><td>⚠️ đã khai báo ca xấu nhất</td></tr>
 <tr><td>T8</td><td>Chạy lại có ra cùng kết quả?</td><td>GT yếu — AI Act Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ 3/3 lần giống nhau</td></tr>
 <tr><td>T9</td><td>Mỗi kết luận truy được bằng chứng?</td><td>GT — GDPR Đ.5(2), Đ.24(1); AI Act Phụ lục IV</td><td>A.6.2.7, A.6.2.8</td><td>✅ <code>file:dòng@commit</code></td></tr>
 <tr><td>T10</td><td>Công cụ tự ghi log từng bước?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.8</td><td>✅ log của công cụ được lưu</td></tr>
@@ -204,46 +218,31 @@ Phần dưới đây là một <b>phân tích pháp lý khác</b>, không phải
 <tr><td>T12</td><td>Người xây và người chấm tách nhau?</td><td>—</td><td>A.3.2</td><td>✅ chấm ở môi trường cách ly</td></tr>
 <tr><td>T13</td><td>Đầu vào đúng phiên bản?</td><td>GT yếu — AI Act Đ.11(1), Phụ lục IV điểm 6</td><td>A.7.4, A.7.5</td><td>✅ manifest, mã băm</td></tr>
 <tr><td>T14</td><td>Giới hạn phép đo có được khai báo?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.7</td><td>✅</td></tr>
-<tr><td>T15</td><td>Bản thật dùng mô hình AI: ảo giác, tái lập?</td><td>—</td><td>A.6.2.4</td><td>❌ sandbox không đo được</td></tr>
 </table>
 </div>
 <p style="font-size:13px;color:#555"><b>Về T4/T5/T6 (dùng khoảng Clopper–Pearson trên chính số đếm):</b> ba dòng này đo trên <b>6 lỗi và 3 mục sạch</b>. Recall 0,667 có khoảng tin cậy 95% là <b>[0,223 – 0,957]</b>; nếu recall thực chỉ bằng tung đồng xu thì xác suất quan sát ≥ 4/6 vẫn là <b>0,344</b>. Phép đo chứng minh <b>giao thức chạy được</b>, chưa đủ lực mẫu để xếp hạng chất lượng công cụ.</p>
 
-<h4>4. Bảng kiểm toán pháp lý cho AI kiểm định</h4>
-<p>Ký hiệu thêm: ⚖️ cần Pháp chế kết luận.</p>
-<div style="overflow-x:auto">
-<table>
-<tr><th>#</th><th>Câu hỏi</th><th>Căn cứ luật</th><th>ISO 42001</th><th>Bản sandbox</th><th>Bản thật</th></tr>
-<tr><td>P1</td><td>Có phải "hệ thống AI"?</td><td>AI Act Đ.3(1) — phải <i>"suy luận"</i> cách tạo đầu ra</td><td>—</td><td>Có thể không</td><td>⚖️ nhiều khả năng có</td></tr>
-<tr><td>P2</td><td>Có phải AI rủi ro cao?</td><td>AI Act Đ.6(2), Phụ lục III 4(b) — công cụ đánh giá code, không đánh giá người</td><td>A.5.2</td><td>Không</td><td>⚖️ không, nếu kết quả không dùng trực tiếp để quyết định về tài xế</td></tr>
-<tr><td>P3</td><td>Phải tuân thủ Điều 9–15?</td><td>AI Act Đ.8(1) — chỉ áp cho rủi ro cao</td><td>—</td><td>Không</td><td>Không (nếu P2 là không)</td></tr>
-<tr><td>P4</td><td>Nghĩa vụ chung cho mọi hệ thống AI?</td><td>AI Act Đ.4, Đ.50 <i>[Chưa xác minh]</i></td><td>A.4.6, A.8.2</td><td>—</td><td>⚖️</td></tr>
-<tr><td>P5</td><td>Dùng mô hình AI của bên thứ ba?</td><td>Nghĩa vụ nhà cung cấp mô hình đa mục đích <i>[Chưa xác minh]</i></td><td>A.10.3</td><td>—</td><td>⚖️</td></tr>
-<tr><td>P6</td><td>Có xử lý dữ liệu cá nhân của tài xế?</td><td>GDPR Đ.5(1)(c), Đ.6</td><td>A.7.3, A.7.5</td><td>✅ dữ liệu giả</td><td>❌ sẽ đọc dữ liệu thật</td></tr>
-<tr><td>P7</td><td>Dữ liệu tài xế có bị chuyển ra ngoài EU?</td><td>GDPR Đ.44–49</td><td>A.10.3</td><td>Không áp</td><td>⚖️ rủi ro pháp lý lớn nhất của bản thật</td></tr>
-<tr><td>P8</td><td>Vai trò của các bên theo GDPR?</td><td>GDPR Đ.28 <i>[Chưa xác minh]</i></td><td>A.10.2</td><td>—</td><td>⚖️</td></tr>
-<tr><td>P9</td><td>Dùng công cụ có chuyển trách nhiệm sang công cụ?</td><td>Không — nghĩa vụ vẫn thuộc doanh nghiệp (AI Act Đ.8(1))</td><td>A.10.2</td><td>✅ đã ghi "chứng minh phương pháp, không chứng minh tuân thủ"</td><td>⚖️ cần văn bản</td></tr>
-<tr><td>P10</td><td>Kết quả có được dùng làm bằng chứng tuân thủ?</td><td>AI Act Đ.9(8), Đ.72; Chỉ thị Đ.10(1)</td><td>Điều 9.2</td><td>⚠️</td><td>⚖️ — <b>tiền đề của mục 2</b></td></tr>
-<tr><td>P11</td><td>Bộ quy tắc pháp lý có đúng luật?</td><td>Diễn giải luật</td><td>A.10.2, A.6.2.2</td><td>❌ chưa được Pháp chế duyệt</td><td>❌</td></tr>
-<tr><td>P12</td><td>Cập nhật khi luật thay đổi?</td><td>Omnibus (hiệu lực 27/07/2026); Chỉ thị Lao động Nền tảng (hạn nội luật hóa 02/12/2026)</td><td>Điều 6.3; A.2.4</td><td>❌</td><td>❌</td></tr>
-<tr><td>P13</td><td>Giải trình vì sao kiểm cái này, bỏ cái kia?</td><td>Luật không có cơ chế</td><td>Điều 6.1.3 — Tuyên bố áp dụng</td><td>❌</td><td>❌</td></tr>
-</table>
-</div>
+<p><b>Khối 2 — Chưa làm được (4/15 dòng):</b></p>
+<ul>
+<li><b>T1</b> — Mục đích và giới hạn sử dụng có được ghi rõ? <b>Chưa làm được.</b> Có một câu trong tài liệu ("Chỉ đề xuất, Pháp chế quyết"), không có văn bản phạm vi.</li>
+<li><b>T2</b> — Bộ quy tắc có phủ đủ nghĩa vụ cần kiểm? <b>Chưa đo.</b> Độ phủ của bộ quy tắc chưa bao giờ được đo — và biết nó chưa đủ: 2 lỗi bị bỏ lọt đều nằm trong phạm vi 12 dòng hiện có.</li>
+<li><b>T7</b> — Báo "ĐẠT" sai đúng chỗ có lỗi? <b>Chưa đo.</b> Chỉ khai báo rằng ca này có thể xảy ra, chưa đo xem nó có xảy ra thật hay không.</li>
+<li><b>T15</b> — Bản thật dùng mô hình AI: ảo giác, tái lập? <b>Chưa làm.</b> Sandbox không đo được.</li>
+</ul>
 
-<h4>5. Ba kết luận</h4>
+<h4>4. Hai kết luận</h4>
 <ol>
 <li><b>Về thuật toán của công cụ:</b> luật EU cho căn cứ <b>gián tiếp</b> cho 6/15 câu hỏi, cộng <b>5 câu có căn cứ gián tiếp yếu</b>; 4 câu còn lại luật không với tới. Luật mạnh hơn ISO ở câu về độ phủ bộ quy tắc. ISO 42001 là căn cứ <b>duy nhất</b> cho 4 câu then chốt: mục đích sử dụng, đóng băng công cụ, tách vai, và rủi ro của mô hình AI.</li>
-<li><b>Về pháp lý của công cụ:</b> Đạo luật AI gần như không áp trực tiếp. GDPR áp ngay khi bản thật đọc dữ liệu tài xế tại EU. Rủi ro lớn nhất nằm ở <b>cách dùng kết quả</b> (P9, P10) và <b>độ đúng của bộ quy tắc</b> (P11).</li>
 <li><b>Sandbox chứng minh được phương pháp đo, không chứng minh sản phẩm thật tuân thủ.</b></li>
 </ol>
 
-<h4>6. Việc tiếp theo</h4>
+<h4>5. Việc tiếp theo</h4>
 <ul>
 <li><b>Làm được ngay, không cần Pháp chế:</b> văn bản phạm vi đưa AI kiểm định vào hệ thống quản lý AI (T1); KPI = tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (T4, T5); cột Source đã có (T9).</li>
-<li><b>Phải có Pháp chế/DPO kết luận trước:</b> duyệt bộ quy tắc (P11) và tiền đề "dùng làm bằng chứng" (P10); kết luận P1, P2, P7, P8; lập Tuyên bố áp dụng (P13); quy trình cập nhật theo luật (P12); đo riêng rủi ro mô hình AI của bản thật (T15).</li>
+<li><b>Phải có Pháp chế/DPO kết luận trước:</b> duyệt bộ quy tắc pháp lý; chốt tiền đề kết quả công cụ được dùng làm bằng chứng tuân thủ; xác định vai trò các bên theo GDPR và việc chuyển dữ liệu ra ngoài EU; lập Tuyên bố áp dụng; quy trình cập nhật khi luật thay đổi; đo riêng rủi ro mô hình AI của bản thật (T15).</li>
 </ul>
 
-<h4>7. Nguồn gốc câu hỏi và giới hạn</h4>
+<h4>6. Nguồn gốc câu hỏi và giới hạn</h4>
 <ul>
 <li>Các câu hỏi do nhóm <b>tự soạn</b> từ: điều luật đã tra nguyên văn; tên và mục tiêu control ISO 42001; các quyết định trong quá trình làm sandbox.</li>
 <li>Điều luật đã tra nguyên văn (bản hợp nhất AI Act 27/07/2026; Chỉ thị (EU) 2024/2831; GDPR): AI Act Đ.3(1), Đ.6(2)–(3), Đ.8(1), Đ.9(8), Đ.10(3), Đ.10(6), Đ.11(1), Đ.12, Đ.15, Đ.17(1), Đ.27(1), Đ.72, Phụ lục III, Phụ lục IV; GDPR Đ.5(2), Đ.22, Đ.24(1), Đ.35; Chỉ thị Đ.1, Đ.2, Đ.7–Đ.12.</li>
