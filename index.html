@@ -36,6 +36,7 @@
 <body>
 
 <h1>GSM Sandbox - Ma trận kiểm thử</h1>
+<p style="margin:-6px 0 18px"><a href="#ket-luan">↓ Đi tới phần Kết luận</a></p>
 
 <div class="intro">
 <h3>Trang này là gì</h3>
@@ -108,7 +109,7 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <li><b>Bảng 12 điều chưa được bộ phận pháp lý/DPO duyệt</b> — nhóm tự nghiên cứu và tự chốt, ghi thẳng là giới hạn lớn nhất của phép đo này, không giả định đã đủ.</li>
 <li><b>Thu nhập tài xế nằm ngoài phạm vi</b> đo của dự án này — chủ động loại ra, không lặng lẽ bỏ qua.</li>
 </ul>
-<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — xếp vào mốc <b>31/10</b>. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức — <b>chưa có mốc thời gian cụ thể cho việc này</b>.</p>
+<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — triển khai trước. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức trước khi dùng thật.</p>
 </div>
 
 <div class="statusrow">
@@ -155,6 +156,101 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <p style="margin-top:14px"><button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button></p>
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
+
+<div class="warn" id="ket-luan">
+Phần dưới đây là một <b>phân tích pháp lý khác</b>, không phải kết quả B vừa chạy ở trên. Bảng 12 dòng B chạy ra chỉ đo <i>bản thân sản phẩm mẫu A</i>; hai bảng dưới đây đo <i>độ tin cậy của chính B</i> theo luật EU và tiêu chuẩn ISO 42001, và dành cho người làm việc với Pháp chế/DPO, không bắt buộc phải đọc để hiểu phần demo phía trên.
+</div>
+
+<div class="intro">
+<h3>Kết luận — Kiểm toán AI kiểm định: luật EU và ISO/IEC 42001</h3>
+<p><i>[Suy luận] Phần kết luận do nhóm soạn. Không phải tư vấn pháp lý, chưa được bộ phận Pháp chế/DPO duyệt. Trích dẫn tiếng Việt là bản dịch không chính thức; khi dùng chính thức, đối chiếu bản gốc tiếng Anh.</i></p>
+
+<h4>1. Đối tượng kiểm toán</h4>
+<p>Đối tượng là <b>AI kiểm định</b> — công cụ kiểm tra tính năng matching/pricing. Bản thân matching/pricing <b>không</b> phải đối tượng của vòng này.</p>
+<p>Sản phẩm mẫu A (matching + pricing có lỗi cài sẵn) trên trang này chỉ đóng vai <b>bài thi</b> để đo xem AI kiểm định có đáng tin hay không.</p>
+<p>Có hai bản AI kiểm định, và nhiều kết luận pháp lý khác nhau giữa hai bản:</p>
+<ul>
+<li><b>Bản sandbox (trang này):</b> chạy bằng quy tắc + thống kê, dữ liệu hoàn toàn giả.</li>
+<li><b>Bản thật:</b> có khả năng dùng mô hình AI và sẽ đọc dữ liệu thật của tài xế tại EU. <i>[Suy luận]</i></li>
+</ul>
+
+<h4>2. Luật EU và ISO 42001 bổ sung cho nhau thế nào</h4>
+<div style="overflow-x:auto">
+<table>
+<tr><th></th><th>Luật EU (AI Act, GDPR, Chỉ thị Lao động Nền tảng)</th><th>ISO/IEC 42001</th></tr>
+<tr><td>Áp cho AI kiểm định?</td><td><b>Không trực tiếp.</b> Công cụ không phải AI rủi ro cao (AI Act Đ.8(1), Phụ lục III 4(b))</td><td><b>Có, nếu</b> doanh nghiệp ghi công cụ vào phạm vi hệ thống quản lý AI (điều 4.3)</td></tr>
+<tr><td>Cách nối tới công cụ</td><td><b>Gián tiếp:</b> doanh nghiệp phải <i>"chứng minh được"</i> việc tuân thủ (GDPR Đ.5(2), Đ.24(1)) và phải kiểm thử theo <i>"chỉ số xác định trước"</i> (AI Act Đ.9(8), Đ.17(1)(d)). Nếu kết quả AI kiểm định được dùng làm bằng chứng, độ tin cậy của công cụ trở thành câu hỏi pháp lý</td><td><b>Trực tiếp:</b> các control về kiểm chứng, log, mục đích sử dụng, phân vai, phân bổ trách nhiệm</td></tr>
+<tr><td>Mạnh nhất ở</td><td>Độ phủ nghĩa vụ; quyền của người lao động</td><td>Chuẩn chất lượng cho chính công cụ; giải trình phạm vi</td></tr>
+</table>
+</div>
+<p><b>Tiền đề bắt buộc:</b> đường "gián tiếp qua luật" chỉ đứng vững khi văn bản ghi rõ <i>kết quả AI kiểm định được dùng làm bằng chứng tuân thủ</i>, và Pháp chế chấp nhận điều đó.</p>
+
+<h4>3. Bảng kiểm toán thuật toán cho AI kiểm định</h4>
+<p>Ký hiệu: ✅ có bằng chứng · ⚠️ một phần · ❌ chưa có. Cột luật: <b>TT</b> = trực tiếp · <b>GT</b> = gián tiếp · <b>—</b> = luật không có.</p>
+<div style="overflow-x:auto">
+<table>
+<tr><th>#</th><th>Câu hỏi</th><th>Căn cứ luật</th><th>Căn cứ ISO 42001</th><th>Bằng chứng sandbox</th></tr>
+<tr><td>T1</td><td>Mục đích và giới hạn sử dụng có được ghi rõ?</td><td>—</td><td>A.9.4; điều 4.3</td><td>✅ "Chỉ đề xuất, Pháp chế quyết" · ❌ chưa có văn bản phạm vi</td></tr>
+<tr><td>T2</td><td>Bộ quy tắc có phủ đủ nghĩa vụ cần kiểm?</td><td>GT — danh mục nghĩa vụ AI Act Đ.9–15, Chỉ thị Đ.7–12, GDPR Đ.22, Đ.35</td><td>A.6.2.2</td><td>⚠️ 12 dòng ma trận</td></tr>
+<tr><td>T3</td><td>Mỗi quy tắc có căn cứ rõ ràng?</td><td>GT</td><td>A.7.5</td><td>✅ cột căn cứ luật + ISO</td></tr>
+<tr><td>T4</td><td>Tỷ lệ bắt lỗi</td><td>GT — AI Act Đ.9(8), Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ đo với lỗi cài mù</td></tr>
+<tr><td>T5</td><td>Tỷ lệ bỏ lọt (chỉ số sống còn)</td><td>GT — Đ.9(8); GDPR Đ.5(2)</td><td>A.6.2.4</td><td>✅ có phân tích "vì sao sót"</td></tr>
+<tr><td>T6</td><td>Báo động giả</td><td>GT — Đ.9(8)</td><td>A.6.2.4</td><td>✅ chấm theo tập bằng chứng</td></tr>
+<tr><td>T7</td><td>Báo "ĐẠT" sai đúng chỗ có lỗi</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.4</td><td>⚠️ đã khai báo ca xấu nhất</td></tr>
+<tr><td>T8</td><td>Chạy lại có ra cùng kết quả?</td><td>GT yếu — AI Act Đ.17(1)(d)</td><td>A.6.2.4</td><td>✅ 3/3 lần giống nhau</td></tr>
+<tr><td>T9</td><td>Mỗi kết luận truy được bằng chứng?</td><td>GT — GDPR Đ.5(2), Đ.24(1); AI Act Phụ lục IV</td><td>A.6.2.7, A.6.2.8</td><td>✅ <code>file:dòng@commit</code></td></tr>
+<tr><td>T10</td><td>Công cụ tự ghi log từng bước?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.8</td><td>✅ log của công cụ được lưu</td></tr>
+<tr><td>T11</td><td>Không chỉnh công cụ sau khi thấy kết quả?</td><td>—</td><td>A.6.2.5; điều 6.3</td><td>✅ phiên bản đóng băng</td></tr>
+<tr><td>T12</td><td>Người xây và người chấm tách nhau?</td><td>—</td><td>A.3.2</td><td>✅ chấm ở môi trường cách ly</td></tr>
+<tr><td>T13</td><td>Đầu vào đúng phiên bản?</td><td>GT yếu — AI Act Đ.11(1), Phụ lục IV điểm 6</td><td>A.7.4, A.7.5</td><td>✅ manifest, mã băm</td></tr>
+<tr><td>T14</td><td>Giới hạn phép đo có được khai báo?</td><td>GT yếu — GDPR Đ.5(2)</td><td>A.6.2.7</td><td>✅</td></tr>
+<tr><td>T15</td><td>Bản thật dùng mô hình AI: ảo giác, tái lập?</td><td>—</td><td>A.6.2.4</td><td>❌ sandbox không đo được</td></tr>
+</table>
+</div>
+<p style="font-size:13px;color:#555"><b>Về T4/T5/T6 (dùng khoảng Clopper–Pearson trên chính số đếm):</b> ba dòng này đo trên <b>6 lỗi và 3 mục sạch</b>. Recall 0,667 có khoảng tin cậy 95% là <b>[0,223 – 0,957]</b>; nếu recall thực chỉ bằng tung đồng xu thì xác suất quan sát ≥ 4/6 vẫn là <b>0,344</b>. Phép đo chứng minh <b>giao thức chạy được</b>, chưa đủ lực mẫu để xếp hạng chất lượng công cụ.</p>
+
+<h4>4. Bảng kiểm toán pháp lý cho AI kiểm định</h4>
+<p>Ký hiệu thêm: ⚖️ cần Pháp chế kết luận.</p>
+<div style="overflow-x:auto">
+<table>
+<tr><th>#</th><th>Câu hỏi</th><th>Căn cứ luật</th><th>ISO 42001</th><th>Bản sandbox</th><th>Bản thật</th></tr>
+<tr><td>P1</td><td>Có phải "hệ thống AI"?</td><td>AI Act Đ.3(1) — phải <i>"suy luận"</i> cách tạo đầu ra</td><td>—</td><td>Có thể không</td><td>⚖️ nhiều khả năng có</td></tr>
+<tr><td>P2</td><td>Có phải AI rủi ro cao?</td><td>AI Act Đ.6(2), Phụ lục III 4(b) — công cụ đánh giá code, không đánh giá người</td><td>A.5.2</td><td>Không</td><td>⚖️ không, nếu kết quả không dùng trực tiếp để quyết định về tài xế</td></tr>
+<tr><td>P3</td><td>Phải tuân thủ Điều 9–15?</td><td>AI Act Đ.8(1) — chỉ áp cho rủi ro cao</td><td>—</td><td>Không</td><td>Không (nếu P2 là không)</td></tr>
+<tr><td>P4</td><td>Nghĩa vụ chung cho mọi hệ thống AI?</td><td>AI Act Đ.4, Đ.50 <i>[Chưa xác minh]</i></td><td>A.4.6, A.8.2</td><td>—</td><td>⚖️</td></tr>
+<tr><td>P5</td><td>Dùng mô hình AI của bên thứ ba?</td><td>Nghĩa vụ nhà cung cấp mô hình đa mục đích <i>[Chưa xác minh]</i></td><td>A.10.3</td><td>—</td><td>⚖️</td></tr>
+<tr><td>P6</td><td>Có xử lý dữ liệu cá nhân của tài xế?</td><td>GDPR Đ.5(1)(c), Đ.6</td><td>A.7.3, A.7.5</td><td>✅ dữ liệu giả</td><td>❌ sẽ đọc dữ liệu thật</td></tr>
+<tr><td>P7</td><td>Dữ liệu tài xế có bị chuyển ra ngoài EU?</td><td>GDPR Đ.44–49</td><td>A.10.3</td><td>Không áp</td><td>⚖️ rủi ro pháp lý lớn nhất của bản thật</td></tr>
+<tr><td>P8</td><td>Vai trò của các bên theo GDPR?</td><td>GDPR Đ.28 <i>[Chưa xác minh]</i></td><td>A.10.2</td><td>—</td><td>⚖️</td></tr>
+<tr><td>P9</td><td>Dùng công cụ có chuyển trách nhiệm sang công cụ?</td><td>Không — nghĩa vụ vẫn thuộc doanh nghiệp (AI Act Đ.8(1))</td><td>A.10.2</td><td>✅ đã ghi "chứng minh phương pháp, không chứng minh tuân thủ"</td><td>⚖️ cần văn bản</td></tr>
+<tr><td>P10</td><td>Kết quả có được dùng làm bằng chứng tuân thủ?</td><td>AI Act Đ.9(8), Đ.72; Chỉ thị Đ.10(1)</td><td>Điều 9.2</td><td>⚠️</td><td>⚖️ — <b>tiền đề của mục 2</b></td></tr>
+<tr><td>P11</td><td>Bộ quy tắc pháp lý có đúng luật?</td><td>Diễn giải luật</td><td>A.10.2, A.6.2.2</td><td>❌ chưa được Pháp chế duyệt</td><td>❌</td></tr>
+<tr><td>P12</td><td>Cập nhật khi luật thay đổi?</td><td>Omnibus (hiệu lực 27/07/2026); Chỉ thị Lao động Nền tảng (hạn nội luật hóa 02/12/2026)</td><td>Điều 6.3; A.2.4</td><td>❌</td><td>❌</td></tr>
+<tr><td>P13</td><td>Giải trình vì sao kiểm cái này, bỏ cái kia?</td><td>Luật không có cơ chế</td><td>Điều 6.1.3 — Tuyên bố áp dụng</td><td>❌</td><td>❌</td></tr>
+</table>
+</div>
+
+<h4>5. Ba kết luận</h4>
+<ol>
+<li><b>Về thuật toán của công cụ:</b> luật EU cho căn cứ <b>gián tiếp</b> cho 6/15 câu hỏi, cộng <b>5 câu có căn cứ gián tiếp yếu</b>; 4 câu còn lại luật không với tới. Luật mạnh hơn ISO ở câu về độ phủ bộ quy tắc. ISO 42001 là căn cứ <b>duy nhất</b> cho 4 câu then chốt: mục đích sử dụng, đóng băng công cụ, tách vai, và rủi ro của mô hình AI.</li>
+<li><b>Về pháp lý của công cụ:</b> Đạo luật AI gần như không áp trực tiếp. GDPR áp ngay khi bản thật đọc dữ liệu tài xế tại EU. Rủi ro lớn nhất nằm ở <b>cách dùng kết quả</b> (P9, P10) và <b>độ đúng của bộ quy tắc</b> (P11).</li>
+<li><b>Sandbox chứng minh được phương pháp đo, không chứng minh sản phẩm thật tuân thủ.</b></li>
+</ol>
+
+<h4>6. Việc tiếp theo</h4>
+<ul>
+<li><b>Làm được ngay, không cần Pháp chế:</b> văn bản phạm vi đưa AI kiểm định vào hệ thống quản lý AI (T1); KPI = tỷ lệ bắt lỗi và tỷ lệ bỏ lọt (T4, T5); cột Source đã có (T9).</li>
+<li><b>Phải có Pháp chế/DPO kết luận trước:</b> duyệt bộ quy tắc (P11) và tiền đề "dùng làm bằng chứng" (P10); kết luận P1, P2, P7, P8; lập Tuyên bố áp dụng (P13); quy trình cập nhật theo luật (P12); đo riêng rủi ro mô hình AI của bản thật (T15).</li>
+</ul>
+
+<h4>7. Nguồn gốc câu hỏi và giới hạn</h4>
+<ul>
+<li>Các câu hỏi do nhóm <b>tự soạn</b> từ: điều luật đã tra nguyên văn; tên và mục tiêu control ISO 42001; các quyết định trong quá trình làm sandbox.</li>
+<li>Điều luật đã tra nguyên văn (bản hợp nhất AI Act 27/07/2026; Chỉ thị (EU) 2024/2831; GDPR): AI Act Đ.3(1), Đ.6(2)–(3), Đ.8(1), Đ.9(8), Đ.10(3), Đ.10(6), Đ.11(1), Đ.12, Đ.15, Đ.17(1), Đ.27(1), Đ.72, Phụ lục III, Phụ lục IV; GDPR Đ.5(2), Đ.22, Đ.24(1), Đ.35; Chỉ thị Đ.1, Đ.2, Đ.7–Đ.12.</li>
+<li>ISO/IEC 42001: chỉ đối chiếu được <b>tên control và câu mục tiêu</b> qua nguồn thứ cấp. Nội dung yêu cầu chi tiết (Phụ lục B) chưa đọc vì cần bản có bản quyền.</li>
+<li>Mục ghi <b>[Chưa xác minh]</b> cần tra nguyên văn trước khi dùng chính thức.</li>
+</ul>
+</div>
 
 <div class="source-links">
 <p><b>Mã nguồn chạy trên trang này:</b> <a href="https://github.com/jinsimple/gsm-demo" target="_blank" rel="noopener">github.com/jinsimple/gsm-demo</a> — đúng những tệp trang này đang chạy, không thêm không bớt.</p>
