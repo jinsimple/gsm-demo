@@ -131,8 +131,8 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <div class="intro">
 <p>Bấm ①. Rồi ②.<br>Gài một lỗi ở ③, chạy lại — xem B có bắt được không.</p>
 <p>Kết quả đo thật: B bắt được <b>4/6</b> lỗi cài sẵn.<br>Chạy lại 3 lần — kết quả không đổi một dòng.</p>
-<p>4/6 nghĩa là: B <b>có</b> kiểm định — nhưng không phải kết luận nào cũng đúng.<br>Đếm "bao nhiêu tính năng đã được kiểm định" là chưa đủ. Còn phải đo <b>kiểm định đúng đến đâu.</b></p>
-<p style="font-size:13px;color:#555">Phải nói thêm cho đủ: 6 lỗi là mẫu nhỏ. Khoảng tin cậy 95% của tỷ lệ 4/6 là <b>[0,22 – 0,96]</b> — rộng đến mức chưa xếp hạng được chất lượng công cụ. Nó chứng minh <b>cách đo chạy được</b>, chưa chứng minh công cụ tốt đến đâu.</p>
+<p>4/6 nghĩa là: B <b>có</b> kiểm định — nhưng không phải kết luận nào cũng đúng.</p>
+<p>6 lỗi vẫn là mẫu nhỏ. Con số này chứng minh <b>cách đo chạy được</b> — chưa đủ để nói công cụ tốt đến đâu.</p>
 </div>
 
 <div class="statusrow">
@@ -184,24 +184,29 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 <h3>5. Điều em nhận ra</h3><p>Luật EU rất rõ ở một chỗ: <b>hệ thống AI nào là rủi ro cao</b> (Đạo luật AI Đ.6(2), Phụ lục III).</p>
 <p>AI kiểm định dùng nội bộ — chấm code, không chấm con người — không nằm trong nhóm đó.</p>
 <p>Và khi không phải rủi ro cao, luật gần như im lặng.<br>Các yêu cầu kỹ thuật ở Điều 9–15 chỉ dành cho nhóm rủi ro cao (Đ.8(1)).</p>
-<p>Nghĩa là: muốn xây một AI kiểm định tốt — hay kiểm tra xem nó có tốt không — <b>luật không cho em cây thước nào.</b></p>
-<p>Đây là chỗ ISO 42001 bước vào.<br>Nó không thay luật. Nó cho cây thước mà luật bỏ trống — đo <b>trực tiếp</b> phần kỹ thuật.</p>
+<p>Muốn xây một AI kiểm định tốt — hay kiểm tra xem nó có tốt không — <b>luật không cho em cây thước nào.</b></p>
+<p>ISO 42001 thì có.</p>
+</div>
+
+<div class="intro">
+<h3>6. Em đã áp ISO 42001 vào demo này thế nào</h3>
+<p>Sáu control. Mỗi control thành một việc em làm thật — và một kết quả chị kiểm lại được.</p>
 <div style="overflow-x:auto">
 <table>
-<tr><th>ISO 42001 hỏi</th><th>Chị tự kiểm ngay trên trang này</th><th>Dùng được cho dự án</th></tr>
-<tr><td><b>A.6.2.4</b> — Có kiểm chứng không?</td><td>Gài <b>Lỗi 1</b> → B báo đúng. <b>Thay đổi hợp lệ</b> → B im. Chạy <b>②</b> hai lần → giống hệt</td><td>Bổ sung cho KPI: không chỉ "bao nhiêu % được kiểm định" mà cả "kiểm định đúng bao nhiêu %"</td></tr>
-<tr><td><b>A.6.2.7</b> — Có tài liệu không?</td><td>Mỗi kết luận chỉ thẳng <code>tệp:dòng</code> — kèm <code>@commit</code> với tệp nằm trong mã nguồn đã đóng băng</td><td>Cột Source mốc 31/10 — chi tiết tới dòng và phiên bản code</td></tr>
-<tr><td><b>A.6.2.8</b> — Có ghi log không?</td><td>Log của B nằm cùng kết quả</td><td>Legal/DPO xem lại được B đã kiểm những gì</td></tr>
-<tr><td><b>A.6.2.5</b> — Triển khai có kiểm soát không?</td><td>B khóa tại <code>b-freeze</code> — xem chân trang</td><td>Mốc 31/12: hệ thống còn thay đổi → biết kết luận nào ứng với phiên bản nào</td></tr>
-<tr><td><b>A.3.2</b> — Vai trò có tách bạch không?</td><td><b>Lúc chấm</b>, đáp án chỉ nằm ở môi trường cách ly</td><td>Người xây AI kiểm định không tự chấm điểm chính mình</td></tr>
-<tr><td><b>A.7.5</b> — Căn cứ từ đâu ra?</td><td>Ma trận 12 dòng, dòng nào cũng có cột căn cứ</td><td>Legal/DPO thấy từng kết luận dựa trên điều luật nào</td></tr>
+<tr><th>ISO 42001</th><th>Em đã làm</th><th>Kết quả</th></tr>
+<tr><td><b>A.6.2.4</b> Kiểm chứng và xác nhận</td><td>Đo B bằng lỗi cài sẵn mà người xây B không biết. Thêm 2 thay đổi hợp lệ để thử B có báo nhầm không. Chạy lại nhiều lần</td><td>Bắt <b>4/6</b> lỗi. Thay đổi hợp lệ: <b>B không báo nhầm</b>. Chạy <b>3 lần</b> — giống hệt</td></tr>
+<tr><td><b>A.6.2.7</b> Tài liệu kỹ thuật</td><td>Bắt B ghi nguồn cho từng kết luận</td><td><b>12/12</b> dòng có <code>tệp:dòng</code>, kèm phiên bản với phần code đã đóng băng</td></tr>
+<tr><td><b>A.6.2.8</b> Ghi log sự kiện</td><td>Bắt B tự ghi lại từng bước kiểm</td><td>Log của B lưu cùng kết quả — xem lại được B đã kiểm gì</td></tr>
+<tr><td><b>A.6.2.5</b> Triển khai có kiểm soát</td><td>Khóa B lại <b>trước</b> khi cài lỗi và chấm</td><td>B khóa tại <code>b-freeze</code>. Không ai sửa B sau khi thấy kết quả</td></tr>
+<tr><td><b>A.3.2</b> Vai trò và trách nhiệm</td><td>Tách vai: người xây B không mở code A, không biết đáp án. Cài lỗi và chấm điểm ở môi trường riêng</td><td>Người xây công cụ không tự chấm điểm chính mình</td></tr>
+<tr><td><b>A.7.5</b> Nguồn gốc dữ liệu</td><td>Mỗi quy tắc kiểm phải có căn cứ</td><td><b>12/12</b> dòng ma trận có căn cứ luật EU và ISO 42001</td></tr>
 </table>
 </div>
 </div>
 
 <div class="intro">
-<h3>6. Còn dở</h3>
-<p>B vẫn bỏ lọt 2/6 lỗi. Em đang tìm vì sao.<br>Trang này chưa làm phần phân loại Mechanism/Effect — mới đo cách đối chiếu kết luận của AI với code.<br>Bộ quy tắc pháp lý trong ma trận chưa qua Legal/DPO.<br>Phần ISO mới đối chiếu được tên control — chưa đọc nội dung chi tiết của chuẩn.</p>
+<h3>7. Chưa làm được</h3>
+<p>B vẫn bỏ lọt 2/6 lỗi. Em đang tìm vì sao.<br>Chưa làm phần phân loại Mechanism/Effect.<br>Bộ quy tắc pháp lý trong ma trận chưa qua Legal/DPO.<br>Phần ISO mới đối chiếu được tên control — chưa đọc nội dung chi tiết của chuẩn.</p>
 </div>
 
 <div class="intro" style="text-align:center">
@@ -213,7 +218,6 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 
 <div class="source-links">
 <p><b>Mã nguồn chạy trên trang này:</b> <a href="https://github.com/jinsimple/gsm-demo" target="_blank" rel="noopener">github.com/jinsimple/gsm-demo</a> — đúng những tệp trang này đang chạy, không thêm không bớt.</p>
-<p><b>Toàn bộ hồ sơ dự án</b> (tài liệu, quyết định thiết kế, bộ lệnh kiểm, báo cáo): <a href="https://github.com/jinsimple/gsm-check" target="_blank" rel="noopener">github.com/jinsimple/gsm-check</a></p>
 <p>Chi tiết kỹ thuật: A chạy tại commit <code>2abeafd</code> (bản sạch), B đóng băng tại tag <code>b-freeze</code> (commit <code>cce80bf</code>) — không sửa một dòng nào trong <code>product/</code> hay <code>auditor/</code>. Ba lời gọi tiến trình con/git của B (không chạy được trong trình duyệt) được thay ở tầng môi trường của trang này, ngoài mã B.</p>
 </div>
 
