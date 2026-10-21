@@ -51,14 +51,70 @@
 <div class="note">
 Đây là bản <b>mô phỏng</b>, dữ liệu <b>hoàn toàn tổng hợp</b> (giả lập) — không phải sản phẩm thật, không phải dữ liệu thật của Green SM.
 </div>
-<div class="note">
-Trang này chạy <b>đúng mã nguồn</b> của A (bản sạch, commit <code>2abeafd</code>) và B (đóng băng tại tag <code>b-freeze</code>, commit <code>cce80bf</code>) — không sửa một dòng nào trong <code>product/</code> hay <code>auditor/</code>. Ba chỗ B gọi tiến trình con/git (không chạy được trong trình duyệt) được thay ở <b>tầng môi trường</b>, ngoài mã B.
-</div>
 <div class="warn">
 Bản thu nhỏ <b>200 chuyến</b> (báo cáo G4 đo trên 1.000 chuyến) để chạy được trong trình duyệt — mọi số đếm (số chuyến, số quyết định, kết quả M01–M12) <b>khác</b> báo cáo G4, vì cỡ mẫu nhỏ hơn làm thay đổi phân phối ngẫu nhiên. Đây là bản minh hoạ cách chạy, không phải số đo thay thế báo cáo G4.
 </div>
 <div class="note" id="mobile-note" style="display:none">
 Trang này cần máy tính (không chạy trên điện thoại/máy yếu) — tải Pyodide và chạy đủ 200 chuyến tốn vài chục giây đến vài phút CPU.
+</div>
+
+<div class="intro">
+<h3>1. Đề bài và cách hiểu</h3>
+<p>Đề bài được giao: làm một sản phẩm mẫu <b>A</b> (ghép xe + tính giá), rồi làm một chương trình <b>B</b> tự động kiểm A theo một bảng 12 điều, lấy từ ISO/IEC 42001 (tiêu chuẩn quản lý AI) đối chiếu với các điều khoản cụ thể của luật châu Âu (AI Act, GDPR, chỉ thị nền tảng lao động số — PWD).</p>
+<p>A và B, cộng bảng 12 điều, đều đã làm xong và đo thật — kết quả ở mục 3 dưới đây.</p>
+<p><b>Kết quả chứng minh một phương pháp kiểm định có đứng được không</b> — B có tự tìm ra lỗi mà không được xem trước đáp án hay không. Nó <b>không</b> chứng minh sản phẩm thật của Green SM có tuân thủ hay không, vì A chỉ là bản mẫu tự viết để thử phương pháp.</p>
+</div>
+
+<div class="intro">
+<h3>2. Ma trận kiểm 12 dòng</h3>
+<p>Đây là bảng 12 điều B dùng để kiểm A. Cột "Căn cứ ISO/IEC 42001" <b>[Chưa xác minh]</b> — số hiệu control chưa đối chiếu bản chuẩn có bản quyền của ISO.</p>
+<div style="overflow-x:auto">
+<table>
+<tr><th>ID</th><th>Control ISO/IEC 42001</th><th>Căn cứ AI Act / GDPR / PWD</th><th>Câu hỏi kiểm</th></tr>
+<tr><td>M01</td><td>A.5.4 Tác động lên cá nhân/nhóm</td><td>AI Act PL III 4(b); PWD Đ.8</td><td>Chênh lệch tỷ lệ được ghép hoặc khoảng cách trung bình giữa các nhóm khách/tài xế có vượt ngưỡng không?</td></tr>
+<tr><td>M02</td><td>A.7.4 Chất lượng dữ liệu</td><td>PWD Đ.7</td><td>Mã ghép xe có đọc thuộc tính nào ngoài danh sách được phép không?</td></tr>
+<tr><td>M03</td><td>A.7.5 Nguồn gốc dữ liệu</td><td>GDPR Đ.5(1)(c)</td><td>Dữ liệu mẫu có mang định dạng dữ liệu cá nhân thật (SĐT, email, CCCD…) không?</td></tr>
+<tr><td>M04</td><td>A.6.2.8 Log sự kiện</td><td>AI Act Đ.12</td><td>Mọi quyết định có được ghi log không?</td></tr>
+<tr><td>M05</td><td>A.6.2.3 Tài liệu thiết kế</td><td>AI Act Đ.11</td><td>Có hằng số tính tiền nào giấu trong mã, không khai trong tệp cấu hình không?</td></tr>
+<tr><td>M06</td><td>A.6.2.7 Tài liệu kỹ thuật</td><td>AI Act Đ.11</td><td>Tệp cấu hình có thiếu số phiên bản không?</td></tr>
+<tr><td>M07</td><td>A.9.2 Sử dụng có trách nhiệm</td><td>GDPR Đ.22; PWD Đ.10</td><td>Có hành động bất lợi/ràng buộc lên tài xế (khoá, phạt, hạ ưu tiên, tự nhận chuyến) mà không có bước người xem xét không?</td></tr>
+<tr><td>M08</td><td>A.5.2 Quy trình đánh giá tác động</td><td>GDPR Đ.35; PWD Đ.8</td><td>Có tài liệu đánh giá tác động không?</td></tr>
+<tr><td>M09</td><td>A.8.2 Thông tin cho người dùng</td><td>PWD Đ.9</td><td>Mỗi quyết định có kèm lý do đọc được không?</td></tr>
+<tr><td>M10</td><td>A.6.2.4 Kiểm chứng & xác nhận</td><td>AI Act Đ.15</td><td>Cùng đầu vào chạy nhiều lần có ra cùng kết quả không?</td></tr>
+<tr><td>M11</td><td>A.5.4 (pricing)</td><td>Luật tiêu dùng EU [Suy luận]</td><td>Giá có phụ thuộc thuộc tính nào của khách ngoài quãng đường và thời điểm không?</td></tr>
+<tr><td>M12</td><td>A.6.2.6 Vận hành & giám sát</td><td>AI Act Đ.72 [Suy luận]</td><td>Có ngưỡng cảnh báo cho tỷ lệ tự động nhận chuyến không?</td></tr>
+</table>
+</div>
+</div>
+
+<div class="intro">
+<h3>3. Kết quả đo thật (G4)</h3>
+<p>Chép nguyên văn từ báo cáo G4 và từ điểm chấm của qa — không tính lại.</p>
+<p>Chấm trên <b>6 lỗi cài sẵn</b> (không ai ngoài hai phiên cách ly biết là lỗi gì khi B chạy) + 3 mục sạch:</p>
+<table>
+<tr><th>Số đo</th><th>Kết quả</th><th>Mục tiêu đề xuất</th></tr>
+<tr><td>Precision (khi B báo, B đúng bao nhiêu %)</td><td><b>1.000</b></td><td>— (không đặt ngưỡng cứng)</td></tr>
+<tr><td>Recall (B bắt được bao nhiêu % lỗi cài)</td><td><b>0.667</b></td><td>≥ 0.80 — <b>không đạt</b></td></tr>
+<tr><td>FNR (B bỏ sót bao nhiêu % lỗi cài)</td><td><b>0.333</b></td><td>≤ 0.20 — <b>không đạt</b></td></tr>
+<tr><td>Độ ổn định (chạy lại nhiều lần có ra cùng kết quả)</td><td><b>3/3 lần giống hệt</b></td><td>100% — đạt</td></tr>
+</table>
+<p style="margin-top:14px"><b>Vì sao B bỏ sót 2 lỗi — ba câu nguyên văn từ báo cáo G4:</b></p>
+<ol>
+<li>"Bách xác nhận: cả 2 lỗi bị sót nằm TRONG vùng 12 dòng ma trận" — không phải vì bảng 12 điều thiếu dòng.</li>
+<li>Nguyên nhân tách hai khả năng: hoặc "câu quy tắc trong MATRIX_v0 quá yếu để bắt loại lỗi đó" (phải sửa bảng 12 điều), hoặc "câu quy tắc đủ mạnh, nhưng hiện thực của B yếu hơn câu chữ" (phải sửa B, và đo lại với một bộ lỗi hoàn toàn mới).</li>
+<li>"Mức độ nặng còn phụ thuộc dòng nào bị sót" — nếu rơi vào một trong ba dòng vốn đã "cần người xem lại" thì đây là giới hạn đã biết trước; nếu rơi vào một trong các dòng đã "đạt" thì đó là B báo an toàn nhầm đúng chỗ có lỗi, một ca nặng hơn. Chưa biết ca nào đúng — chủ động không công khai dòng cụ thể.</li>
+</ol>
+</div>
+
+<div class="intro">
+<h3>4. Giới hạn và bước tiếp theo</h3>
+<ul style="padding-left:18px; line-height:1.7">
+<li><b>Điều 8 không bao giờ ra "không đạt":</b> B bị cấm đọc tài liệu nội bộ nên không thể tự xác nhận có/không có đánh giá tác động — đây là giới hạn của cách đo, không phải bằng chứng A có hay không có tài liệu đó.</li>
+<li><b>2 lỗi bị B bỏ sót</b> — xem 3 câu ở mục 3. Việc sửa (bảng 12 điều hay B) tuỳ vào tầng nào đúng, chưa xác định ở đây.</li>
+<li><b>Bảng 12 điều chưa được bộ phận pháp lý/DPO duyệt</b> — nhóm tự nghiên cứu và tự chốt, ghi thẳng là giới hạn lớn nhất của phép đo này, không giả định đã đủ.</li>
+<li><b>Thu nhập tài xế nằm ngoài phạm vi</b> đo của dự án này — chủ động loại ra, không lặng lẽ bỏ qua.</li>
+</ul>
+<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — xếp vào mốc <b>31/10</b>. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức trước <b>31/12</b>.</p>
 </div>
 
 <div class="statusrow">
@@ -93,18 +149,19 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <br><br>
 Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy trên cấu hình mới — trang <b>không tự chạy lại</b>.
 </div>
-<div>
-  <button id="btn-f1" disabled>Lỗi 1 — xoá version khỏi cấu hình giá</button>
-  <button id="btn-f2" disabled>Lỗi 2 — đổi giá bậc 12–25km</button>
-  <button id="btn-f3" disabled>Lỗi 3 — hệ số giờ vượt trần 1.3</button>
-  <button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button>
-</div>
+<p style="margin-bottom:4px"><button id="btn-f1" disabled>Lỗi 1 — xoá version khỏi cấu hình giá</button><br>
+<span style="font-size:13px;color:#555">Đã chạy thật trước: B báo ở dòng <b>M06</b> (và kéo theo M04/M09/M10 thành "cần người xem lại", vì A không chạy được khi thiếu <code>version</code>).</span></p>
+<p style="margin-bottom:4px"><button id="btn-f2" disabled>Lỗi 2 — đổi giá bậc 12–25km</button><br>
+<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>thay đổi hợp lệ — B không nên báo</b> (kiểm báo động giả). Cả 12 dòng giữ nguyên kết quả.</span></p>
+<p style="margin-bottom:4px"><button id="btn-f3" disabled>Lỗi 3 — hệ số giờ vượt trần 1.3</button><br>
+<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>thay đổi hợp lệ — B không nên báo</b> (kiểm báo động giả). Nhánh trần giá chặn đúng ở 1.3, cả 12 dòng giữ nguyên kết quả.</span></p>
+<p><button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button></p>
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
 
 <div class="source-links">
 <p><b>Mã nguồn chạy trên trang này:</b> <a href="https://github.com/jinsimple/gsm-demo" target="_blank" rel="noopener">github.com/jinsimple/gsm-demo</a> — đúng những tệp trang này đang chạy, không thêm không bớt.</p>
-<p><b>Toàn bộ hồ sơ dự án</b> (tài liệu, quyết định thiết kế, bộ lệnh kiểm, báo cáo): <a href="https://github.com/jinsimple/gsm-check" target="_blank" rel="noopener">github.com/jinsimple/gsm-check</a></p>
+<p>Chi tiết kỹ thuật: A chạy tại commit <code>2abeafd</code> (bản sạch), B đóng băng tại tag <code>b-freeze</code> (commit <code>cce80bf</code>) — không sửa một dòng nào trong <code>product/</code> hay <code>auditor/</code>. Ba lời gọi tiến trình con/git của B (không chạy được trong trình duyệt) được thay ở tầng môi trường của trang này, ngoài mã B.</p>
 </div>
 
 <script>
