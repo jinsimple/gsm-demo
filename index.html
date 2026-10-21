@@ -114,7 +114,7 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <li><b>Bảng 12 điều chưa được bộ phận pháp lý/DPO duyệt</b> — nhóm tự nghiên cứu và tự chốt, ghi thẳng là giới hạn lớn nhất của phép đo này, không giả định đã đủ.</li>
 <li><b>Thu nhập tài xế nằm ngoài phạm vi</b> đo của dự án này — chủ động loại ra, không lặng lẽ bỏ qua.</li>
 </ul>
-<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — xếp vào mốc <b>31/10</b>. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức trước <b>31/12</b>.</p>
+<p style="margin-top:14px"><b>Bước tiếp theo đề xuất:</b> điều nào vừa có bằng chứng truy được tới đúng dòng mã (<code>file:dòng@commit</code>), vừa đo được bằng recall/FNR, <b>vừa</b> thuộc nhóm rủi ro thấp (Minimal/Mitigation theo định nghĩa riêng của dự án) — xếp vào mốc <b>31/10</b>. Toàn bộ bảng 12 điều, kể cả nhóm rủi ro cao hơn, cần bộ phận pháp lý/DPO duyệt chính thức — <b>chưa có mốc thời gian cụ thể cho việc này</b>.</p>
 </div>
 
 <div class="statusrow">
@@ -132,13 +132,14 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <pre id="out-a">(chưa chạy)</pre>
 
 <p class="commit-line">Bản mã đang chạy — A: commit <code>2abeafd</code> · B: tag <code>b-freeze</code> (<code>cce80bf</code>)</p>
+<p class="commit-line">Trên bản 200 cuốc này, kết quả nền (chưa gài gì) là <b>7 đạt / 4 cần người xem lại / 1 không đạt</b> — khác bảng 8/3/1 của báo cáo G4 (đo trên 1.000 cuốc), xem lý do ngay dưới bảng.</p>
 <h3>Kết quả B</h3>
 <div id="out-b-table"></div>
 <pre id="out-b">(chưa chạy)</pre>
 
 <div class="intro after-note">
 <h3>Vài điều nên biết trước</h3>
-<p><b>"Cần người xem lại" không phải là lỗi của B.</b> Khi B không đủ căn cứ để kết luận, nó được thiết kế để <b>nói là chưa đủ căn cứ</b>, chứ không đoán. Có bốn dòng như vậy trên bản demo 200 cuốc này, và lý do từng dòng ghi ngay trong bảng.</p>
+<p><b>"Cần người xem lại" không phải là lỗi của B.</b> Khi B không đủ căn cứ để kết luận, nó được thiết kế để <b>nói là chưa đủ căn cứ</b>, chứ không đoán. Trên bản demo 200 cuốc này có <b>bốn</b> dòng như vậy (báo cáo G4 trên 1.000 cuốc có ba) — dòng thứ tư là <b>M01</b>: với chỉ 200 cuốc, nhóm xe "premium" còn lại khá ít chuyến, nên khoảng cách trung bình của nhóm đó dao động mạnh hơn và lệch qua ngưỡng 10% dù không có gì bất thường thật. Lý do đầy đủ ghi ngay trong bảng.</p>
 <p><b>Sản phẩm A là bản mô phỏng.</b> Nhóm tự viết để làm mẫu, dữ liệu là số giả. Không có mã hay dữ liệu thật của Green SM trong đó.</p>
 <p><b>Trang này dùng bản thu nhỏ 200 cuốc</b> để chạy nhanh trong trình duyệt. Thí nghiệm thật chạy 1.000 cuốc, nên các con số đếm ở đây khác với con số trong báo cáo.</p>
 </div>
@@ -151,11 +152,13 @@ Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy 
 </div>
 <p style="margin-bottom:4px"><button id="btn-f1" disabled>Lỗi 1 — xoá version khỏi cấu hình giá</button><br>
 <span style="font-size:13px;color:#555">Đã chạy thật trước: B báo ở dòng <b>M06</b> (và kéo theo M04/M09/M10 thành "cần người xem lại", vì A không chạy được khi thiếu <code>version</code>).</span></p>
-<p style="margin-bottom:4px"><button id="btn-f2" disabled>Lỗi 2 — đổi giá bậc 12–25km</button><br>
-<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>thay đổi hợp lệ — B không nên báo</b> (kiểm báo động giả). Cả 12 dòng giữ nguyên kết quả.</span></p>
-<p style="margin-bottom:4px"><button id="btn-f3" disabled>Lỗi 3 — hệ số giờ vượt trần 1.3</button><br>
-<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>thay đổi hợp lệ — B không nên báo</b> (kiểm báo động giả). Nhánh trần giá chặn đúng ở 1.3, cả 12 dòng giữ nguyên kết quả.</span></p>
-<p><button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button></p>
+
+<p style="margin:18px 0 6px"><b>Thử xem B có báo động giả không</b> — hai thay đổi dưới đây <b>không phải lỗi</b>, chỉ là chỉnh giá hợp lệ. Nếu B im lặng (giữ nguyên 12 dòng) thì đó là B làm đúng, không phải B bỏ lọt.</p>
+<p style="margin-bottom:4px"><button id="btn-f2" disabled>Thay đổi hợp lệ 1 — đổi giá bậc 12–25km</button><br>
+<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>B giữ nguyên cả 12 dòng</b> — đúng, vì đây không phải lỗi.</span></p>
+<p style="margin-bottom:4px"><button id="btn-f3" disabled>Thay đổi hợp lệ 2 — hệ số giờ vượt trần 1.3</button><br>
+<span style="font-size:13px;color:#555">Đã chạy thật trước: <b>B giữ nguyên cả 12 dòng</b> — đúng, vì nhánh trần giá đã tự chặn đúng ở 1.3, cũng không phải lỗi.</span></p>
+<p style="margin-top:14px"><button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button></p>
 <p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
 <pre id="fault-diff"></pre>
 
@@ -228,7 +231,7 @@ function applyFault2() {
   t3.rate_vnd_per_km = 20000;
   writePricing(obj);
   clearResults();
-  showDiff('đã gài Lỗi 2 (đổi giá bậc 12–25km) — bấm ① ② để xem tác động', before, 't3.rate_vnd_per_km = ' + t3.rate_vnd_per_km);
+  showDiff('đã áp Thay đổi hợp lệ 1 (đổi giá bậc 12–25km) — bấm ① ② để xem B có im lặng đúng không', before, 't3.rate_vnd_per_km = ' + t3.rate_vnd_per_km);
 }
 
 function applyFault3() {
@@ -238,7 +241,7 @@ function applyFault3() {
   peak.coef = 1.5;
   writePricing(obj);
   clearResults();
-  showDiff('đã gài Lỗi 3 (hệ số giờ vượt trần) — bấm ① ② để xem tác động', before, 'peak.coef = ' + peak.coef + '  (max_time_coef = ' + obj.max_time_coef + ', nhánh trần sẽ chặn lại ở 1.3)');
+  showDiff('đã áp Thay đổi hợp lệ 2 (hệ số giờ vượt trần) — bấm ① ② để xem B có im lặng đúng không', before, 'peak.coef = ' + peak.coef + '  (max_time_coef = ' + obj.max_time_coef + ', nhánh trần sẽ chặn lại ở 1.3)');
 }
 
 function resetClean() {
