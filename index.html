@@ -18,6 +18,9 @@
   .st-cnx { color: #b8860b; font-weight: 600; }
   .st-khongdat { color: #c0392b; font-weight: 600; }
   #status { font-weight: 600; }
+  .fault-box { background: #f0f4ff; border: 1px solid #7a93d1; padding: 10px 14px; border-radius: 6px; margin: 16px 0 8px; font-size: 14px; }
+  #fault-active { font-weight: 600; margin: 8px 0 0; }
+  #fault-diff { display: none; }
 </style>
 </head>
 <body>
@@ -51,6 +54,21 @@ Trang này cần máy tính (không chạy trên điện thoại/máy yếu) —
 <div id="out-b-table"></div>
 <pre id="out-b">(chưa chạy)</pre>
 
+<h3>③ Tự gài lỗi thử (chỉ trong trang này)</h3>
+<div class="fault-box">
+Đây là lỗi <b>bạn</b> vừa tự tạo để thử. Bộ lỗi dùng trong thí nghiệm thật (báo cáo G4) <b>không nằm trong trang này</b> — gài ở đây không đụng tới bộ lỗi thật, và chỉ sửa một bản sao cấu hình trong bộ nhớ trình duyệt, không sửa tệp gốc.
+<br><br>
+Sau khi gài (hoặc hoàn lại), bấm lại ① và ② để xem A/B chạy trên cấu hình mới — trang <b>không tự chạy lại</b>.
+</div>
+<div>
+  <button id="btn-f1" disabled>Lỗi 1 — xoá version khỏi cấu hình giá</button>
+  <button id="btn-f2" disabled>Lỗi 2 — đổi giá bậc 12–25km</button>
+  <button id="btn-f3" disabled>Lỗi 3 — hệ số giờ vượt trần 1.3</button>
+  <button id="btn-reset" disabled>↺ Hoàn lại trạng thái sạch</button>
+</div>
+<p id="fault-active">Trạng thái: cấu hình sạch (chưa gài lỗi).</p>
+<pre id="fault-diff"></pre>
+
 <script>
 const statusEl = document.getElementById('status');
 const btnA = document.getElementById('btn-a');
@@ -58,12 +76,73 @@ const btnB = document.getElementById('btn-b');
 const outA = document.getElementById('out-a');
 const outB = document.getElementById('out-b');
 const outBTable = document.getElementById('out-b-table');
+const btnF1 = document.getElementById('btn-f1');
+const btnF2 = document.getElementById('btn-f2');
+const btnF3 = document.getElementById('btn-f3');
+const btnReset = document.getElementById('btn-reset');
+const faultActive = document.getElementById('fault-active');
+const faultDiff = document.getElementById('fault-diff');
 
 if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
   document.getElementById('mobile-note').style.display = 'block';
 }
 
 let pyodideReady = null;
+let filesPristine = null;
+const PRICING_PATH = 'product/config/pricing.json';
+
+function clearResults() {
+  outA.textContent = '(chưa chạy)';
+  outB.textContent = '(chưa chạy)';
+  outBTable.innerHTML = '';
+}
+
+function showDiff(label, before, after) {
+  faultActive.textContent = 'Trạng thái: ' + label;
+  faultDiff.style.display = 'block';
+  faultDiff.textContent = '--- truoc ---\n' + before + '\n--- sau ---\n' + after;
+}
+
+function writePricing(obj) {
+  pyodideReady.FS.writeFile(PRICING_PATH, JSON.stringify(obj, null, 2));
+}
+
+function applyFault1() {
+  const obj = JSON.parse(filesPristine[PRICING_PATH]);
+  const before = 'version: "' + obj.version + '"';
+  delete obj.version;
+  writePricing(obj);
+  clearResults();
+  showDiff('đã gài Lỗi 1 (xoá version) — bấm ① ② để xem tác động', before, 'version: (không còn khoá này)');
+}
+
+function applyFault2() {
+  const obj = JSON.parse(filesPristine[PRICING_PATH]);
+  const t3 = obj.tiers.find(t => t.tier_id === 't3');
+  const before = 't3.rate_vnd_per_km = ' + t3.rate_vnd_per_km;
+  t3.rate_vnd_per_km = 20000;
+  writePricing(obj);
+  clearResults();
+  showDiff('đã gài Lỗi 2 (đổi giá bậc 12–25km) — bấm ① ② để xem tác động', before, 't3.rate_vnd_per_km = ' + t3.rate_vnd_per_km);
+}
+
+function applyFault3() {
+  const obj = JSON.parse(filesPristine[PRICING_PATH]);
+  const peak = obj.time_coefficients.find(w => w.window_id === 'peak');
+  const before = 'peak.coef = ' + peak.coef + '  (max_time_coef = ' + obj.max_time_coef + ')';
+  peak.coef = 1.5;
+  writePricing(obj);
+  clearResults();
+  showDiff('đã gài Lỗi 3 (hệ số giờ vượt trần) — bấm ① ② để xem tác động', before, 'peak.coef = ' + peak.coef + '  (max_time_coef = ' + obj.max_time_coef + ', nhánh trần sẽ chặn lại ở 1.3)');
+}
+
+function resetClean() {
+  pyodideReady.FS.writeFile(PRICING_PATH, filesPristine[PRICING_PATH]);
+  clearResults();
+  faultActive.textContent = 'Trạng thái: cấu hình sạch (chưa gài lỗi).';
+  faultDiff.style.display = 'none';
+  faultDiff.textContent = '';
+}
 
 function ensureDir(pyodide, path) {
   const parts = path.split('/');
@@ -78,6 +157,7 @@ async function boot() {
   const pyodide = await loadPyodide();
   statusEl.textContent = 'Đang nạp mã nguồn A + B vào bộ nhớ…';
   const files = await (await fetch('files.json')).json();
+  filesPristine = files;
   for (const [path, content] of Object.entries(files)) {
     ensureDir(pyodide, path);
     pyodide.FS.writeFile(path, content);
@@ -87,6 +167,10 @@ async function boot() {
   statusEl.textContent = 'Sẵn sàng. Bấm ① để chạy A, ② để chạy B.';
   btnA.disabled = false;
   btnB.disabled = false;
+  btnF1.disabled = false;
+  btnF2.disabled = false;
+  btnF3.disabled = false;
+  btnReset.disabled = false;
   pyodideReady = pyodide;
 }
 
@@ -206,7 +290,7 @@ btnB.addEventListener('click', async () => {
   outB.textContent = 'Đang chạy B (nạp A, chạy 12 quy tắc)…';
   outBTable.innerHTML = '';
   try {
-    pyodideReady.globals.set('TRACKED_JSON', JSON.stringify(Object.keys(await (await fetch('files.json')).json())));
+    pyodideReady.globals.set('TRACKED_JSON', JSON.stringify(Object.keys(filesPristine)));
     const result = pyodideReady.runPython(STAGE2_PY).toJs({ dict_converter: Object.fromEntries });
     outB.textContent = (result.ok ? '[OK]\n' : '[LOI]\n') + result.stdout;
     if (result.report_json) {
@@ -218,6 +302,11 @@ btnB.addEventListener('click', async () => {
   }
   btnB.disabled = false;
 });
+
+btnF1.addEventListener('click', applyFault1);
+btnF2.addEventListener('click', applyFault2);
+btnF3.addEventListener('click', applyFault3);
+btnReset.addEventListener('click', resetClean);
 
 boot();
 </script>
